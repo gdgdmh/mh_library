@@ -10,7 +10,7 @@ template <typename T>
 class IExecuteMethod {
 public:
 
-  IExecuteMethod(IExecuteMethod<T> (T::*f) ) : func_(f) {};
+  IExecuteMethod(IExecuteMethod<T>(T::* f)()) : function_(f) {};
 
   /**
    * デストラクタ
@@ -24,7 +24,7 @@ public:
 
 private:
   // 実行するT型クラスのメソッドポインタ
-  IExecuteMethod<T> (T::*function_)();
+  IExecuteMethod<T>(T::* function_)();
 
 };
 

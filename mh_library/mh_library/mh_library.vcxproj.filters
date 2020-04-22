@@ -25,6 +25,9 @@
     <Filter Include="ソース ファイル\mh_library\util\template">
       <UniqueIdentifier>{1ccf713f-32c1-452b-bbce-c4a990a93cba}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\test">
+      <UniqueIdentifier>{7fe1f537-37d0-4a9e-a9eb-3bc64dd3d9d0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mh_library\util\output\IOutputConsole.hpp">
@@ -36,6 +39,9 @@
     <ClInclude Include="mh_library\util\template\IExecuteMethod.hpp">
       <Filter>ソース ファイル\mh_library\util\template</Filter>
     </ClInclude>
+    <ClInclude Include="test\TestExecuteMethod.hpp">
+      <Filter>ソース ファイル\test</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mh_library\util\output\OutputConsole.cpp">
@@ -43,6 +49,9 @@
     </ClCompile>
     <ClCompile Include="mh_library.cpp">
       <Filter>ソース ファイル\mh_library</Filter>
+    </ClCompile>
+    <ClCompile Include="test\TestExecuteMethod.cpp">
+      <Filter>ソース ファイル\test</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
