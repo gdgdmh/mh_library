@@ -13,10 +13,19 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="ソース ファイル\mh_library">
+      <UniqueIdentifier>{8e468bc4-e621-4c5f-bc35-5b408db5a3bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\mh_library\util">
+      <UniqueIdentifier>{1a35acb6-56cb-42f7-983f-d6eedd3fe8bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\mh_library\util\output">
+      <UniqueIdentifier>{77c7115f-5b34-4d8b-9528-c7bba844c596}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="mh_library.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
+    <ClInclude Include="mh_library\util\output\IOutputConsole.hpp">
+      <Filter>ソース ファイル\mh_library\util\output</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
