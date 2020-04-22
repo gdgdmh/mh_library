@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClInclude Include="mh_library\util\output\IOutputConsole.hpp" />
     <ClInclude Include="mh_library\util\output\OutputConsole.hpp" />
+    <ClInclude Include="mh_library\util\template\IExecuteMethod.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mh_library.cpp" />

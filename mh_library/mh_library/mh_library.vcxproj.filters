@@ -22,6 +22,9 @@
     <Filter Include="ソース ファイル\mh_library\util\output">
       <UniqueIdentifier>{77c7115f-5b34-4d8b-9528-c7bba844c596}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\mh_library\util\template">
+      <UniqueIdentifier>{1ccf713f-32c1-452b-bbce-c4a990a93cba}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mh_library\util\output\IOutputConsole.hpp">
@@ -29,6 +32,9 @@
     </ClInclude>
     <ClInclude Include="mh_library\util\output\OutputConsole.hpp">
       <Filter>ソース ファイル\mh_library\util\output</Filter>
+    </ClInclude>
+    <ClInclude Include="mh_library\util\template\IExecuteMethod.hpp">
+      <Filter>ソース ファイル\mh_library\util\template</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
