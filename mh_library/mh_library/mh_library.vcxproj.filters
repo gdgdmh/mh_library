@@ -27,5 +27,16 @@
     <ClInclude Include="mh_library\util\output\IOutputConsole.hpp">
       <Filter>ソース ファイル\mh_library\util\output</Filter>
     </ClInclude>
+    <ClInclude Include="mh_library\util\output\OutputConsole.hpp">
+      <Filter>ソース ファイル\mh_library\util\output</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="mh_library\util\output\OutputConsole.cpp">
+      <Filter>ソース ファイル\mh_library\util\output</Filter>
+    </ClCompile>
+    <ClCompile Include="mh_library.cpp">
+      <Filter>ソース ファイル\mh_library</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

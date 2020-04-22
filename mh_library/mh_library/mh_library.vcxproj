@@ -20,6 +20,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mh_library\util\output\IOutputConsole.hpp" />
+    <ClInclude Include="mh_library\util\output\OutputConsole.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="mh_library.cpp" />
+    <ClCompile Include="mh_library\util\output\OutputConsole.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
