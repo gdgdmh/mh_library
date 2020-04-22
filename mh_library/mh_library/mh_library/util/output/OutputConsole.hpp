@@ -9,25 +9,25 @@ namespace mh_library {
 // コンソール出力クラス
 class OutputConsole : public mh_library::IOutputConsole {
 public:
-	/**
-	 * コンストラクタ
-	 */
-	OutputConsole();
+  /**
+   * コンストラクタ
+   */
+  OutputConsole();
 
-	/**
-	 * デストラクタ
-	 */
-	virtual ~OutputConsole();
+  /**
+   * デストラクタ
+   */
+  virtual ~OutputConsole();
 
-	/**
-	 * 文字列を出力する
-	 */
-	void Print(std::string string);
+  /**
+   * 文字列を出力する
+   */
+  void Print(std::string string);
 
-	/**
-	 * 改行付き文字列を出力する
-	 */
-	void PrintLine(std::string string);
+  /**
+   * 改行付き文字列を出力する
+   */
+  void PrintLine(std::string string);
 };
 
 }
