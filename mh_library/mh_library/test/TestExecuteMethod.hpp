@@ -28,7 +28,7 @@ public:
    */
   virtual ~TestExecuteMethod();
 
-  void Execute();
+  void ExecuteUnitTest();
 
   void Task();
 

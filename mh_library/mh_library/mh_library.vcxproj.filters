@@ -34,6 +34,9 @@
     <Filter Include="ソース ファイル\mh_library\exception">
       <UniqueIdentifier>{b8c57225-53eb-4ab8-be3e-9562c2e9b4b4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\mh_library\util\string">
+      <UniqueIdentifier>{25220865-6293-4a9c-94ad-2357e31b5942}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mh_library\util\output\IOutputConsole.hpp">
@@ -60,6 +63,9 @@
     <ClInclude Include="mh_library\test\UnitTestExecuteList.hpp">
       <Filter>ソース ファイル\mh_library\test</Filter>
     </ClInclude>
+    <ClInclude Include="mh_library\util\string\StdStringFormatter.hpp">
+      <Filter>ソース ファイル\mh_library\util\string</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mh_library\util\output\OutputConsole.cpp">
@@ -70,9 +76,6 @@
     </ClCompile>
     <ClCompile Include="test\TestExecuteMethod.cpp">
       <Filter>ソース ファイル\test</Filter>
-    </ClCompile>
-    <ClCompile Include="mh_library\test\UnitTestBase.cpp">
-      <Filter>ソース ファイル\mh_library\test</Filter>
     </ClCompile>
     <ClCompile Include="mh_library\exception\UnitTestException.cpp">
       <Filter>ソース ファイル\mh_library\exception</Filter>

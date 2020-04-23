@@ -4,41 +4,55 @@
 #include <string>
 #include <memory>
 #include "../util/output/IOutputConsole.hpp"
+#include "../util/string/StdStringFormatter.hpp"
+#include "../exception/UnitTestException.hpp"
 
 namespace mh_library {
 
 // 単体テスト用のベースクラス
 class UnitTestBase {
 public:
+
+  // アサーションマクロ定義
+#ifdef NDEBUG
+  #define AssertEquals(expected, msg)
+#else
+  /**
+   * 条件のチェックの成否をチェックして失敗したときはメッセージを表示して例外をスローする
+   * @param  expected 条件チェックした値(0なら失敗とする)
+   * @param  msg      失敗した際のメッセージ
+   */
+  #define AssertEquals(expected, msg) \
+  if (!(expected)) { \
+    std::string msg1 = mh_library::StdStringFormatter::Format("UnitTestBase Assert %s ", (#msg)); \
+    std::string msg2 = mh_library::StdStringFormatter::Format("file %s ", __FILE__); \
+    std::string msg3 = mh_library::StdStringFormatter::Format("function %s ", __FUNCTION__); \
+    std::string msg4 = mh_library::StdStringFormatter::Format("line %d ", __LINE__); \
+    throw mh_library::UnitTestException(msg1 + msg2 + msg3 + msg4, 0); \
+  }
+#endif
+
+public:
   /**
    * コンストラクタ
    * @param outputConsole コンソール出力クラス
    */
-  UnitTestBase(std::shared_ptr<mh_library::IOutputConsole> output_console);
+  UnitTestBase(std::shared_ptr<mh_library::IOutputConsole> output_console) : output_console_(output_console){
+  }
 
   /**
    * デストラクタ
    */
-  virtual ~UnitTestBase();
+  virtual ~UnitTestBase() {
+  }
 
   /**
    * 実行
    */
-  virtual void ExecuteUnitTest();
+  virtual void ExecuteUnitTest() = 0;
 
 protected:
-
-  /**
-   * 条件のチェックの成否をチェックして失敗したときはメッセージを表示して例外を発生させる
-   * メソッド内ではプログラム停止をしないので注意
-   * @param expected 条件チェックした値(0なら失敗とする)
-   * @param message  失敗した際のメッセージ
-   * @return         trueなら成功
-   */
-  bool AssertEquals(int expected, std::string message);
-
-protected:
-  std::shared_ptr<mh_library::IOutputConsole> output_console_; // コンソール出力
+  std::shared_ptr<mh_library::IOutputConsole> output_console_;   // コンソール出力
 };
 
 }

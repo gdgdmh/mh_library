@@ -13,8 +13,10 @@ test::TestExecuteMethod::TestExecuteMethod(std::shared_ptr<mh_library::IOutputCo
 test::TestExecuteMethod::~TestExecuteMethod() {
 }
 
-void test::TestExecuteMethod::Execute() {
+void test::TestExecuteMethod::ExecuteUnitTest() {
   AssertEquals(scene_ == SCENE::kInitialize, "TestExecuteMethod not kInitialize");
+  Task();
+  AssertEquals(scene_ == SCENE::kInitialize, "TestExecuteMethod not kInitialize(2)");
   Task();
   AssertEquals(scene_ == SCENE::kLoad, "TestExecuteMethod not kLoad");
   Task();
