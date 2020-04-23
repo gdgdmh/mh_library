@@ -57,6 +57,9 @@
     <ClInclude Include="mh_library\exception\ArgumentException.hpp">
       <Filter>ソース ファイル\mh_library\exception</Filter>
     </ClInclude>
+    <ClInclude Include="mh_library\test\UnitTestExecuteList.hpp">
+      <Filter>ソース ファイル\mh_library\test</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mh_library\util\output\OutputConsole.cpp">
@@ -76,6 +79,9 @@
     </ClCompile>
     <ClCompile Include="mh_library\exception\ArgumentException.cpp">
       <Filter>ソース ファイル\mh_library\exception</Filter>
+    </ClCompile>
+    <ClCompile Include="mh_library\test\UnitTestExecuteList.cpp">
+      <Filter>ソース ファイル\mh_library\test</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
