@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="mh_library\exception\UnitTestException.hpp" />
     <ClInclude Include="mh_library\test\UnitTestBase.hpp" />
     <ClInclude Include="mh_library\util\output\IOutputConsole.hpp" />
     <ClInclude Include="mh_library\util\output\OutputConsole.hpp" />
@@ -27,6 +28,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mh_library.cpp" />
+    <ClCompile Include="mh_library\exception\UnitTestException.cpp" />
     <ClCompile Include="mh_library\test\UnitTestBase.cpp" />
     <ClCompile Include="mh_library\util\output\OutputConsole.cpp" />
     <ClCompile Include="test\TestExecuteMethod.cpp" />

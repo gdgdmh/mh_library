@@ -31,6 +31,9 @@
     <Filter Include="ソース ファイル\mh_library\test">
       <UniqueIdentifier>{3b4606ca-4150-4994-a268-d340cf0729ce}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\mh_library\exception">
+      <UniqueIdentifier>{b8c57225-53eb-4ab8-be3e-9562c2e9b4b4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mh_library\util\output\IOutputConsole.hpp">
@@ -48,6 +51,9 @@
     <ClInclude Include="mh_library\test\UnitTestBase.hpp">
       <Filter>ソース ファイル\mh_library\test</Filter>
     </ClInclude>
+    <ClInclude Include="mh_library\exception\UnitTestException.hpp">
+      <Filter>ソース ファイル\mh_library\exception</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mh_library\util\output\OutputConsole.cpp">
@@ -61,6 +67,9 @@
     </ClCompile>
     <ClCompile Include="mh_library\test\UnitTestBase.cpp">
       <Filter>ソース ファイル\mh_library\test</Filter>
+    </ClCompile>
+    <ClCompile Include="mh_library\exception\UnitTestException.cpp">
+      <Filter>ソース ファイル\mh_library\exception</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
