@@ -23,9 +23,8 @@ public:
 
   /**
    * 実行
-   * @return trueなら成功 falseなら失敗
    */
-  virtual bool Execute();
+  virtual void ExecuteUnitTest();
 
 protected:
 

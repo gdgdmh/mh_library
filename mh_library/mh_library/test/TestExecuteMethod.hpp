@@ -1,27 +1,40 @@
 ﻿#ifndef TEST_TESTEXECUTEMETHOD_HPP_
 #define TEST_TESTEXECUTEMETHOD_HPP_
 
+#include <memory>
+#include "../mh_library/test/UnitTestBase.hpp"
 #include "../mh_library/util/template/IExecuteMethod.hpp"
 
 namespace test {
 
 // メソッド実行テストクラス
-class TestExecuteMethod {
-
+class TestExecuteMethod : public mh_library::UnitTestBase {
 public:
   typedef mh_library::IExecuteMethod<test::TestExecuteMethod> MEB;
+  enum class SCENE {
+    kInitialize,
+    kLoad,
+    kMain
+  };
+
 public:
   /**
    * コンストラクタ
    */
-  TestExecuteMethod();
+  TestExecuteMethod(std::shared_ptr<mh_library::IOutputConsole> output_console);
 
   /**
    * デストラクタ
    */
   virtual ~TestExecuteMethod();
 
+  void Execute();
+
   void Task();
+
+  SCENE GetScene() {
+    return scene_;
+  }
 
 public:
 
@@ -33,6 +46,7 @@ public:
 
 private:
     mh_library::IExecuteMethod<test::TestExecuteMethod> on_exec_;
+    SCENE scene_;
     //MEB on_exec_;
 };
 

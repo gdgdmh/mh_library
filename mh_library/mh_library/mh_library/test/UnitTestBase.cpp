@@ -18,10 +18,8 @@ mh_library::UnitTestBase::~UnitTestBase() {
 
 /**
  * 実行
- * @return trueなら成功 falseなら失敗
  */
-bool mh_library::UnitTestBase::Execute() {
-  return true;
+void mh_library::UnitTestBase::ExecuteUnitTest() {
 }
 
 /**

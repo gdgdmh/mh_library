@@ -14,15 +14,19 @@ void mh_library::UnitTestExecuteList::Add(const std::shared_ptr<UnitTestBase>& u
   unit_test_list.push_back(unit_test);
 }
 
-void mh_library::UnitTestExecuteList::Execute() {
+bool mh_library::UnitTestExecuteList::Execute() {
   std::shared_ptr<IOutputConsole> console(new OutputConsole());
   try {
+    console->PrintLine("--- UnitTestExecuteList start ---------------------------");
     for (auto it = unit_test_list.begin(); it != unit_test_list.end(); ++it) {
-      (*it)->Execute();
+      (*it)->ExecuteUnitTest();
     }
   } catch (const mh_library::UnitTestException& e) {
     // 単体テスト失敗の例外
     console->PrintLine("UnitTestExecuteList::Execute failure");
     console->PrintLine(e.what());
+    return false;
   }
+  console->PrintLine("--- UnitTestExecuteList end -----------------------------");
+  return true;
 }

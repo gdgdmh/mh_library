@@ -17,7 +17,7 @@ public:
 
   void Add(const std::shared_ptr<UnitTestBase>& unit_test);
 
-  void Execute();
+  bool Execute();
 
 protected:
   std::list< std::shared_ptr<UnitTestBase> > unit_test_list;
