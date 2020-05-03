@@ -3,7 +3,7 @@
 
 #include <stdexcept>
 
-namespace mh_library {
+namespace mhl {
 
 // 渡された引数が無効、不正なときにスローされる例外クラス
 class ArgumentException : public std::runtime_error {

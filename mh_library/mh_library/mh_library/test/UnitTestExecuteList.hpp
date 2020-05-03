@@ -6,7 +6,7 @@
 
 #include "UnitTestBase.hpp"
 
-namespace mh_library {
+namespace mhl {
 
 // 単体テスト実行リストクラス
 class UnitTestExecuteList {

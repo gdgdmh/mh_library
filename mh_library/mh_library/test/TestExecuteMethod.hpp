@@ -8,9 +8,9 @@
 namespace test {
 
 // メソッド実行テストクラス
-class TestExecuteMethod : public mh_library::UnitTestBase {
+class TestExecuteMethod : public mhl::UnitTestBase {
 public:
-  typedef mh_library::IExecuteMethod<test::TestExecuteMethod> MEB;
+  typedef mhl::IExecuteMethod<test::TestExecuteMethod> MEB;
   enum class SCENE {
     kInitialize,
     kLoad,
@@ -21,7 +21,7 @@ public:
   /**
    * コンストラクタ
    */
-  TestExecuteMethod(std::shared_ptr<mh_library::IOutputConsole> output_console);
+  TestExecuteMethod(std::shared_ptr<mhl::IOutputConsole> output_console);
 
   /**
    * デストラクタ
@@ -38,16 +38,13 @@ public:
 
 public:
 
-  mh_library::IExecuteMethod<test::TestExecuteMethod> Initialize();
-
-  mh_library::IExecuteMethod<test::TestExecuteMethod> Load();
-
-  mh_library::IExecuteMethod<test::TestExecuteMethod> Main();
+  mhl::IExecuteMethod<test::TestExecuteMethod> Initialize();
+  mhl::IExecuteMethod<test::TestExecuteMethod> Load();
+  mhl::IExecuteMethod<test::TestExecuteMethod> Main();
 
 private:
-    mh_library::IExecuteMethod<test::TestExecuteMethod> on_exec_;
-    SCENE scene_;
-    //MEB on_exec_;
+  mhl::IExecuteMethod<test::TestExecuteMethod> on_exec_;
+  SCENE scene_;
 };
 
 }

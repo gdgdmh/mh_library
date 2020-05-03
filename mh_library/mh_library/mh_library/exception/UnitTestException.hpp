@@ -3,7 +3,7 @@
 
 #include <stdexcept>
 
-namespace mh_library {
+namespace mhl {
 
 // 使い方
 // std::shared_ptr<mh_library::IOutputConsole> console(new mh_library::OutputConsole());

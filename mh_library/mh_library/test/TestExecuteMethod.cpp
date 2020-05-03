@@ -3,7 +3,7 @@
 /**
  * コンストラクタ
  */
-test::TestExecuteMethod::TestExecuteMethod(std::shared_ptr<mh_library::IOutputConsole> output_console)
+test::TestExecuteMethod::TestExecuteMethod(std::shared_ptr<mhl::IOutputConsole> output_console)
   : UnitTestBase(output_console), on_exec_(&test::TestExecuteMethod::Initialize), scene_(SCENE::kInitialize) {
 }
 
@@ -29,17 +29,17 @@ void test::TestExecuteMethod::Task() {
   on_exec_ = on_exec_.executeMethod(this);
 }
 
-mh_library::IExecuteMethod<test::TestExecuteMethod> test::TestExecuteMethod::Initialize() {
+mhl::IExecuteMethod<test::TestExecuteMethod> test::TestExecuteMethod::Initialize() {
   scene_ = SCENE::kInitialize;
   return &test::TestExecuteMethod::Load;
 }
 
-mh_library::IExecuteMethod<test::TestExecuteMethod> test::TestExecuteMethod::Load() {
+mhl::IExecuteMethod<test::TestExecuteMethod> test::TestExecuteMethod::Load() {
   scene_ = SCENE::kLoad;
   return &test::TestExecuteMethod::Main;
 }
 
-mh_library::IExecuteMethod<test::TestExecuteMethod> test::TestExecuteMethod::Main() {
+mhl::IExecuteMethod<test::TestExecuteMethod> test::TestExecuteMethod::Main() {
   scene_ = SCENE::kMain;
   return &test::TestExecuteMethod::Main;
 }

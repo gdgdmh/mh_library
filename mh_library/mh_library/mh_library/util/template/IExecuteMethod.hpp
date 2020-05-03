@@ -3,7 +3,7 @@
 
 #include <string>
 
-namespace mh_library {
+namespace mhl {
 
 // メソッド実行インターフェースクラス
 template <typename T>

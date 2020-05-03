@@ -4,10 +4,10 @@
 #include <string>
 #include "IOutputConsole.hpp"
 
-namespace mh_library {
+namespace mhl {
 
 // コンソール出力クラス
-class OutputConsole : public mh_library::IOutputConsole {
+class OutputConsole : public mhl::IOutputConsole {
 public:
   /**
    * コンストラクタ

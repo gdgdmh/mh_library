@@ -3,7 +3,7 @@
 
 #include <string>
 
-namespace mh_library {
+namespace mhl {
 
 // コンソール出力のインターフェースクラス
 class IOutputConsole {
