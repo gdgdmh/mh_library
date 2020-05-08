@@ -19,22 +19,22 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="mh_library\exception\ArgumentException.hpp" />
-    <ClInclude Include="mh_library\exception\UnitTestException.hpp" />
-    <ClInclude Include="mh_library\test\UnitTestBase.hpp" />
-    <ClInclude Include="mh_library\test\UnitTestExecuteList.hpp" />
-    <ClInclude Include="mh_library\util\output\IOutputConsole.hpp" />
-    <ClInclude Include="mh_library\util\output\OutputConsole.hpp" />
-    <ClInclude Include="mh_library\util\string\StdStringFormatter.hpp" />
-    <ClInclude Include="mh_library\util\template\IExecuteMethod.hpp" />
+    <ClInclude Include="mhl\exception\ArgumentException.hpp" />
+    <ClInclude Include="mhl\exception\UnitTestException.hpp" />
+    <ClInclude Include="mhl\test\UnitTestBase.hpp" />
+    <ClInclude Include="mhl\test\UnitTestExecuteList.hpp" />
+    <ClInclude Include="mhl\util\output\IOutputConsole.hpp" />
+    <ClInclude Include="mhl\util\output\OutputConsole.hpp" />
+    <ClInclude Include="mhl\util\string\StdStringFormatter.hpp" />
+    <ClInclude Include="mhl\util\template\IExecuteMethod.hpp" />
     <ClInclude Include="test\TestExecuteMethod.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="mhl\exception\ArgumentException.cpp" />
+    <ClCompile Include="mhl\exception\UnitTestException.cpp" />
+    <ClCompile Include="mhl\test\UnitTestExecuteList.cpp" />
+    <ClCompile Include="mhl\util\output\OutputConsole.cpp" />
     <ClCompile Include="mh_library.cpp" />
-    <ClCompile Include="mh_library\exception\ArgumentException.cpp" />
-    <ClCompile Include="mh_library\exception\UnitTestException.cpp" />
-    <ClCompile Include="mh_library\test\UnitTestExecuteList.cpp" />
-    <ClCompile Include="mh_library\util\output\OutputConsole.cpp" />
     <ClCompile Include="test\TestExecuteMethod.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
