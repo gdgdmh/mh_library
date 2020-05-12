@@ -66,6 +66,15 @@
     <ClInclude Include="test\TestExecuteMethod.hpp">
       <Filter>ソース ファイル\test</Filter>
     </ClInclude>
+    <ClInclude Include="mhl\util\template\IObservable.hpp">
+      <Filter>ソース ファイル\mhl\util\template</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\util\template\Subject.hpp">
+      <Filter>ソース ファイル\mhl\util\template</Filter>
+    </ClInclude>
+    <ClInclude Include="test\TestSubject.hpp">
+      <Filter>ソース ファイル\test</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mhl\exception\ArgumentException.cpp">
@@ -84,6 +93,9 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="test\TestExecuteMethod.cpp">
+      <Filter>ソース ファイル\test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\TestSubject.cpp">
       <Filter>ソース ファイル\test</Filter>
     </ClCompile>
   </ItemGroup>
