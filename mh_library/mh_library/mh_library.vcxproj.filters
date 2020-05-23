@@ -75,6 +75,9 @@
     <ClInclude Include="test\TestSubject.hpp">
       <Filter>ソース ファイル\test</Filter>
     </ClInclude>
+    <ClInclude Include="test\TestCppNewFunctionTest.hpp">
+      <Filter>ソース ファイル\test</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mhl\exception\ArgumentException.cpp">
@@ -96,6 +99,9 @@
       <Filter>ソース ファイル\test</Filter>
     </ClCompile>
     <ClCompile Include="test\TestSubject.cpp">
+      <Filter>ソース ファイル\test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\TestCppNewFunctionTest.cpp">
       <Filter>ソース ファイル\test</Filter>
     </ClCompile>
   </ItemGroup>

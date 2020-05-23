@@ -29,6 +29,7 @@
     <ClInclude Include="mhl\util\template\IExecuteMethod.hpp" />
     <ClInclude Include="mhl\util\template\IObservable.hpp" />
     <ClInclude Include="mhl\util\template\Subject.hpp" />
+    <ClInclude Include="test\TestCppNewFunctionTest.hpp" />
     <ClInclude Include="test\TestExecuteMethod.hpp" />
     <ClInclude Include="test\TestSubject.hpp" />
   </ItemGroup>
@@ -38,6 +39,7 @@
     <ClCompile Include="mhl\test\UnitTestExecuteList.cpp" />
     <ClCompile Include="mhl\util\output\OutputConsole.cpp" />
     <ClCompile Include="mh_library.cpp" />
+    <ClCompile Include="test\TestCppNewFunctionTest.cpp" />
     <ClCompile Include="test\TestExecuteMethod.cpp" />
     <ClCompile Include="test\TestSubject.cpp" />
   </ItemGroup>
