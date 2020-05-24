@@ -6,6 +6,22 @@
 
 namespace test {
 
+  class TestEmplace {
+    public:
+    TestEmplace() : aaa(0), bbb(0) {
+    }
+    TestEmplace(int a, int b) : aaa(a), bbb(b) {
+    }
+    void Get(int& a, int& b) {
+      a = aaa;
+      b = bbb;
+    }
+
+    private:
+    int aaa;
+    int bbb;
+  };
+
 // C++機能テスト
 class TestCppNewFunctionTest : public mhl::UnitTestBase {
 public:
@@ -45,6 +61,21 @@ public:
    * 統一初期化記法case004
    */
   void TestUniformInitialization004();
+
+  /**
+   * emplaceメソッドテスト
+   */
+  void TestEmplace();
+
+  /**
+   * スマートポインタ
+   */
+  void TestSmartPointer();
+
+  /**
+   * 型エイリアス
+   */
+  void TestTypeAlias();
 };
 
 }

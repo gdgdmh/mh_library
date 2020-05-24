@@ -19,6 +19,9 @@ void test::TestCppNewFunctionTest::ExecuteUnitTest() {
   TestUniformInitialization002();
   TestUniformInitialization003();
   TestUniformInitialization004();
+  TestEmplace();
+  TestSmartPointer();
+  TestTypeAlias();
 }
 
 /**
@@ -77,4 +80,44 @@ void test::TestCppNewFunctionTest::TestUniformInitialization004() {
   std::vector<int> x = { VALUE1, VALUE2 };
   AssertEquals(x[0] == VALUE1, "TestCppNewFunctionTest::TestUniformInitialization003 x[0] not VALUE1");
   AssertEquals(x[1] == VALUE2, "TestCppNewFunctionTest::TestUniformInitialization003 x[1] not VALUE2");
+}
+
+/**
+ * emplaceメソッドテスト
+ */
+void test::TestCppNewFunctionTest::TestEmplace() {
+  const int VALUE1 = 1000;
+  const int VALUE2 = 2000;
+  std::vector<test::TestEmplace> vec;
+  vec.emplace_back(test::TestEmplace(VALUE1, VALUE2));
+  int a = 0, b = 0;
+  vec.at(0).Get(a, b);
+  AssertEquals(a == VALUE1, "TestCppNewFunctionTest::TestEmplace a not VALUE1");
+  AssertEquals(b == VALUE2, "TestCppNewFunctionTest::TestEmplace b not VALUE2");
+}
+
+/**
+ * スマートポインタ
+ */
+void test::TestCppNewFunctionTest::TestSmartPointer() {
+  const int VALUE1 = 10;
+  std::shared_ptr<int> smart_pointer(new int(VALUE1));
+  AssertEquals(smart_pointer.use_count() == 1, "TestCppNewFunctionTest::TestSmartPointer smart_pointer count not 1");
+  AssertEquals((*smart_pointer) == VALUE1, "TestCppNewFunctionTest::TestSmartPointer smart_pointer not VALUE1");
+
+  std::shared_ptr<int> smart_pointer2 = smart_pointer;
+  AssertEquals(smart_pointer.use_count() == 2, "TestCppNewFunctionTest::TestSmartPointer smart_pointer count not 2");
+  AssertEquals(smart_pointer2.use_count() == 2, "TestCppNewFunctionTest::TestSmartPointer smart_pointer2 count not 2");
+
+  AssertEquals((*smart_pointer) == VALUE1, "TestCppNewFunctionTest::TestSmartPointer smart_pointer not VALUE1");
+  AssertEquals((*smart_pointer2) == VALUE1, "TestCppNewFunctionTest::TestSmartPointer smart_pointer2 not VALUE1");
+}
+
+/**
+ * 型エイリアス
+ */
+void test::TestCppNewFunctionTest::TestTypeAlias() {
+  using SmartPointerInt = std::shared_ptr<int>;
+  SmartPointerInt si(new int(0));
+  AssertEquals((*si) == 0, "TestCppNewFunctionTest::TestTypeAlias si not 0");
 }
