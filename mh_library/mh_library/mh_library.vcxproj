@@ -31,6 +31,7 @@
     <ClInclude Include="mhl\util\template\Subject.hpp" />
     <ClInclude Include="test\TestCppNewFunctionTest.hpp" />
     <ClInclude Include="test\TestExecuteMethod.hpp" />
+    <ClInclude Include="test\TestInstanceOfTest.hpp" />
     <ClInclude Include="test\TestSubject.hpp" />
   </ItemGroup>
   <ItemGroup>
@@ -41,6 +42,7 @@
     <ClCompile Include="mh_library.cpp" />
     <ClCompile Include="test\TestCppNewFunctionTest.cpp" />
     <ClCompile Include="test\TestExecuteMethod.cpp" />
+    <ClCompile Include="test\TestInstanceOfTest.cpp" />
     <ClCompile Include="test\TestSubject.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

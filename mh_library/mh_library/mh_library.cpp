@@ -6,6 +6,7 @@
 #include "test/TestCppNewFunctionTest.hpp"
 #include "test/TestExecuteMethod.hpp"
 #include "test/TestSubject.hpp"
+#include "test/TestInstanceOfTest.hpp"
 
 int main() {
   mhl::UnitTestExecuteList list;
@@ -13,6 +14,7 @@ int main() {
   list.Add(std::shared_ptr<test::TestCppNewFunctionTest>(new test::TestCppNewFunctionTest(console)));
   list.Add(std::shared_ptr<test::TestExecuteMethod>(new test::TestExecuteMethod(console)));
   list.Add(std::shared_ptr<test::TestSubject>(new test::TestSubject(console)));
+  list.Add(std::shared_ptr<test::TestInstanceOfTest>(new test::TestInstanceOfTest(console)));
   if (!list.Execute()) {
       return 1;
   }
