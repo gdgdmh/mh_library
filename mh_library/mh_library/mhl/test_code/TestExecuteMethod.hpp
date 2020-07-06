@@ -1,5 +1,5 @@
-﻿#ifndef TEST_TESTEXECUTEMETHOD_HPP_
-#define TEST_TESTEXECUTEMETHOD_HPP_
+﻿#ifndef MHL_TEST_CODE_TESTEXECUTEMETHOD_HPP_
+#define MHL_TEST_CODE_TESTEXECUTEMETHOD_HPP_
 
 #include <memory>
 #include "../test/UnitTestBase.hpp"

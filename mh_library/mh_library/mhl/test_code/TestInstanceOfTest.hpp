@@ -1,5 +1,5 @@
-﻿#ifndef TEST_TESTINSTANCEOFTEST_HPP_
-#define TEST_TESTINSTANCEOFTEST_HPP_
+﻿#ifndef MHL_TEST_CODE_TESTINSTANCEOFTEST_HPP_
+#define MHL_TEST_CODE_TESTINSTANCEOFTEST_HPP_
 
 #include <memory>
 #include "../test/UnitTestBase.hpp"
