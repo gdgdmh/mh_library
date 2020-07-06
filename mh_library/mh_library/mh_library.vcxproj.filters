@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="ソース ファイル\test">
-      <UniqueIdentifier>{7fe1f537-37d0-4a9e-a9eb-3bc64dd3d9d0}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ソース ファイル\mhl">
       <UniqueIdentifier>{8e468bc4-e621-4c5f-bc35-5b408db5a3bc}</UniqueIdentifier>
     </Filter>
@@ -36,6 +33,9 @@
     </Filter>
     <Filter Include="ソース ファイル\mhl\exception">
       <UniqueIdentifier>{b8c57225-53eb-4ab8-be3e-9562c2e9b4b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\mhl\test_code">
+      <UniqueIdentifier>{15046ffb-d1fc-47f1-a451-b49f35313880}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -63,23 +63,23 @@
     <ClInclude Include="mhl\util\template\IExecuteMethod.hpp">
       <Filter>ソース ファイル\mhl\util\template</Filter>
     </ClInclude>
-    <ClInclude Include="test\TestExecuteMethod.hpp">
-      <Filter>ソース ファイル\test</Filter>
-    </ClInclude>
     <ClInclude Include="mhl\util\template\IObservable.hpp">
       <Filter>ソース ファイル\mhl\util\template</Filter>
     </ClInclude>
     <ClInclude Include="mhl\util\template\Subject.hpp">
       <Filter>ソース ファイル\mhl\util\template</Filter>
     </ClInclude>
-    <ClInclude Include="test\TestSubject.hpp">
-      <Filter>ソース ファイル\test</Filter>
+    <ClInclude Include="mhl\test_code\TestCppNewFunctionTest.hpp">
+      <Filter>ソース ファイル\mhl\test_code</Filter>
     </ClInclude>
-    <ClInclude Include="test\TestCppNewFunctionTest.hpp">
-      <Filter>ソース ファイル\test</Filter>
+    <ClInclude Include="mhl\test_code\TestExecuteMethod.hpp">
+      <Filter>ソース ファイル\mhl\test_code</Filter>
     </ClInclude>
-    <ClInclude Include="test\TestInstanceOfTest.hpp">
-      <Filter>ソース ファイル\test</Filter>
+    <ClInclude Include="mhl\test_code\TestInstanceOfTest.hpp">
+      <Filter>ソース ファイル\mhl\test_code</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\test_code\TestSubject.hpp">
+      <Filter>ソース ファイル\mhl\test_code</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -98,17 +98,17 @@
     <ClCompile Include="mh_library.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="test\TestExecuteMethod.cpp">
-      <Filter>ソース ファイル\test</Filter>
+    <ClCompile Include="mhl\test_code\TestCppNewFunctionTest.cpp">
+      <Filter>ソース ファイル\mhl\test_code</Filter>
     </ClCompile>
-    <ClCompile Include="test\TestSubject.cpp">
-      <Filter>ソース ファイル\test</Filter>
+    <ClCompile Include="mhl\test_code\TestExecuteMethod.cpp">
+      <Filter>ソース ファイル\mhl\test_code</Filter>
     </ClCompile>
-    <ClCompile Include="test\TestCppNewFunctionTest.cpp">
-      <Filter>ソース ファイル\test</Filter>
+    <ClCompile Include="mhl\test_code\TestInstanceOfTest.cpp">
+      <Filter>ソース ファイル\mhl\test_code</Filter>
     </ClCompile>
-    <ClCompile Include="test\TestInstanceOfTest.cpp">
-      <Filter>ソース ファイル\test</Filter>
+    <ClCompile Include="mhl\test_code\TestSubject.cpp">
+      <Filter>ソース ファイル\mhl\test_code</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

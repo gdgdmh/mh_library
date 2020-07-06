@@ -2,10 +2,10 @@
 #define TEST_TESTSUBJECT_HPP_
 
 #include <memory>
-#include "../mhl/test/UnitTestBase.hpp"
-#include "../mhl/util/template/IExecuteMethod.hpp"
-#include "../mhl/util/template/IObservable.hpp"
-#include "../mhl/util/template/Subject.hpp"
+#include "../test/UnitTestBase.hpp"
+#include "../util/template/IExecuteMethod.hpp"
+#include "../util/template/IObservable.hpp"
+#include "../util/template/Subject.hpp"
 
 namespace test {
 

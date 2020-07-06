@@ -4,10 +4,10 @@
 #include "mhl/test/UnitTestExecuteList.hpp"
 #include "mhl/util/output/IOutputConsole.hpp"
 #include "mhl/util/output/OutputConsole.hpp"
-#include "test/TestCppNewFunctionTest.hpp"
-#include "test/TestExecuteMethod.hpp"
-#include "test/TestInstanceOfTest.hpp"
-#include "test/TestSubject.hpp"
+#include "mhl/test_code/TestCppNewFunctionTest.hpp"
+#include "mhl/test_code/TestExecuteMethod.hpp"
+#include "mhl/test_code/TestInstanceOfTest.hpp"
+#include "mhl/test_code/TestSubject.hpp"
 
 int main() {
   mhl::UnitTestExecuteList list;

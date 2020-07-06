@@ -2,7 +2,7 @@
 #define TEST_TESTCPPNEWFUNCTIONTEST_HPP_
 
 #include <memory>
-#include "../mhl/test/UnitTestBase.hpp"
+#include "../test/UnitTestBase.hpp"
 
 namespace test {
 
