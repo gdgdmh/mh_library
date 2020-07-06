@@ -81,6 +81,9 @@
     <ClInclude Include="mhl\test_code\TestSubject.hpp">
       <Filter>ソース ファイル\mhl\test_code</Filter>
     </ClInclude>
+    <ClInclude Include="mhl\test_code\TestMhl.hpp">
+      <Filter>ソース ファイル\mhl\test_code</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mhl\exception\ArgumentException.cpp">
@@ -108,6 +111,9 @@
       <Filter>ソース ファイル\mhl\test_code</Filter>
     </ClCompile>
     <ClCompile Include="mhl\test_code\TestSubject.cpp">
+      <Filter>ソース ファイル\mhl\test_code</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\test_code\TestMhl.cpp">
       <Filter>ソース ファイル\mhl\test_code</Filter>
     </ClCompile>
   </ItemGroup>
