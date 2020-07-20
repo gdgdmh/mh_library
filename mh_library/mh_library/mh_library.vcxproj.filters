@@ -37,6 +37,9 @@
     <Filter Include="ソース ファイル\mhl\test_code">
       <UniqueIdentifier>{15046ffb-d1fc-47f1-a451-b49f35313880}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\mhl\scene">
+      <UniqueIdentifier>{c73fd3d9-4aa7-479b-94cf-9b115bdccbae}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mhl\exception\ArgumentException.hpp">
@@ -86,6 +89,9 @@
     </ClInclude>
     <ClInclude Include="mhl\util\output\DummyOutputConsole.hpp">
       <Filter>ソース ファイル\mhl\util\output</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\scene\ISceneable.hpp">
+      <Filter>ソース ファイル\mhl\scene</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
