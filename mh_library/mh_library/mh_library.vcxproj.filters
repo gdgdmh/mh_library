@@ -93,6 +93,12 @@
     <ClInclude Include="mhl\scene\ISceneable.hpp">
       <Filter>ソース ファイル\mhl\scene</Filter>
     </ClInclude>
+    <ClInclude Include="mhl\scene\SceneStack.hpp">
+      <Filter>ソース ファイル\mhl\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\test_code\TestSceneStack.hpp">
+      <Filter>ソース ファイル\mhl\test_code</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mhl\exception\ArgumentException.cpp">
@@ -127,6 +133,12 @@
     </ClCompile>
     <ClCompile Include="mhl\util\output\DummyOutputConsole.cpp">
       <Filter>ソース ファイル\mhl\util\output</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\scene\SceneStack.cpp">
+      <Filter>ソース ファイル\mhl\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\test_code\TestSceneStack.cpp">
+      <Filter>ソース ファイル\mhl\test_code</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
