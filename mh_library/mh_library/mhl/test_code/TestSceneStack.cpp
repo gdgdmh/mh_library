@@ -84,7 +84,7 @@ bool test::TestScene::IsUnderDraw() { return under_draw_; }
  * @brief このシーンがポップ処理をされる前に呼び出される
  *
  */
-void test::TestScene::EventPop() { ++call_event_swap_; }
+void test::TestScene::EventPop() { ++call_event_pop_; }
 
 /**
  * @brief このシーンの上にプッシュ処理をされる前に呼び出される
@@ -198,62 +198,149 @@ void test::TestSceneStack::TestInitializeCall() {
   mhl::SceneStack stack;
   std::shared_ptr<test::TestScene> test(new test::TestScene());
   AssertEquals(test->GetInitializeCall() == 0, "");
-  AssertEquals(test->GetReleaseCall() == 0, "");
-  AssertEquals(test->GetLoadCall() == 0, "");
-  AssertEquals(test->GetUpdateCall() == 0, "");
-  AssertEquals(test->GetDrawCall() == 0, "");
-  AssertEquals(test->GetEventPushCall() == 0, "");
-  AssertEquals(test->GetEventPopCall() == 0, "");
-  AssertEquals(test->GetEventSwapCall() == 0, "");
   stack.Push(test);
   AssertEquals(test->GetInitializeCall() == 1, "");
-  AssertEquals(test->GetReleaseCall() == 0, "");
-  AssertEquals(test->GetLoadCall() == 0, "");
-  AssertEquals(test->GetUpdateCall() == 0, "");
-  AssertEquals(test->GetDrawCall() == 0, "");
-  AssertEquals(test->GetEventPushCall() == 0, "");
-  AssertEquals(test->GetEventPopCall() == 0, "");
-  AssertEquals(test->GetEventSwapCall() == 0, "");
+  stack.Pop();
+  AssertEquals(test->GetInitializeCall() == 1, "");
 }
 
 /**
  * @brief Releaseコールのテスト
  *
  */
-void test::TestSceneStack::TestReleaseCall() {}
+void test::TestSceneStack::TestReleaseCall() {
+  mhl::SceneStack stack;
+  std::shared_ptr<test::TestScene> test(new test::TestScene());
+  AssertEquals(test->GetReleaseCall() == 0, "");
+  stack.Push(test);
+  AssertEquals(test->GetReleaseCall() == 0, "");
+  stack.Pop();
+  AssertEquals(test->GetReleaseCall() == 1, "");
+}
 
 /**
  * @brief Loadコールのテスト
  *
  */
-void test::TestSceneStack::TestLoadCall() {}
+void test::TestSceneStack::TestLoadCall() {
+  mhl::SceneStack stack;
+  std::shared_ptr<test::TestScene> test(new test::TestScene());
+  AssertEquals(test->GetLoadCall() == 0, "");
+  stack.Push(test);
+  AssertEquals(test->GetLoadCall() == 1, "");
+  stack.Pop();
+  AssertEquals(test->GetLoadCall() == 1, "");
+}
 
 /**
  * @brief Updateコールのテスト
  *
  */
-void test::TestSceneStack::TestUpdateCall() {}
+void test::TestSceneStack::TestUpdateCall() {
+  mhl::SceneStack stack;
+  std::shared_ptr<test::TestScene> test(new test::TestScene());
+  AssertEquals(test->GetUpdateCall() == 0, "");
+  stack.Push(test);
+  AssertEquals(test->GetUpdateCall() == 0, "");
+  stack.Update();
+  AssertEquals(test->GetUpdateCall() == 1, "");
+  stack.Pop();
+  AssertEquals(test->GetUpdateCall() == 1, "");
+}
 
 /**
  * @brief Drawコールのテスト
  *
  */
-void test::TestSceneStack::TestDrawCall() {}
+void test::TestSceneStack::TestDrawCall() {
+  mhl::SceneStack stack;
+  std::shared_ptr<test::TestScene> test(new test::TestScene());
+  AssertEquals(test->GetDrawCall() == 0, "");
+  stack.Push(test);
+  AssertEquals(test->GetDrawCall() == 0, "");
+  stack.Draw();
+  AssertEquals(test->GetDrawCall() == 1, "");
+  stack.Pop();
+  AssertEquals(test->GetDrawCall() == 1, "");
+}
 
 /**
  * @brief EventPushコールのテスト
  *
  */
-void test::TestSceneStack::TestEventPushCall() {}
+void test::TestSceneStack::TestEventPushCall() {
+  mhl::SceneStack stack;
+  std::shared_ptr<test::TestScene> test_first(new test::TestScene());
+  std::shared_ptr<test::TestScene> test(new test::TestScene());
+  AssertEquals(test_first->GetEventPushCall() == 0, "");
+  AssertEquals(test->GetEventPushCall() == 0, "");
+  stack.Push(test_first);
+  AssertEquals(test_first->GetEventPushCall() == 0, "");
+  AssertEquals(test->GetEventPushCall() == 0, "");
+  stack.Push(test);
+  AssertEquals(test_first->GetEventPushCall() == 1, "");
+  AssertEquals(test->GetEventPushCall() == 0, "");
+  stack.Update();
+  stack.Draw();
+  AssertEquals(test_first->GetEventPushCall() == 1, "");
+  AssertEquals(test->GetEventPushCall() == 0, "");
+  stack.Pop();
+  AssertEquals(test_first->GetEventPushCall() == 1, "");
+  AssertEquals(test->GetEventPushCall() == 0, "");
+  stack.Pop();
+  AssertEquals(test_first->GetEventPushCall() == 1, "");
+  AssertEquals(test->GetEventPushCall() == 0, "");
+}
 
 /**
  * @brief EventPopコールのテスト
  *
  */
-void test::TestSceneStack::TestEventPopCall() {}
+void test::TestSceneStack::TestEventPopCall() {
+  mhl::SceneStack stack;
+  std::shared_ptr<test::TestScene> test_first(new test::TestScene());
+  std::shared_ptr<test::TestScene> test(new test::TestScene());
+  AssertEquals(test_first->GetEventPopCall() == 0, "");
+  AssertEquals(test->GetEventPopCall() == 0, "");
+  stack.Push(test_first);
+  AssertEquals(test_first->GetEventPopCall() == 0, "");
+  AssertEquals(test->GetEventPopCall() == 0, "");
+  stack.Push(test);
+  AssertEquals(test_first->GetEventPopCall() == 0, "");
+  AssertEquals(test->GetEventPopCall() == 0, "");
+  stack.Update();
+  stack.Draw();
+  AssertEquals(test_first->GetEventPopCall() == 0, "");
+  AssertEquals(test->GetEventPopCall() == 0, "");
+  stack.Pop();
+  AssertEquals(test_first->GetEventPopCall() == 0, "");
+  AssertEquals(test->GetEventPopCall() == 1, "");
+  stack.Pop();
+  AssertEquals(test_first->GetEventPopCall() == 1, "");
+  AssertEquals(test->GetEventPopCall() == 1, "");
+}
 
 /**
  * @brief EventSwapコールのテスト
  *
  */
-void test::TestSceneStack::TestEventSwapCall() {}
+void test::TestSceneStack::TestEventSwapCall() {
+  mhl::SceneStack stack;
+  std::shared_ptr<test::TestScene> test_first(new test::TestScene());
+  std::shared_ptr<test::TestScene> test(new test::TestScene());
+  AssertEquals(test_first->GetEventSwapCall() == 0, "");
+  AssertEquals(test->GetEventSwapCall() == 0, "");
+  stack.Push(test_first);
+  AssertEquals(test_first->GetEventSwapCall() == 0, "");
+  AssertEquals(test->GetEventSwapCall() == 0, "");
+  stack.Update();
+  stack.Draw();
+  AssertEquals(test_first->GetEventSwapCall() == 0, "");
+  AssertEquals(test->GetEventSwapCall() == 0, "");
+  stack.Swap(test);
+  AssertEquals(test_first->GetEventSwapCall() == 1, "");
+  AssertEquals(test->GetEventSwapCall() == 0, "");
+  stack.Pop();
+  AssertEquals(test_first->GetEventSwapCall() == 1, "");
+  AssertEquals(test->GetEventSwapCall() == 0, "");
+}

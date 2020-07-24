@@ -43,7 +43,7 @@ class SceneStack {
    *
    * @param scene プッシュするシーン
    */
-  void Push(std::shared_ptr<ISceneable> scene);
+  void Push(const std::shared_ptr<mhl::ISceneable>& scene);
 
   /**
    * @brief シーンをスタックからポップする
@@ -62,10 +62,25 @@ class SceneStack {
    *
    * @param scene 切り替えるシーン
    */
-  void Swap(std::shared_ptr<ISceneable> scene);
+  void Swap(const std::shared_ptr<mhl::ISceneable>& scene);
 
  private:
-  std::list< std::shared_ptr<mhl::ISceneable> > stack_;
+  /**
+   * @brief シーンの初期化処理
+   *
+   * @param scene 対象のシーン
+   */
+  void InitializeScene(const std::shared_ptr<mhl::ISceneable>& scene);
+
+  /**
+   * @brief シーンの終了処理
+   *
+   * @param scene 対象のシーン
+   */
+  void EndScene(const std::shared_ptr<mhl::ISceneable>& scene);
+
+ private:
+  std::list<std::shared_ptr<mhl::ISceneable> > stack_;
 };
 
 }  // namespace mhl
