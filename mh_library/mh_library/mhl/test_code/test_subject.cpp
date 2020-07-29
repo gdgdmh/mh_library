@@ -1,4 +1,4 @@
-﻿#include "TestSubject.hpp"
+﻿#include "test_subject.hpp"
 
 /**
  * コンストラクタ

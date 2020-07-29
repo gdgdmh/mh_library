@@ -3,8 +3,8 @@
 
 #include <memory>
 
-#include "../scene/ISceneable.hpp"
-#include "../test/UnitTestBase.hpp"
+#include "../scene/isceneable.hpp"
+#include "../test/unittest_base.hpp"
 
 namespace test {
 

@@ -2,8 +2,8 @@
 #define MHL_TEST_CODE_TESTEXECUTEMETHOD_HPP_
 
 #include <memory>
-#include "../test/UnitTestBase.hpp"
-#include "../util/template/IExecuteMethod.hpp"
+#include "../test/unittest_base.hpp"
+#include "../util/template/iexecute_method.hpp"
 
 namespace test {
 

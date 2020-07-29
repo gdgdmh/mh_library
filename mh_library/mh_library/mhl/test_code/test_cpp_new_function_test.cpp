@@ -1,4 +1,4 @@
-﻿#include "TestCppNewFunctionTest.hpp"
+﻿#include "test_cpp_new_function_test.hpp"
 
 /**
  * コンストラクタ

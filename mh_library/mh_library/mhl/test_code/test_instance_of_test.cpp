@@ -1,5 +1,5 @@
 ﻿#include <list>
-#include "TestInstanceOfTest.hpp"
+#include "test_instance_of_test.hpp"
 
 
 /**

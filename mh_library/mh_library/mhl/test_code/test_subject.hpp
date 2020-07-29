@@ -3,10 +3,10 @@
 
 #include <memory>
 
-#include "../test/UnitTestBase.hpp"
-#include "../util/template/IExecuteMethod.hpp"
-#include "../util/template/IObservable.hpp"
-#include "../util/template/Subject.hpp"
+#include "../test/unittest_base.hpp"
+#include "../util/template/iexecute_method.hpp"
+#include "../util/template/iobservable.hpp"
+#include "../util/template/subject.hpp"
 
 namespace test {
 

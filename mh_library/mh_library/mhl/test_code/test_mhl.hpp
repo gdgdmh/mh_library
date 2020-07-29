@@ -3,7 +3,7 @@
 
 #include <memory>
 
-#include "../test/UnitTestBase.hpp"
+#include "../test/unittest_base.hpp"
 
 namespace test {
 

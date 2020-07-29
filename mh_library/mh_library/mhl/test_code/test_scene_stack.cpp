@@ -1,6 +1,6 @@
-﻿#include "TestSceneStack.hpp"
+﻿#include "test_scene_stack.hpp"
 
-#include "../scene/SceneStack.hpp"
+#include "../scene/scene_stack.hpp"
 
 test::TestScene::TestScene()
     : under_update_(false),
