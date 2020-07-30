@@ -8,6 +8,7 @@
 #include "test_instance_of_test.hpp"
 #include "test_scene_stack.hpp"
 #include "test_subject.hpp"
+#include "bit/test_bit_control_uint32.hpp"
 
 /**
  * コンストラクタ
@@ -31,6 +32,9 @@ void test::TestMhl::ExecuteUnitTest() {
   list.Add(std::shared_ptr<test::TestInstanceOfTest>(
       new test::TestInstanceOfTest(console)));
   list.Add(std::shared_ptr<test::TestSceneStack>(new test::TestSceneStack(console)));
+  // bit
+  list.Add(std::shared_ptr<test_code::TestBitControlUint32>(new test_code::TestBitControlUint32(console)));
+  // execute test
   if (!list.Execute()) {
     AssertEquals(false, "TestMhl::ExecuteUnitTest failure");
   }
