@@ -111,6 +111,9 @@
     <ClInclude Include="mhl\test_code\bit\test_bit_control_uint32.hpp">
       <Filter>ソース ファイル\mhl\test_code\bit</Filter>
     </ClInclude>
+    <ClInclude Include="mhl\test_code\test_callback_test.hpp">
+      <Filter>ソース ファイル\mhl\test_code</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mh_library.cpp">
@@ -157,6 +160,9 @@
     </ClCompile>
     <ClCompile Include="mhl\test_code\bit\test_bit_control_uint32.cpp">
       <Filter>ソース ファイル\mhl\test_code\bit</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\test_code\test_callback_test.cpp">
+      <Filter>ソース ファイル\mhl\test_code</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
