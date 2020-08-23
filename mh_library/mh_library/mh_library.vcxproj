@@ -27,6 +27,7 @@
     <ClInclude Include="mhl\test\unittest_base.hpp" />
     <ClInclude Include="mhl\test\unittest_execute_list.hpp" />
     <ClInclude Include="mhl\test_code\bit\test_bit_control_uint32.hpp" />
+    <ClInclude Include="mhl\test_code\test_binarytree_test.hpp" />
     <ClInclude Include="mhl\test_code\test_callback_test.hpp" />
     <ClInclude Include="mhl\test_code\test_cpp_new_function_test.hpp" />
     <ClInclude Include="mhl\test_code\test_execute_method.hpp" />
@@ -49,6 +50,7 @@
     <ClCompile Include="mhl\scene\scene_stack.cpp" />
     <ClCompile Include="mhl\test\unittest_execute_list.cpp" />
     <ClCompile Include="mhl\test_code\bit\test_bit_control_uint32.cpp" />
+    <ClCompile Include="mhl\test_code\test_binarytree_test.cpp" />
     <ClCompile Include="mhl\test_code\test_callback_test.cpp" />
     <ClCompile Include="mhl\test_code\test_cpp_new_function_test.cpp" />
     <ClCompile Include="mhl\test_code\test_execute_method.cpp" />
