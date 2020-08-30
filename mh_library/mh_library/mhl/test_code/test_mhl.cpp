@@ -9,6 +9,7 @@
 #include "test_scene_stack.hpp"
 #include "test_subject.hpp"
 #include "bit/test_bit_control_uint32.hpp"
+#include "test_binarytree_test.hpp"
 
 /**
  * コンストラクタ
@@ -34,6 +35,9 @@ void test::TestMhl::ExecuteUnitTest() {
   list.Add(std::shared_ptr<test::TestSceneStack>(new test::TestSceneStack(console)));
   // bit
   list.Add(std::shared_ptr<test_code::TestBitControlUint32>(new test_code::TestBitControlUint32(console)));
+
+  list.Add(std::shared_ptr<test::TestBinaryTest>(new test::TestBinaryTest(console)));
+
   // execute test
   if (!list.Execute()) {
     AssertEquals(false, "TestMhl::ExecuteUnitTest failure");

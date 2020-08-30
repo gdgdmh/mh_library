@@ -7,6 +7,30 @@
 
 namespace test {
 
+class TestBinaryClass {
+public:
+  /**
+   * @brief コンストラクタ
+   * 
+   */
+ TestBinaryClass(int id, const std::string& value) : id_(id), value_(value) {}
+
+  /**
+   * @brief デストラクタ
+   *
+   */
+  virtual ~TestBinaryClass() {}
+
+  void SetId(int id) { id_ = id; }
+  int GetId() const { return id_; }
+  void SetValue(const std::string& value) { value_ = value;}
+  const std::string& GetValue() const { return value_; }
+
+private:
+  int id_;
+  std::string value_;
+};
+
 // 2分木テスト
 class TestBinaryTest : public mhl::UnitTestBase {
  public:
@@ -21,6 +45,10 @@ class TestBinaryTest : public mhl::UnitTestBase {
   virtual ~TestBinaryTest();
 
   void ExecuteUnitTest();
+
+ private:
+  void TestIntTest();
+  void TestBinaryClassTest();
 };
 
 }  // namespace test
