@@ -10,6 +10,7 @@
 #include "test_subject.hpp"
 #include "bit/test_bit_control_uint32.hpp"
 #include "test_binarytree_test.hpp"
+#include "test_multithread_test.hpp"
 
 /**
  * コンストラクタ
@@ -38,6 +39,8 @@ void test::TestMhl::ExecuteUnitTest() {
 
   list.Add(std::shared_ptr<test::TestBinaryTest>(new test::TestBinaryTest(console)));
 
+  // できれば最後の実行したい()
+  list.Add(std::shared_ptr<test::TestMultithreadTest>(new test::TestMultithreadTest(console)));
   // execute test
   if (!list.Execute()) {
     AssertEquals(false, "TestMhl::ExecuteUnitTest failure");

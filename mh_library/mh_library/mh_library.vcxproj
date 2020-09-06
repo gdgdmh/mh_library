@@ -33,6 +33,7 @@
     <ClInclude Include="mhl\test_code\test_execute_method.hpp" />
     <ClInclude Include="mhl\test_code\test_instance_of_test.hpp" />
     <ClInclude Include="mhl\test_code\test_mhl.hpp" />
+    <ClInclude Include="mhl\test_code\test_multithread_test.hpp" />
     <ClInclude Include="mhl\test_code\test_scene_stack.hpp" />
     <ClInclude Include="mhl\test_code\test_subject.hpp" />
     <ClInclude Include="mhl\util\output\dummy_output_console.hpp" />
@@ -56,6 +57,7 @@
     <ClCompile Include="mhl\test_code\test_execute_method.cpp" />
     <ClCompile Include="mhl\test_code\test_instance_of_test.cpp" />
     <ClCompile Include="mhl\test_code\test_mhl.cpp" />
+    <ClCompile Include="mhl\test_code\test_multithread_test.cpp" />
     <ClCompile Include="mhl\test_code\test_scene_stack.cpp" />
     <ClCompile Include="mhl\test_code\test_subject.cpp" />
     <ClCompile Include="mhl\util\output\dummy_output_console.cpp" />

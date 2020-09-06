@@ -117,6 +117,9 @@
     <ClInclude Include="mhl\test_code\test_binarytree_test.hpp">
       <Filter>ソース ファイル\mhl\test_code</Filter>
     </ClInclude>
+    <ClInclude Include="mhl\test_code\test_multithread_test.hpp">
+      <Filter>ソース ファイル\mhl\test_code</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mh_library.cpp">
@@ -168,6 +171,9 @@
       <Filter>ソース ファイル\mhl\test_code</Filter>
     </ClCompile>
     <ClCompile Include="mhl\test_code\test_binarytree_test.cpp">
+      <Filter>ソース ファイル\mhl\test_code</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\test_code\test_multithread_test.cpp">
       <Filter>ソース ファイル\mhl\test_code</Filter>
     </ClCompile>
   </ItemGroup>
