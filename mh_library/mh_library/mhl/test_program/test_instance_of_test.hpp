@@ -4,7 +4,7 @@
 #include <memory>
 #include "../test/unittest_base.hpp"
 
-namespace test {
+namespace test_program {
 
 /**
  * @brief 攻撃インターフェース

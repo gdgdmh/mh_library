@@ -46,6 +46,9 @@
     <Filter Include="ソース ファイル\mhl\test_code\bit">
       <UniqueIdentifier>{39624075-7e9a-4221-8741-98f281e97c97}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\mhl\test_program">
+      <UniqueIdentifier>{34aecdb9-6313-463e-92d3-4a0361e47f0b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mhl\exception\argument_exception.hpp">
@@ -66,13 +69,7 @@
     <ClInclude Include="mhl\test\unittest_execute_list.hpp">
       <Filter>ソース ファイル\mhl\test</Filter>
     </ClInclude>
-    <ClInclude Include="mhl\test_code\test_cpp_new_function_test.hpp">
-      <Filter>ソース ファイル\mhl\test_code</Filter>
-    </ClInclude>
     <ClInclude Include="mhl\test_code\test_execute_method.hpp">
-      <Filter>ソース ファイル\mhl\test_code</Filter>
-    </ClInclude>
-    <ClInclude Include="mhl\test_code\test_instance_of_test.hpp">
       <Filter>ソース ファイル\mhl\test_code</Filter>
     </ClInclude>
     <ClInclude Include="mhl\test_code\test_mhl.hpp">
@@ -111,14 +108,20 @@
     <ClInclude Include="mhl\test_code\bit\test_bit_control_uint32.hpp">
       <Filter>ソース ファイル\mhl\test_code\bit</Filter>
     </ClInclude>
-    <ClInclude Include="mhl\test_code\test_callback_test.hpp">
-      <Filter>ソース ファイル\mhl\test_code</Filter>
+    <ClInclude Include="mhl\test_program\test_binarytree_test.hpp">
+      <Filter>ソース ファイル\mhl\test_program</Filter>
     </ClInclude>
-    <ClInclude Include="mhl\test_code\test_binarytree_test.hpp">
-      <Filter>ソース ファイル\mhl\test_code</Filter>
+    <ClInclude Include="mhl\test_program\test_callback_test.hpp">
+      <Filter>ソース ファイル\mhl\test_program</Filter>
     </ClInclude>
-    <ClInclude Include="mhl\test_code\test_multithread_test.hpp">
-      <Filter>ソース ファイル\mhl\test_code</Filter>
+    <ClInclude Include="mhl\test_program\test_cpp_new_function_test.hpp">
+      <Filter>ソース ファイル\mhl\test_program</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\test_program\test_instance_of_test.hpp">
+      <Filter>ソース ファイル\mhl\test_program</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\test_program\test_multithread_test.hpp">
+      <Filter>ソース ファイル\mhl\test_program</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -137,13 +140,7 @@
     <ClCompile Include="mhl\test\unittest_execute_list.cpp">
       <Filter>ソース ファイル\mhl\test</Filter>
     </ClCompile>
-    <ClCompile Include="mhl\test_code\test_cpp_new_function_test.cpp">
-      <Filter>ソース ファイル\mhl\test_code</Filter>
-    </ClCompile>
     <ClCompile Include="mhl\test_code\test_execute_method.cpp">
-      <Filter>ソース ファイル\mhl\test_code</Filter>
-    </ClCompile>
-    <ClCompile Include="mhl\test_code\test_instance_of_test.cpp">
       <Filter>ソース ファイル\mhl\test_code</Filter>
     </ClCompile>
     <ClCompile Include="mhl\test_code\test_mhl.cpp">
@@ -167,14 +164,20 @@
     <ClCompile Include="mhl\test_code\bit\test_bit_control_uint32.cpp">
       <Filter>ソース ファイル\mhl\test_code\bit</Filter>
     </ClCompile>
-    <ClCompile Include="mhl\test_code\test_callback_test.cpp">
-      <Filter>ソース ファイル\mhl\test_code</Filter>
+    <ClCompile Include="mhl\test_program\test_binarytree_test.cpp">
+      <Filter>ソース ファイル\mhl\test_program</Filter>
     </ClCompile>
-    <ClCompile Include="mhl\test_code\test_binarytree_test.cpp">
-      <Filter>ソース ファイル\mhl\test_code</Filter>
+    <ClCompile Include="mhl\test_program\test_callback_test.cpp">
+      <Filter>ソース ファイル\mhl\test_program</Filter>
     </ClCompile>
-    <ClCompile Include="mhl\test_code\test_multithread_test.cpp">
-      <Filter>ソース ファイル\mhl\test_code</Filter>
+    <ClCompile Include="mhl\test_program\test_cpp_new_function_test.cpp">
+      <Filter>ソース ファイル\mhl\test_program</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\test_program\test_instance_of_test.cpp">
+      <Filter>ソース ファイル\mhl\test_program</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\test_program\test_multithread_test.cpp">
+      <Filter>ソース ファイル\mhl\test_program</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

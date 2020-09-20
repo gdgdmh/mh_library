@@ -6,7 +6,7 @@
 #include "../scene/isceneable.hpp"
 #include "../test/unittest_base.hpp"
 
-namespace test {
+namespace test_code {
 
 class TestScene : public mhl::ISceneable {
  public:

@@ -5,17 +5,17 @@
 #include <thread>
 #include <vector>
 
-test::MultiThreadTestTask::MultiThreadTestTask(
+test_program::MultiThreadTestTask::MultiThreadTestTask(
     std::shared_ptr<mhl::IOutputConsole> output_console)
     : output_console_(output_console), id_(0), value_(0) {}
 
-test::MultiThreadTestTask::~MultiThreadTestTask() {}
+test_program::MultiThreadTestTask::~MultiThreadTestTask() {}
 
-void test::MultiThreadTestTask::Task1() {
+void test_program::MultiThreadTestTask::Task1() {
   Add();
   Print();
 }
-void test::MultiThreadTestTask::Task2() {
+void test_program::MultiThreadTestTask::Task2() {
     std::lock_guard<std::mutex> lock(mutex_);
     Add();
     Print();
@@ -25,16 +25,16 @@ void test::MultiThreadTestTask::Task2() {
 /**
  * コンストラクタ
  */
-test::TestMultithreadTest::TestMultithreadTest(
+test_program::TestMultithreadTest::TestMultithreadTest(
     std::shared_ptr<mhl::IOutputConsole> output_console)
     : UnitTestBase(output_console) {}
 
 /**
  * デストラクタ
  */
-test::TestMultithreadTest::~TestMultithreadTest() {}
+test_program::TestMultithreadTest::~TestMultithreadTest() {}
 
-void test::TestMultithreadTest::ExecuteUnitTest() {
+void test_program::TestMultithreadTest::ExecuteUnitTest() {
   MultiThreadTestTask mt(output_console_);
   std::vector<std::thread> ths(4);
   const int pattern = 0;

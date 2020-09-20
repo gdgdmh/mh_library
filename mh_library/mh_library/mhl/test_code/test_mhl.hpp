@@ -5,7 +5,7 @@
 
 #include "../test/unittest_base.hpp"
 
-namespace test {
+namespace test_code {
 
 // MHLテストクラス
 class TestMhl : public mhl::UnitTestBase {

@@ -6,21 +6,21 @@
 /**
  * コンストラクタ
  */
-test::TestBinaryTest::TestBinaryTest(
+test_program::TestBinaryTest::TestBinaryTest(
     std::shared_ptr<mhl::IOutputConsole> output_console)
     : UnitTestBase(output_console) {}
 
 /**
  * デストラクタ
  */
-test::TestBinaryTest::~TestBinaryTest() {}
+test_program::TestBinaryTest::~TestBinaryTest() {}
 
-void test::TestBinaryTest::ExecuteUnitTest() {
+void test_program::TestBinaryTest::ExecuteUnitTest() {
   TestIntTest();
   TestBinaryClassTest();
 }
 
-void test::TestBinaryTest::TestIntTest() {
+void test_program::TestBinaryTest::TestIntTest() {
   std::vector<int> v;
   for (int i = 0; i < 10; ++i) {
     v.push_back(i);
@@ -89,7 +89,7 @@ void test::TestBinaryTest::TestIntTest() {
   }
 }
 
-void test::TestBinaryTest::TestBinaryClassTest() {
+void test_program::TestBinaryTest::TestBinaryClassTest() {
   std::vector<TestBinaryClass> v;
   for (int i = 0; i < 10000; ++i) {
     TestBinaryClass t(i, mhl::StdStringFormatter::Format("%d", i));

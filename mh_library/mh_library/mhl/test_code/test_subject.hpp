@@ -8,7 +8,7 @@
 #include "../util/template/iobservable.hpp"
 #include "../util/template/subject.hpp"
 
-namespace test {
+namespace test_code {
 
 // テストのためのクラス
 class TestObserver : public mhl::IObservable {

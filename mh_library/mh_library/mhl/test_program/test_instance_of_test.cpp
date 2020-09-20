@@ -5,17 +5,17 @@
 /**
  * コンストラクタ
  */
-test::TestInstanceOfTest::TestInstanceOfTest(std::shared_ptr<mhl::IOutputConsole> output_console)
+test_program::TestInstanceOfTest::TestInstanceOfTest(
+    std::shared_ptr<mhl::IOutputConsole> output_console)
   : UnitTestBase(output_console) {
 }
 
 /**
  * デストラクタ
  */
-test::TestInstanceOfTest::~TestInstanceOfTest() {
-}
+test_program::TestInstanceOfTest::~TestInstanceOfTest() {}
 
-void test::TestInstanceOfTest::ExecuteUnitTest() {
+void test_program::TestInstanceOfTest::ExecuteUnitTest() {
 
   /*
   std::list<std::shared_ptr<Enemy> > enemys;

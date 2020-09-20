@@ -5,7 +5,7 @@
 
 #include "../test/unittest_base.hpp"
 
-namespace test {
+namespace test_program {
 
 class TestBinaryClass {
 public:
