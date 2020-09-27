@@ -29,13 +29,18 @@ void test_program::TestBinaryTest::TestIntTest() {
     // ソート済み配列が必須
     std::sort(v.begin(), v.end());
     // 5を探す
+    // 仕様として探せなくてもend以外で返ってくる可能性はある
     {
       {
         std::vector<int>::iterator lower_it =
             std::lower_bound(v.begin(), v.end(), 5);
-        std::string s =
-            mhl::StdStringFormatter::Format("low 5 find -> %d", (*lower_it));
-        output_console_->PrintLine(s);
+        if (lower_it != v.end() && (*lower_it) == 5) {
+          std::string s =
+              mhl::StdStringFormatter::Format("low 5 find -> %d", (*lower_it));
+          output_console_->PrintLine(s);
+        } else {
+          output_console_->PrintLine("low 5 find -> not found");
+        }
       }
     }
   }
@@ -83,6 +88,16 @@ void test_program::TestBinaryTest::TestIntTest() {
       if (it != v.end()) {
         std::string s =
             mhl::StdStringFormatter::Format("up 0 find -> %d", (*it));
+        output_console_->PrintLine(s);
+      }
+    }
+    // -1
+    // 仕様として探せなくてもend以外で返ってくる可能性はある
+    // このケースのときに発生する
+    {
+      std::vector<int>::iterator it = std::upper_bound(v.begin(), v.end(), -1);
+      if (it != v.end()) {
+        std::string s = mhl::StdStringFormatter::Format("up -1 find -> %d", (*it));
         output_console_->PrintLine(s);
       }
     }

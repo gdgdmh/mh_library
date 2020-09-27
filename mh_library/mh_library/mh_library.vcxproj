@@ -35,7 +35,9 @@
     <ClInclude Include="mhl\test_program\test_callback_test.hpp" />
     <ClInclude Include="mhl\test_program\test_cpp_new_function_test.hpp" />
     <ClInclude Include="mhl\test_program\test_instance_of_test.hpp" />
+    <ClInclude Include="mhl\test_program\test_mhl_test_program.hpp" />
     <ClInclude Include="mhl\test_program\test_multithread_test.hpp" />
+    <ClInclude Include="mhl\test_program\test_vector_test.hpp" />
     <ClInclude Include="mhl\util\output\dummy_output_console.hpp" />
     <ClInclude Include="mhl\util\output\ioutput_console.hpp" />
     <ClInclude Include="mhl\util\output\output_console.hpp" />
@@ -59,7 +61,9 @@
     <ClCompile Include="mhl\test_program\test_callback_test.cpp" />
     <ClCompile Include="mhl\test_program\test_cpp_new_function_test.cpp" />
     <ClCompile Include="mhl\test_program\test_instance_of_test.cpp" />
+    <ClCompile Include="mhl\test_program\test_mhl_test_program.cpp" />
     <ClCompile Include="mhl\test_program\test_multithread_test.cpp" />
+    <ClCompile Include="mhl\test_program\test_vector_test.cpp" />
     <ClCompile Include="mhl\util\output\dummy_output_console.cpp" />
     <ClCompile Include="mhl\util\output\output_console.cpp" />
     <ClCompile Include="mh_library.cpp" />
