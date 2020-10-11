@@ -7,6 +7,7 @@
 #include "../test_program/test_multithread_test.hpp"
 #include "../test_program/test_callback_test.hpp"
 #include "../test_program/test_vector_test.hpp"
+#include "../test_program/test_delegate_test.hpp"
 #include "../util/output/ioutput_console.hpp"
 #include "../util/output/output_console.hpp"
 
@@ -33,6 +34,7 @@ void test_program::TestMhlTestProgram::ExecuteUnitTest() {
       new test_program::TestBinaryTest(console)));
   list.Add(std::shared_ptr<test_program::TestVectorTest>(
   new test_program::TestVectorTest(console)));
+  list.Add(std::shared_ptr<test_program::TestDelegateTest>(new test_program::TestDelegateTest(console)));
   // できれば最後の実行したい(マルチスレッドが途中だと原因がわからなくなる可能性があるかもしれない)
   list.Add(std::shared_ptr<test_program::TestMultithreadTest>(
       new test_program::TestMultithreadTest(console)));
