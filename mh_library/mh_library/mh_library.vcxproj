@@ -37,6 +37,7 @@
     <ClInclude Include="mhl\test_program\test_delegate_test.hpp" />
     <ClInclude Include="mhl\test_program\test_instance_of_test.hpp" />
     <ClInclude Include="mhl\test_program\test_mhl_test_program.hpp" />
+    <ClInclude Include="mhl\test_program\test_move_test.hpp" />
     <ClInclude Include="mhl\test_program\test_multithread_test.hpp" />
     <ClInclude Include="mhl\test_program\test_vector_test.hpp" />
     <ClInclude Include="mhl\util\output\dummy_output_console.hpp" />
@@ -64,6 +65,7 @@
     <ClCompile Include="mhl\test_program\test_delegate_test.cpp" />
     <ClCompile Include="mhl\test_program\test_instance_of_test.cpp" />
     <ClCompile Include="mhl\test_program\test_mhl_test_program.cpp" />
+    <ClCompile Include="mhl\test_program\test_move_test.cpp" />
     <ClCompile Include="mhl\test_program\test_multithread_test.cpp" />
     <ClCompile Include="mhl\test_program\test_vector_test.cpp" />
     <ClCompile Include="mhl\util\output\dummy_output_console.cpp" />

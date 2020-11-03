@@ -132,6 +132,9 @@
     <ClInclude Include="mhl\test_program\test_delegate_test.hpp">
       <Filter>ソース ファイル\mhl\test_program</Filter>
     </ClInclude>
+    <ClInclude Include="mhl\test_program\test_move_test.hpp">
+      <Filter>ソース ファイル\mhl\test_program</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mh_library.cpp">
@@ -195,6 +198,9 @@
       <Filter>ソース ファイル\mhl\test_program</Filter>
     </ClCompile>
     <ClCompile Include="mhl\test_program\test_delegate_test.cpp">
+      <Filter>ソース ファイル\mhl\test_program</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\test_program\test_move_test.cpp">
       <Filter>ソース ファイル\mhl\test_program</Filter>
     </ClCompile>
   </ItemGroup>
