@@ -44,7 +44,7 @@ void test_code::TestDataCollection::ExecuteUnitTest() {
 
 void test_code::TestDataCollection::TestIntAdd1Data() {
   const int kValue = 9732;
-  const int kSize = 0;
+  const int kSize = 1;
   mhl::DataCollection<int> d;
   d.Add(kValue);
   AssertEquals(d.Size() == kSize, "");
