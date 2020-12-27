@@ -49,6 +49,12 @@
     <Filter Include="ソース ファイル\mhl\test_program">
       <UniqueIdentifier>{34aecdb9-6313-463e-92d3-4a0361e47f0b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\mhl\data">
+      <UniqueIdentifier>{870327e0-5d9d-4325-a05a-7bbd9fa26f60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\mhl\test_code\data">
+      <UniqueIdentifier>{402aac18-bb1c-4375-ac6d-acc6eaee0b4b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mhl\exception\argument_exception.hpp">
@@ -135,6 +141,12 @@
     <ClInclude Include="mhl\test_program\test_move_test.hpp">
       <Filter>ソース ファイル\mhl\test_program</Filter>
     </ClInclude>
+    <ClInclude Include="mhl\data\data_collection.hpp">
+      <Filter>ソース ファイル\mhl\data</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\test_code\data\test_data_collection.hpp">
+      <Filter>ソース ファイル\mhl\test_code\data</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mh_library.cpp">
@@ -202,6 +214,9 @@
     </ClCompile>
     <ClCompile Include="mhl\test_program\test_move_test.cpp">
       <Filter>ソース ファイル\mhl\test_program</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\test_code\data\test_data_collection.cpp">
+      <Filter>ソース ファイル\mhl\test_code\data</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

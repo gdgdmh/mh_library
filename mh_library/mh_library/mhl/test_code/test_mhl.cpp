@@ -7,6 +7,7 @@
 #include "test_scene_stack.hpp"
 #include "test_subject.hpp"
 #include "bit/test_bit_control_uint32.hpp"
+#include "data/test_data_collection.hpp"
 
 
 /**
@@ -23,6 +24,8 @@ test_code::TestMhl::~TestMhl() {}
 void test_code::TestMhl::ExecuteUnitTest() {
   mhl::UnitTestExecuteList list;
   std::shared_ptr<mhl::IOutputConsole> console(new mhl::OutputConsole());
+  list.Add(std::shared_ptr<test_code::TestDataCollection>(
+      new test_code::TestDataCollection(console)));
   list.Add(std::shared_ptr<test_code::TestExecuteMethod>(
       new test_code::TestExecuteMethod(console)));
   list.Add(std::shared_ptr<test_code::TestSubject>(
