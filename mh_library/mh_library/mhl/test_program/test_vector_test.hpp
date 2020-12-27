@@ -1,6 +1,7 @@
 ﻿#ifndef MHL_TEST_PROGRAM_TEST_VECTOR_TEST_HPP_
 #define MHL_TEST_PROGRAM_TEST_VECTOR_TEST_HPP_
 
+#include <stdint.h>
 #include <memory>
 
 #include "../test/unittest_base.hpp"
@@ -9,12 +10,12 @@ namespace test_program {
 
 class TestVectorData {
 public:
-  TestVectorData(int a, int b, int c);
+  TestVectorData(int32_t a, int32_t b, int32_t c);
 
 public:
-  int a_;
-  int b_;
-  int c_;
+  int32_t a_;
+  int32_t b_;
+  int32_t c_;
 
 };
 

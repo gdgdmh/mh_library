@@ -3,7 +3,7 @@
 #include <vector>
 #include <iterator>
 
-test_program::TestVectorData::TestVectorData(int a, int b, int c)
+test_program::TestVectorData::TestVectorData(int32_t a, int32_t b, int32_t c)
     : a_(a), b_(b), c_(c) {
 
 }
