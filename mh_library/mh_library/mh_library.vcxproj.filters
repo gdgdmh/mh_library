@@ -147,6 +147,9 @@
     <ClInclude Include="mhl\test_code\data\test_data_collection.hpp">
       <Filter>ソース ファイル\mhl\test_code\data</Filter>
     </ClInclude>
+    <ClInclude Include="mhl\test_program\test_fermat_test.hpp">
+      <Filter>ソース ファイル\mhl\test_program</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mh_library.cpp">
@@ -217,6 +220,9 @@
     </ClCompile>
     <ClCompile Include="mhl\test_code\data\test_data_collection.cpp">
       <Filter>ソース ファイル\mhl\test_code\data</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\test_program\test_fermat_test.cpp">
+      <Filter>ソース ファイル\mhl\test_program</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
