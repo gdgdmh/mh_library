@@ -1,5 +1,8 @@
 ﻿#include "test_mhl_test_program.hpp"
 
+#include "../util/output/ioutput_console.hpp"
+#include "../util/output/output_console.hpp"
+
 #include "../test/unittest_execute_list.hpp"
 #include "../test_program/test_binarytree_test.hpp"
 #include "../test_program/test_cpp_new_function_test.hpp"
@@ -10,8 +13,7 @@
 #include "../test_program/test_delegate_test.hpp"
 #include "../test_program/test_move_test.hpp"
 #include "../test_program/test_fermat_test.hpp"
-#include "../util/output/ioutput_console.hpp"
-#include "../util/output/output_console.hpp"
+#include "../test_program/test_route_search_test.hpp"
 
 /**
  * コンストラクタ
@@ -39,7 +41,8 @@ void test_program::TestMhlTestProgram::ExecuteUnitTest() {
   list.Add(std::shared_ptr<test_program::TestDelegateTest>(new test_program::TestDelegateTest(console)));
   list.Add(std::shared_ptr<test_program::TestMoveTest>(new test_program::TestMoveTest(console)));
   list.Add(std::shared_ptr<test_program::TestFermatTest>(new test_program::TestFermatTest(console)));
-  // できれば最後の実行したい(マルチスレッドが途中だと原因がわからなくなる可能性があるかもしれない)
+  list.Add(std::shared_ptr<test_program::TestRouteSearchTest>(new test_program::TestRouteSearchTest(console)));
+  // できればマルチスレッドは最後の実行したい(マルチスレッドが途中だと原因がわからなくなる可能性があるかもしれない)
   list.Add(std::shared_ptr<test_program::TestMultithreadTest>(
       new test_program::TestMultithreadTest(console)));
   // execute test
