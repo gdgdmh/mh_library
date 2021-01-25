@@ -21,6 +21,4 @@ test_program::TestRouteSearchTest::~TestRouteSearchTest() {}
  * @brief テスト実行
  *
  */
-void test_program::TestRouteSearchTest::ExecuteUnitTest() {
-
-}
+void test_program::TestRouteSearchTest::ExecuteUnitTest() {}

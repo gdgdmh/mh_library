@@ -10,17 +10,16 @@
 namespace test_program {
 
 // フィールド全体情報
-class Field {
-
-};
+class Field {};
 
 // フィールド情報
 class FieldType {
  public:
   enum class Type : int32_t {
-    kNone,  // 何もなし
-    kBlock, // ブロック
+    kNone,   // 何もなし
+    kBlock,  // ブロック
   };
+
  public:
   FieldType() : type_(Type::kNone) {}
   virtual ~FieldType() {}
@@ -38,9 +37,13 @@ class Position {
   Position() : x_(0), y_(0) {}
   virtual ~Position() {}
 
-  void SetPosition(int32_t x, int32_t y) { x_ = x; y_ = y; }
+  void SetPosition(int32_t x, int32_t y) {
+    x_ = x;
+    y_ = y;
+  }
   int32_t GetX() const { return x_; }
   int32_t GetY() const { return y_; }
+
  private:
   int32_t x_;
   int32_t y_;
@@ -50,15 +53,22 @@ class Position {
 class TestRouteSearchTest : public mhl::UnitTestBase {
  public:
   /**
-   * コンストラクタ
+   * @brief Construct a new Test Route Search Test object
+   *
+   * @param output_console コンソール出力クラス
    */
   TestRouteSearchTest(std::shared_ptr<mhl::IOutputConsole> output_console);
 
   /**
-   * デストラクタ
+   * @brief Destroy the Test Route Search Test object
+   *
    */
   virtual ~TestRouteSearchTest();
 
+  /**
+   * @brief テスト実行
+   *
+   */
   void ExecuteUnitTest();
 };
 
