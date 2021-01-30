@@ -21,4 +21,6 @@ test_program::TestRouteSearchTest::~TestRouteSearchTest() {}
  * @brief テスト実行
  *
  */
-void test_program::TestRouteSearchTest::ExecuteUnitTest() {}
+void test_program::TestRouteSearchTest::ExecuteUnitTest() {
+  field_.Initialize(5, 5);
+}
