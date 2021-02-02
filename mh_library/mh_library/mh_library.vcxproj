@@ -38,6 +38,7 @@
     <ClInclude Include="mhl\test_program\route_search\field_position.hpp" />
     <ClInclude Include="mhl\test_program\route_search\field_type.hpp" />
     <ClInclude Include="mhl\test_program\route_search\ifield_block_settable.hpp" />
+    <ClInclude Include="mhl\test_program\route_search\set_field_block_always.hpp" />
     <ClInclude Include="mhl\test_program\route_search\test_route_search_test.hpp" />
     <ClInclude Include="mhl\test_program\test_binarytree_test.hpp" />
     <ClInclude Include="mhl\test_program\test_callback_test.hpp" />
@@ -73,6 +74,7 @@
     <ClCompile Include="mhl\test_program\route_search\field_info.cpp" />
     <ClCompile Include="mhl\test_program\route_search\field_position.cpp" />
     <ClCompile Include="mhl\test_program\route_search\field_type.cpp" />
+    <ClCompile Include="mhl\test_program\route_search\set_field_block_always.cpp" />
     <ClCompile Include="mhl\test_program\route_search\test_route_search_test.cpp" />
     <ClCompile Include="mhl\test_program\test_binarytree_test.cpp" />
     <ClCompile Include="mhl\test_program\test_callback_test.cpp" />

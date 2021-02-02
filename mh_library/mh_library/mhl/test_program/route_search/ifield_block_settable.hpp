@@ -1,5 +1,5 @@
-﻿#ifndef MHL_TEST_PROGRAM_ROUTE_SEARCH_IFIELD_BLOCK_CHANGEABLE_HPP_
-#define MHL_TEST_PROGRAM_ROUTE_SEARCH_IFIELD_BLOCK_CHANGEABLE_HPP_
+﻿#ifndef MHL_TEST_PROGRAM_ROUTE_SEARCH_IFIELD_BLOCK_SETTABLE_HPP_
+#define MHL_TEST_PROGRAM_ROUTE_SEARCH_IFIELD_BLOCK_SETTABLE_HPP_
 
 #include <stdint.h>
 
@@ -12,19 +12,19 @@ namespace test_program {
 namespace route_search {
 
 /**
- * @brief フィールドにブロックを変更(設定)するIFクラス
+ * @brief フィールドにブロックを設定するIFクラス
  *
  */
 class IFieldBlockSettable {
  public:
   /**
-   * @brief Destroy the IFieldBlockChangeable object
+   * @brief Destroy the IFieldBlockSettable object
    *
    */
   virtual ~IFieldBlockSettable() {}
 
   /**
-   * @brief フィールドのブロック
+   * @brief フィールドのブロックを設定する
    *
    * @param field
    */
@@ -35,4 +35,4 @@ class IFieldBlockSettable {
 
 }  // namespace test_program
 
-#endif  // MHL_TEST_PROGRAM_ROUTE_SEARCH_IFIELD_BLOCK_CHANGEABLE_HPP_
+#endif  // MHL_TEST_PROGRAM_ROUTE_SEARCH_IFIELD_BLOCK_SETTABLE_HPP_

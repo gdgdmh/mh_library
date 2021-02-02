@@ -171,6 +171,9 @@
     <ClInclude Include="mhl\test_program\route_search\ifield_block_settable.hpp">
       <Filter>ソース ファイル\mhl\test_program\route_search</Filter>
     </ClInclude>
+    <ClInclude Include="mhl\test_program\route_search\set_field_block_always.hpp">
+      <Filter>ソース ファイル\mhl\test_program\route_search</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mh_library.cpp">
@@ -258,6 +261,9 @@
       <Filter>ソース ファイル\mhl\test_program\route_search</Filter>
     </ClCompile>
     <ClCompile Include="mhl\test_program\route_search\field.cpp">
+      <Filter>ソース ファイル\mhl\test_program\route_search</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\test_program\route_search\set_field_block_always.cpp">
       <Filter>ソース ファイル\mhl\test_program\route_search</Filter>
     </ClCompile>
   </ItemGroup>
