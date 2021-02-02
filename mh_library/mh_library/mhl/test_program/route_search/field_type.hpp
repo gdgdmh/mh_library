@@ -19,30 +19,48 @@ class FieldType {
   };
 
  public:
-  FieldType() : type_(Type::kNone) {}
-  FieldType(const Type& type) : type_(type) {}
-  virtual ~FieldType() {}
+  /**
+   * @brief Construct a new Field Type object
+   *
+   */
+  FieldType();
 
+  /**
+   * @brief Construct a new Field Type object
+   *
+   * @param type フィールドのタイプ
+   */
+  FieldType(const Type& type);
+
+  /**
+   * @brief Destroy the Field Type object
+   *
+   */
+  virtual ~FieldType();
+
+  /**
+   * @brief Set the Type object
+   *
+   * @param type タイプ
+   */
   void SetType(Type type) { type_ = type; }
+
+  /**
+   * @brief Get the Type object
+   *
+   * @return Type タイプ
+   */
   Type GetType() const { return type_; }
 
-  std::string ToString() const {
-    std::string s = "";
-    switch (type_) {
-      case FieldType::Type::kNone:
-        s = " ";
-        break;
-      case FieldType::Type::kBlock:
-        s = "B";
-        break;
-      default:
-        break;
-    }
-    return s;
-  }
+  /**
+   * @brief タイプを文字列で返す
+   *
+   * @return std::string 文字列
+   */
+  std::string ToString() const;
 
  private:
-  Type type_;
+  Type type_;  // タイプ
 };
 
 }  // namespace route_search
