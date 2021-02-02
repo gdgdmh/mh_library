@@ -15,15 +15,53 @@ namespace route_search {
 // 1つのフィールドに対する情報
 class FieldInfo {
  public:
-  FieldInfo() : type_(), position_() {}
-  FieldInfo(const test_program::route_search::FieldType& type,
-            const test_program::route_search::FieldPosition& position)
-      : type_(type), position_(position) {}
-  virtual ~FieldInfo() {}
+  /**
+   * @brief Construct a new Field Info object
+   *
+   */
+  FieldInfo();
 
+  /**
+   * @brief Construct a new Field Info object
+   *
+   * @param type フィールドのタイプ
+   * @param position フィールドの位置
+   */
+  FieldInfo(const test_program::route_search::FieldType& type,
+            const test_program::route_search::FieldPosition& position);
+
+  /**
+   * @brief Destroy the Field Info object
+   *
+   */
+  virtual ~FieldInfo();
+
+  /**
+   * @brief Set the Type object
+   *
+   * @param type フィールドのタイプ
+   */
   void SetType(const FieldType& type) { type_ = type; }
+
+  /**
+   * @brief Set the Position object
+   *
+   * @param position フィールドの位置
+   */
   void SetPosition(const FieldPosition& position) { position_ = position; }
+
+  /**
+   * @brief Get the Type object
+   *
+   * @return const FieldType& フィールドのタイプ
+   */
   const FieldType& GetType() const { return type_; }
+
+  /**
+   * @brief Get the Position object
+   *
+   * @return const FieldPosition& フィールドの位置
+   */
   const FieldPosition& GetPosition() const { return position_; }
 
  private:
