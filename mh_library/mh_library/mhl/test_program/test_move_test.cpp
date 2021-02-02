@@ -6,7 +6,7 @@
  * @param output_console
  */
 test_program::TestMoveDummy::TestMoveDummy(
-    std::shared_ptr<mhl::IOutputConsole>& output_console) {
+    std::shared_ptr<mhl::output::console::IOutputConsole>& output_console) {
   output_console_ = output_console;
   output_console_->PrintLine("TestMoveDummy Constructor");
 }
@@ -15,7 +15,7 @@ test_program::TestMoveDummy::TestMoveDummy(
  * コンストラクタ
  */
 test_program::TestMoveTest::TestMoveTest(
-    std::shared_ptr<mhl::IOutputConsole> output_console)
+    std::shared_ptr<mhl::output::console::IOutputConsole> output_console)
     : UnitTestBase(output_console) {}
 
 /**

@@ -25,7 +25,7 @@ class TestVectorTest : public mhl::UnitTestBase {
   /**
    * コンストラクタ
    */
-  TestVectorTest(std::shared_ptr<mhl::IOutputConsole> output_console);
+  TestVectorTest(std::shared_ptr<mhl::output::console::IOutputConsole> output_console);
 
   /**
    * デストラクタ

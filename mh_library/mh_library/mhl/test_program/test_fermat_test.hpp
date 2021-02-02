@@ -15,7 +15,8 @@ class TestFermatTest : public mhl::UnitTestBase {
   /**
    * コンストラクタ
    */
-  TestFermatTest(std::shared_ptr<mhl::IOutputConsole> output_console);
+  TestFermatTest(
+      std::shared_ptr<mhl::output::console::IOutputConsole> output_console);
 
   /**
    * デストラクタ

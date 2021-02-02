@@ -13,7 +13,8 @@ class TestBitControlUint32 : public mhl::UnitTestBase {
   /**
    * コンストラクタ
    */
-  TestBitControlUint32(std::shared_ptr<mhl::IOutputConsole> output_console);
+  TestBitControlUint32(
+      std::shared_ptr<mhl::output::console::IOutputConsole> output_console);
 
   /**
    * デストラクタ

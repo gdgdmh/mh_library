@@ -174,7 +174,8 @@ class TestSceneStack : public mhl::UnitTestBase {
    *
    * @param output_console 出力クラス
    */
-  TestSceneStack(std::shared_ptr<mhl::IOutputConsole> output_console);
+  TestSceneStack(
+      std::shared_ptr<mhl::output::console::IOutputConsole> output_console);
 
   /**
    * @brief Destroy the Test Scene Stack object

@@ -10,7 +10,7 @@ namespace test_program {
 
 class MultiThreadTestTask {
  public:
-  MultiThreadTestTask(std::shared_ptr<mhl::IOutputConsole> output_console);
+  MultiThreadTestTask(std::shared_ptr<mhl::output::console::IOutputConsole> output_console);
   virtual ~MultiThreadTestTask();
 
   void SetId(int id) { id_ = id; }
@@ -22,7 +22,7 @@ class MultiThreadTestTask {
   void Task2();
 
  private:
-  std::shared_ptr<mhl::IOutputConsole> output_console_;
+  std::shared_ptr<mhl::output::console::IOutputConsole> output_console_;
   std::mutex mutex_;
   int id_;
   int value_;
@@ -34,7 +34,7 @@ class TestMultithreadTest : public mhl::UnitTestBase {
   /**
    * コンストラクタ
    */
-  TestMultithreadTest(std::shared_ptr<mhl::IOutputConsole> output_console);
+  TestMultithreadTest(std::shared_ptr<mhl::output::console::IOutputConsole> output_console);
 
   /**
    * デストラクタ

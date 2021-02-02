@@ -15,7 +15,7 @@ class TestDog {
    *
    * @param output_console
    */
-  TestDog(std::shared_ptr<mhl::IOutputConsole> output_console)
+  TestDog(std::shared_ptr<mhl::output::console::IOutputConsole> output_console)
       : console(output_console) {}
 
   /**
@@ -28,7 +28,8 @@ class TestDog {
   }
 
  private:
-  std::shared_ptr<mhl::IOutputConsole> console;  // コンソール出力
+  std::shared_ptr<mhl::output::console::IOutputConsole>
+      console;  // コンソール出力
 };
 
 class TestCat {
@@ -38,7 +39,7 @@ class TestCat {
    *
    * @param output_console コンソール出力
    */
-  TestCat(std::shared_ptr<mhl::IOutputConsole> output_console)
+  TestCat(std::shared_ptr<mhl::output::console::IOutputConsole> output_console)
       : console(output_console) {}
   /**
    * @brief 鳴くクラス
@@ -50,7 +51,8 @@ class TestCat {
   }
 
  private:
-  std::shared_ptr<mhl::IOutputConsole> console;  // コンソール出力
+  std::shared_ptr<mhl::output::console::IOutputConsole>
+      console;  // コンソール出力
 };
 
 /**
@@ -116,7 +118,8 @@ class TestTukuroDelegate : public TestTukuroDelegateBase {
  */
 class TestTukuroDoorBell {
  public:
-  TestTukuroDoorBell(std::shared_ptr<mhl::IOutputConsole> output_console)
+  TestTukuroDoorBell(
+      std::shared_ptr<mhl::output::console::IOutputConsole> output_console)
       : console(output_console) {}
 
   /**
@@ -140,7 +143,7 @@ class TestTukuroDoorBell {
   }
 
  private:
-  std::shared_ptr<mhl::IOutputConsole> console;
+  std::shared_ptr<mhl::output::console::IOutputConsole> console;
   std::vector<std::shared_ptr<TestTukuroDelegateBase> > events;
 };
 
@@ -153,7 +156,8 @@ class TestDelegateTest : public mhl::UnitTestBase {
   /**
    * コンストラクタ
    */
-  TestDelegateTest(std::shared_ptr<mhl::IOutputConsole> output_console);
+  TestDelegateTest(
+      std::shared_ptr<mhl::output::console::IOutputConsole> output_console);
 
   /**
    * デストラクタ

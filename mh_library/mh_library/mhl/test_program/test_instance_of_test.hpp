@@ -12,7 +12,8 @@ namespace test_program {
 class IAttack {
 public:
   virtual ~IAttack() {}
-  virtual void Attack(std::shared_ptr<mhl::IOutputConsole> output_console) = 0;
+ virtual void Attack(
+     std::shared_ptr<mhl::output::console::IOutputConsole> output_console) = 0;
 };
 
 /**
@@ -21,7 +22,8 @@ public:
 class ISkillAttack {
 public:
   virtual ~ISkillAttack() {}
-  virtual void SkillAttack(std::shared_ptr<mhl::IOutputConsole> output_console) = 0;
+ virtual void SkillAttack(
+     std::shared_ptr<mhl::output::console::IOutputConsole> output_console) = 0;
 };
 
 /**
@@ -32,7 +34,7 @@ public:
   Enemy() : hp_(0) {
   }
 
-  virtual void Attack(std::shared_ptr<mhl::IOutputConsole> output_console) {
+  virtual void Attack(std::shared_ptr<mhl::output::console::IOutputConsole> output_console) {
     output_console->PrintLine("Enemy Attack");
   }
 
@@ -49,11 +51,11 @@ public:
   LightEnemy() {
   }
   
-  void Attack(std::shared_ptr<mhl::IOutputConsole> output_console) {
+  void Attack(std::shared_ptr<mhl::output::console::IOutputConsole> output_console) {
     output_console->PrintLine("LightEnemy Attack");
   }
 
-  void SkillAttack(std::shared_ptr<mhl::IOutputConsole> output_console) {
+  void SkillAttack(std::shared_ptr<mhl::output::console::IOutputConsole> output_console) {
     output_console->PrintLine("LightEnemy SkillAttack");
   }
 };
@@ -67,7 +69,7 @@ public:
   DarkEnemy() {
   }
 
-  void Attack(std::shared_ptr<mhl::IOutputConsole> output_console) {
+  void Attack(std::shared_ptr<mhl::output::console::IOutputConsole> output_console) {
     output_console->PrintLine("dark attack");
   }
 };
@@ -84,7 +86,7 @@ public:
   /**
    * コンストラクタ
    */
-  TestInstanceOfTest(std::shared_ptr<mhl::IOutputConsole> output_console);
+  TestInstanceOfTest(std::shared_ptr<mhl::output::console::IOutputConsole> output_console);
 
   /**
    * デストラクタ

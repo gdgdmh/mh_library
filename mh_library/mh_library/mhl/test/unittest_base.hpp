@@ -5,7 +5,7 @@
 #include <string>
 
 #include "../exception/unittest_exception.hpp"
-#include "../util/output/ioutput_console.hpp"
+#include "../output/console/ioutput_console.hpp"
 #include "../util/string/std_string_formatter.hpp"
 
 namespace mhl {
@@ -54,7 +54,7 @@ class UnitTestBase {
    * コンストラクタ
    * @param outputConsole コンソール出力クラス
    */
-  UnitTestBase(std::shared_ptr<mhl::IOutputConsole> output_console)
+  UnitTestBase(std::shared_ptr<mhl::output::console::IOutputConsole> output_console)
       : output_console_(output_console) {}
 
   /**
@@ -68,7 +68,8 @@ class UnitTestBase {
   virtual void ExecuteUnitTest() = 0;
 
  protected:
-  std::shared_ptr<mhl::IOutputConsole> output_console_;  // コンソール出力
+  std::shared_ptr<mhl::output::console::IOutputConsole>
+      output_console_;  // コンソール出力
 };
 
 }  // namespace mhl

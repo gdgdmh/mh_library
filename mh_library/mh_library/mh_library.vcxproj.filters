@@ -19,9 +19,6 @@
     <Filter Include="ソース ファイル\mhl\util">
       <UniqueIdentifier>{1a35acb6-56cb-42f7-983f-d6eedd3fe8bb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\mhl\util\output">
-      <UniqueIdentifier>{77c7115f-5b34-4d8b-9528-c7bba844c596}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ソース ファイル\mhl\util\template">
       <UniqueIdentifier>{1ccf713f-32c1-452b-bbce-c4a990a93cba}</UniqueIdentifier>
     </Filter>
@@ -58,6 +55,12 @@
     <Filter Include="ソース ファイル\mhl\test_program\route_search">
       <UniqueIdentifier>{e490adbe-a671-44d9-9c89-61f2c4165597}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\mhl\output">
+      <UniqueIdentifier>{c6a9c1bd-a321-49a2-a11a-6137ec841de5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\mhl\output\console">
+      <UniqueIdentifier>{d6de1722-178e-46c2-8776-7665402c3fa3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mhl\exception\argument_exception.hpp">
@@ -89,15 +92,6 @@
     </ClInclude>
     <ClInclude Include="mhl\test_code\test_subject.hpp">
       <Filter>ソース ファイル\mhl\test_code</Filter>
-    </ClInclude>
-    <ClInclude Include="mhl\util\output\dummy_output_console.hpp">
-      <Filter>ソース ファイル\mhl\util\output</Filter>
-    </ClInclude>
-    <ClInclude Include="mhl\util\output\ioutput_console.hpp">
-      <Filter>ソース ファイル\mhl\util\output</Filter>
-    </ClInclude>
-    <ClInclude Include="mhl\util\output\output_console.hpp">
-      <Filter>ソース ファイル\mhl\util\output</Filter>
     </ClInclude>
     <ClInclude Include="mhl\util\string\std_string_formatter.hpp">
       <Filter>ソース ファイル\mhl\util\string</Filter>
@@ -174,6 +168,15 @@
     <ClInclude Include="mhl\test_program\route_search\set_field_block_always.hpp">
       <Filter>ソース ファイル\mhl\test_program\route_search</Filter>
     </ClInclude>
+    <ClInclude Include="mhl\output\console\dummy_output_console.hpp">
+      <Filter>ソース ファイル\mhl\output\console</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\output\console\ioutput_console.hpp">
+      <Filter>ソース ファイル\mhl\output\console</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\output\console\output_console.hpp">
+      <Filter>ソース ファイル\mhl\output\console</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mh_library.cpp">
@@ -202,12 +205,6 @@
     </ClCompile>
     <ClCompile Include="mhl\test_code\test_subject.cpp">
       <Filter>ソース ファイル\mhl\test_code</Filter>
-    </ClCompile>
-    <ClCompile Include="mhl\util\output\dummy_output_console.cpp">
-      <Filter>ソース ファイル\mhl\util\output</Filter>
-    </ClCompile>
-    <ClCompile Include="mhl\util\output\output_console.cpp">
-      <Filter>ソース ファイル\mhl\util\output</Filter>
     </ClCompile>
     <ClCompile Include="mhl\bit\bit_control_uint32.cpp">
       <Filter>ソース ファイル\mhl\bit</Filter>
@@ -265,6 +262,12 @@
     </ClCompile>
     <ClCompile Include="mhl\test_program\route_search\set_field_block_always.cpp">
       <Filter>ソース ファイル\mhl\test_program\route_search</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\output\console\dummy_output_console.cpp">
+      <Filter>ソース ファイル\mhl\output\console</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\output\console\output_console.cpp">
+      <Filter>ソース ファイル\mhl\output\console</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

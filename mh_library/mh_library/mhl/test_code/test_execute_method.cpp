@@ -4,7 +4,7 @@
  * コンストラクタ
  */
 test_code::TestExecuteMethod::TestExecuteMethod(
-    std::shared_ptr<mhl::IOutputConsole> output_console)
+    std::shared_ptr<mhl::output::console::IOutputConsole> output_console)
     : UnitTestBase(output_console),
       on_exec_(&test_code::TestExecuteMethod::Initialize),
       scene_(SCENE::kInitialize) {}

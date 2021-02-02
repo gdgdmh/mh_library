@@ -1,5 +1,5 @@
-﻿#ifndef MHL_UTIL_OUTPUT_OUTPUTCONSOLE_HPP_
-#define MHL_UTIL_OUTPUT_OUTPUTCONSOLE_HPP_
+﻿#ifndef MHL_OUTPUT_CONSOLE_OUTPUTCONSOLE_HPP_
+#define MHL_OUTPUT_CONSOLE_OUTPUTCONSOLE_HPP_
 
 #include <string>
 
@@ -7,8 +7,12 @@
 
 namespace mhl {
 
+namespace output {
+
+namespace console {
+
 // コンソール出力クラス
-class OutputConsole : public mhl::IOutputConsole {
+class OutputConsole : public mhl::output::console::IOutputConsole {
  public:
   /**
    * コンストラクタ
@@ -31,6 +35,10 @@ class OutputConsole : public mhl::IOutputConsole {
   void PrintLine(std::string string);
 };
 
+}  // namespace console
+
+}  // namespace output
+
 }  // namespace mhl
 
-#endif  // MH_LIBRARY_UTIL_OUTPUT_OUTPUTCONSOLE_HPP_
+#endif  // MHL_OUTPUT_CONSOLE_OUTPUTCONSOLE_HPP_

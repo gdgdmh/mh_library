@@ -5,19 +5,19 @@
 /**
  * コンストラクタ
  */
-mhl::DummyOutputConsole::DummyOutputConsole() {}
+mhl::output::console::DummyOutputConsole::DummyOutputConsole() {}
 
 /**
  * デストラクタ
  */
-mhl::DummyOutputConsole::~DummyOutputConsole() {}
+mhl::output::console::DummyOutputConsole::~DummyOutputConsole() {}
 
 /**
  * 文字列を出力する(ダミーなので出力はしない)
  */
-void mhl::DummyOutputConsole::Print(std::string string) {}
+void mhl::output::console::DummyOutputConsole::Print(std::string string) {}
 
 /**
  * 改行付き文字列を出力する(ダミーなので出力はしない)
  */
-void mhl::DummyOutputConsole::PrintLine(std::string string) {}
+void mhl::output::console::DummyOutputConsole::PrintLine(std::string string) {}

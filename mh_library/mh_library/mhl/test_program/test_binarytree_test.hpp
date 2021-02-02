@@ -37,7 +37,8 @@ class TestBinaryTest : public mhl::UnitTestBase {
   /**
    * コンストラクタ
    */
-  TestBinaryTest(std::shared_ptr<mhl::IOutputConsole> output_console);
+  TestBinaryTest(
+      std::shared_ptr<mhl::output::console::IOutputConsole> output_console);
 
   /**
    * デストラクタ

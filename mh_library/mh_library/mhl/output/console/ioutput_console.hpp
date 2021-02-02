@@ -1,9 +1,13 @@
-﻿#ifndef MHL_TEST_CODE_UTIL_OUTPUT_IOUTPUTCONSOLE_HPP_
-#define MHL_TEST_CODE_UTIL_OUTPUT_IOUTPUTCONSOLE_HPP_
+﻿#ifndef MHL_OUTPUT_CONSOLE_IOUTPUTCONSOLE_HPP_
+#define MHL_OUTPUT_CONSOLE_IOUTPUTCONSOLE_HPP_
 
 #include <string>
 
 namespace mhl {
+
+namespace output {
+
+namespace console {
 
 // コンソール出力のインターフェースクラス
 class IOutputConsole {
@@ -24,6 +28,10 @@ class IOutputConsole {
   virtual void PrintLine(std::string string) = 0;
 };
 
+}  // namespace console
+
+}  // namespace output
+
 }  // namespace mhl
 
-#endif  // MH_LIBRARY_UTIL_OUTPUT_IOUTPUTCONSOLE_HPP_
+#endif  // MHL_OUTPUT_CONSOLE_IOUTPUTCONSOLE_HPP_

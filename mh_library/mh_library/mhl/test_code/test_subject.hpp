@@ -29,7 +29,8 @@ class TestSubject : public mhl::UnitTestBase {
   /**
    * コンストラクタ
    */
-  TestSubject(std::shared_ptr<mhl::IOutputConsole> output_console);
+  TestSubject(
+      std::shared_ptr<mhl::output::console::IOutputConsole> output_console);
 
   /**
    * デストラクタ

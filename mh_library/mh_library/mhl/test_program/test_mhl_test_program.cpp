@@ -1,7 +1,7 @@
 ﻿#include "test_mhl_test_program.hpp"
 
-#include "../util/output/ioutput_console.hpp"
-#include "../util/output/output_console.hpp"
+#include "../output/console/ioutput_console.hpp"
+#include "../output/console/output_console.hpp"
 
 #include "../test/unittest_execute_list.hpp"
 #include "../test_program/test_binarytree_test.hpp"
@@ -19,7 +19,7 @@
  * コンストラクタ
  */
 test_program::TestMhlTestProgram::TestMhlTestProgram(
-    std::shared_ptr<mhl::IOutputConsole> output_console)
+    std::shared_ptr<mhl::output::console::IOutputConsole> output_console)
     : UnitTestBase(output_console) {}
 
 /**
@@ -30,7 +30,8 @@ test_program::TestMhlTestProgram::~TestMhlTestProgram() {}
 void test_program::TestMhlTestProgram::ExecuteUnitTest() {
   using namespace test_program;
   mhl::UnitTestExecuteList list;
-  std::shared_ptr<mhl::IOutputConsole> console(new mhl::OutputConsole());
+  std::shared_ptr<mhl::output::console::IOutputConsole> console(
+      new mhl::output::console::OutputConsole());
   list.Add(std::shared_ptr<TestCppNewFunctionTest>(
       new TestCppNewFunctionTest(console)));
   list.Add(std::shared_ptr<TestInstanceOfTest>(

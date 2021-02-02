@@ -166,7 +166,7 @@ int test_code::TestScene::GetEventSwapCall() { return call_event_swap_; }
  * @param output_console 出力クラス
  */
 test_code::TestSceneStack::TestSceneStack(
-    std::shared_ptr<mhl::IOutputConsole> output_console)
+    std::shared_ptr<mhl::output::console::IOutputConsole> output_console)
     : mhl::UnitTestBase(output_console) {}
 
 /**

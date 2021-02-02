@@ -13,7 +13,8 @@ class TestDataCollection : public mhl::UnitTestBase {
   /**
    * コンストラクタ
    */
-  TestDataCollection(std::shared_ptr<mhl::IOutputConsole> output_console);
+  TestDataCollection(
+      std::shared_ptr<mhl::output::console::IOutputConsole> output_console);
 
   /**
    * デストラクタ
