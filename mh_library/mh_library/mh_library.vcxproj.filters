@@ -156,6 +156,21 @@
     <ClInclude Include="mhl\test_program\route_search\test_route_search_test.hpp">
       <Filter>ソース ファイル\mhl\test_program\route_search</Filter>
     </ClInclude>
+    <ClInclude Include="mhl\test_program\route_search\field_type.hpp">
+      <Filter>ソース ファイル\mhl\test_program\route_search</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\test_program\route_search\field_position.hpp">
+      <Filter>ソース ファイル\mhl\test_program\route_search</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\test_program\route_search\field_info.hpp">
+      <Filter>ソース ファイル\mhl\test_program\route_search</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\test_program\route_search\ifield_block_changeable.hpp">
+      <Filter>ソース ファイル\mhl\test_program\route_search</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\test_program\route_search\field.hpp">
+      <Filter>ソース ファイル\mhl\test_program\route_search</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mh_library.cpp">
@@ -231,6 +246,18 @@
       <Filter>ソース ファイル\mhl\test_program</Filter>
     </ClCompile>
     <ClCompile Include="mhl\test_program\route_search\test_route_search_test.cpp">
+      <Filter>ソース ファイル\mhl\test_program\route_search</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\test_program\route_search\field_type.cpp">
+      <Filter>ソース ファイル\mhl\test_program\route_search</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\test_program\route_search\field_position.cpp">
+      <Filter>ソース ファイル\mhl\test_program\route_search</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\test_program\route_search\field_info.cpp">
+      <Filter>ソース ファイル\mhl\test_program\route_search</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\test_program\route_search\field.cpp">
       <Filter>ソース ファイル\mhl\test_program\route_search</Filter>
     </ClCompile>
   </ItemGroup>
