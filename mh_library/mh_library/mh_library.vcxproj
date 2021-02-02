@@ -37,7 +37,7 @@
     <ClInclude Include="mhl\test_program\route_search\field_info.hpp" />
     <ClInclude Include="mhl\test_program\route_search\field_position.hpp" />
     <ClInclude Include="mhl\test_program\route_search\field_type.hpp" />
-    <ClInclude Include="mhl\test_program\route_search\ifield_block_changeable.hpp" />
+    <ClInclude Include="mhl\test_program\route_search\ifield_block_settable.hpp" />
     <ClInclude Include="mhl\test_program\route_search\test_route_search_test.hpp" />
     <ClInclude Include="mhl\test_program\test_binarytree_test.hpp" />
     <ClInclude Include="mhl\test_program\test_callback_test.hpp" />

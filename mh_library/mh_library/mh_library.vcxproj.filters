@@ -165,10 +165,10 @@
     <ClInclude Include="mhl\test_program\route_search\field_info.hpp">
       <Filter>ソース ファイル\mhl\test_program\route_search</Filter>
     </ClInclude>
-    <ClInclude Include="mhl\test_program\route_search\ifield_block_changeable.hpp">
+    <ClInclude Include="mhl\test_program\route_search\field.hpp">
       <Filter>ソース ファイル\mhl\test_program\route_search</Filter>
     </ClInclude>
-    <ClInclude Include="mhl\test_program\route_search\field.hpp">
+    <ClInclude Include="mhl\test_program\route_search\ifield_block_settable.hpp">
       <Filter>ソース ファイル\mhl\test_program\route_search</Filter>
     </ClInclude>
   </ItemGroup>
