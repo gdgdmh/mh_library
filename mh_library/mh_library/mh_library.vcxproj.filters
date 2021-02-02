@@ -55,6 +55,9 @@
     <Filter Include="ソース ファイル\mhl\test_code\data">
       <UniqueIdentifier>{402aac18-bb1c-4375-ac6d-acc6eaee0b4b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\mhl\test_program\route_search">
+      <UniqueIdentifier>{e490adbe-a671-44d9-9c89-61f2c4165597}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mhl\exception\argument_exception.hpp">
@@ -150,8 +153,8 @@
     <ClInclude Include="mhl\test_program\test_fermat_test.hpp">
       <Filter>ソース ファイル\mhl\test_program</Filter>
     </ClInclude>
-    <ClInclude Include="mhl\test_program\test_route_search_test.hpp">
-      <Filter>ソース ファイル\mhl\test_program</Filter>
+    <ClInclude Include="mhl\test_program\route_search\test_route_search_test.hpp">
+      <Filter>ソース ファイル\mhl\test_program\route_search</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -227,8 +230,8 @@
     <ClCompile Include="mhl\test_program\test_fermat_test.cpp">
       <Filter>ソース ファイル\mhl\test_program</Filter>
     </ClCompile>
-    <ClCompile Include="mhl\test_program\test_route_search_test.cpp">
-      <Filter>ソース ファイル\mhl\test_program</Filter>
+    <ClCompile Include="mhl\test_program\route_search\test_route_search_test.cpp">
+      <Filter>ソース ファイル\mhl\test_program\route_search</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

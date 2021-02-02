@@ -1,13 +1,15 @@
-﻿#ifndef MHL_TEST_PROGRAM_TEST_ROUTE_SEARCH_TEST_HPP_
-#define MHL_TEST_PROGRAM_TEST_ROUTE_SEARCH_TEST_HPP_
+﻿#ifndef MHL_TEST_PROGRAM_ROUTE_SEARCH_TEST_ROUTE_SEARCH_TEST_HPP_
+#define MHL_TEST_PROGRAM_ROUTE_SEARCH_TEST_ROUTE_SEARCH_TEST_HPP_
 
 #include <stdint.h>
 
 #include <memory>
 
-#include "../test/unittest_base.hpp"
+#include "../../test/unittest_base.hpp"
 
 namespace test_program {
+
+namespace route_search {
 
 // フィールド情報
 class FieldType {
@@ -81,6 +83,12 @@ class FieldInfo {
   FieldPosition position_;
 };
 
+// ブロックフィールド追加IF
+class IFieldBlockChangeable {
+public:
+  virtual ~IFieldBlockChangeable() {}
+};
+
 // フィールド全体情報
 class Field {
  public:
@@ -119,7 +127,7 @@ class Field {
     for (size_t y = 0; y < yLength; ++y) {
       auto& yInfo = field_[y];
       for (size_t x = 0; x < yInfo.size(); ++x) {
-        yInfo[x].SetPosition(test_program::FieldPosition(
+        yInfo[x].SetPosition(test_program::route_search::FieldPosition(
             static_cast<int32_t>(x), static_cast<int32_t>(y)));
       }
     }
@@ -131,7 +139,7 @@ class Field {
       auto& yInfo = field_[y];
       for (size_t x = 0; x < yInfo.size(); ++x) {
         yInfo[x].SetType(
-            test_program::FieldType(test_program::FieldType::Type::kNone));
+            test_program::route_search::FieldType(test_program::route_search::FieldType::Type::kNone));
       }
     }
   }
@@ -164,6 +172,8 @@ class TestRouteSearchTest : public mhl::UnitTestBase {
  private:
   Field field_;
 };
+
+} // namespace route_search
 
 }  // namespace test_program
 
