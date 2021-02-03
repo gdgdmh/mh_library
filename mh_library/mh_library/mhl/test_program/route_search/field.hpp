@@ -38,6 +38,15 @@ class Field {
   void Print(const std::shared_ptr<mhl::output::console::IOutputConsole>&
                  output_console);
 
+  /**
+   * @brief フィールド情報の設定
+   *
+   * @param info 設定するフィールド情報
+   * @param x 設定する位置X
+   * @param y 設定する位置Y
+   */
+  void SetFieldInfo(const FieldInfo& info, int32_t x, int32_t y);
+
  private:
   /**
    * @brief 位置を設定

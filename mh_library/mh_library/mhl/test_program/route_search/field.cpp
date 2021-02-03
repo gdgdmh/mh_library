@@ -42,6 +42,18 @@ void test_program::route_search::Field::Print(
 }
 
 /**
+ * @brief フィールド情報の設定
+ *
+ * @param info 設定するフィールド情報
+ * @param x 設定する位置X
+ * @param y 設定する位置Y
+ */
+void test_program::route_search::Field::SetFieldInfo(const FieldInfo& info,
+                                                     int32_t x, int32_t y) {
+  field_.at(y).at(x).Set(info);
+}
+
+/**
  * @brief 位置を設定
  *
  */

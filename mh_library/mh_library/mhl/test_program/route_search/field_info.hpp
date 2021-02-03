@@ -37,6 +37,13 @@ class FieldInfo {
   virtual ~FieldInfo();
 
   /**
+   * @brief フィールド情報を設定
+   *
+   * @param info 設定するフィールド情報
+   */
+  void Set(const FieldInfo& info);
+
+  /**
    * @brief Set the Type object
    *
    * @param type フィールドのタイプ
