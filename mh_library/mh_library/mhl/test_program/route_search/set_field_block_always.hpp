@@ -35,7 +35,7 @@ class SetFieldBlockAlways : public IFieldBlockSettable {
    *
    * @param field
    */
-  void SetBlock(test_program::route_search::FieldType& field);
+  void SetBlock(test_program::route_search::Field& field) override;
 };
 
 }  // namespace route_search

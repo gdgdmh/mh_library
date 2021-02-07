@@ -28,7 +28,7 @@ class IFieldBlockSettable {
    *
    * @param field
    */
-  virtual void SetBlock(test_program::route_search::FieldType& field) = 0;
+  virtual void SetBlock(test_program::route_search::Field& field) = 0;
 };
 
 }  // namespace route_search

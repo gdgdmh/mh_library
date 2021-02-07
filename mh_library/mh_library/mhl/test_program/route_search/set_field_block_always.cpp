@@ -18,4 +18,10 @@ test_program::route_search::SetFieldBlockAlways::~SetFieldBlockAlways() {}
  * @param field
  */
 void test_program::route_search::SetFieldBlockAlways::SetBlock(
-    test_program::route_search::FieldType& field) {}
+    test_program::route_search::Field& field) {
+  /*
+  size_t sizeX = ;
+  for (int32_t i = 0; i < ; ++i) {
+  }
+  */
+}

@@ -7,6 +7,7 @@
 
 #include "../../test/unittest_base.hpp"
 #include "field.hpp"
+#include "ifield_block_settable.hpp"
 
 namespace test_program {
 
@@ -36,6 +37,7 @@ class TestRouteSearchTest : public mhl::UnitTestBase {
 
  private:
   Field field_;
+  std::unique_ptr<test_program::route_search::IFieldBlockSettable> block_set_;
 };
 
 }  // namespace route_search

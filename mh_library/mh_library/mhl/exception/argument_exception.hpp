@@ -5,6 +5,8 @@
 
 namespace mhl {
 
+namespace exception {
+
 // 渡された引数が無効、不正なときにスローされる例外クラス
 class ArgumentException : public std::runtime_error {
  public:
@@ -17,6 +19,8 @@ class ArgumentException : public std::runtime_error {
  private:
   int error_code_;  // エラーコード情報
 };
+
+}  // namespace exception
 
 }  // namespace mhl
 

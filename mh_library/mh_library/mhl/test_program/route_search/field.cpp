@@ -54,6 +54,30 @@ void test_program::route_search::Field::SetFieldInfo(const FieldInfo& info,
 }
 
 /**
+ * @brief フィールド情報の取得()
+ *
+ * @param x 取得するフィールドの位置X
+ * @param y 取得するフィールドの位置Y
+ * @return const FieldInfo& フィールド情報
+ */
+const test_program::route_search::FieldInfo&
+test_program::route_search::Field::GetFieldInfo(int32_t x, int32_t y) const {
+  return field_.at(y).at(x);
+}
+
+/**
+ * @brief Get the Field Size object
+ *
+ * @param x
+ * @param y
+ */
+void test_program::route_search::Field::GetFieldSize(size_t& x,
+                                                     size_t& y) const {
+  y = field_.size();
+  x = field_.at(y - 1).size();
+}
+
+/**
  * @brief 位置を設定
  *
  */

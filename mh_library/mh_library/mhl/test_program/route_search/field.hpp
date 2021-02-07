@@ -47,6 +47,23 @@ class Field {
    */
   void SetFieldInfo(const FieldInfo& info, int32_t x, int32_t y);
 
+  /**
+   * @brief フィールド情報の取得()
+   *
+   * @param x 取得するフィールドの位置X
+   * @param y 取得するフィールドの位置Y
+   * @return const FieldInfo& フィールド情報
+   */
+  const FieldInfo& GetFieldInfo(int32_t x, int32_t y) const;
+
+  /**
+   * @brief Get the Field Size object
+   *
+   * @param x
+   * @param y
+   */
+  void GetFieldSize(size_t& x, size_t& y) const;
+
  private:
   /**
    * @brief 位置を設定
