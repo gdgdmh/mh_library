@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="test.cpp" />
+    <ClCompile Include="test_bit_control_uint32.cpp">
+      <Filter>mh_library_gtest</Filter>
+    </ClCompile>
+    <ClCompile Include="a_pch.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="mh_library_gtest">
+      <UniqueIdentifier>{c0dc81b3-7837-44be-8be3-8fb763feaed5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="a_pch.h" />
+  </ItemGroup>
+</Project>
