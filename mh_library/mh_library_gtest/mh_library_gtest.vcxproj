@@ -43,7 +43,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="test_bit_control_uint32.cpp" />
+    <ClCompile Include="gt_mhl_bit_control_uint32.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\mh_library\mh_library.vcxproj">
