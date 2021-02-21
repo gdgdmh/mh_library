@@ -153,6 +153,10 @@ TEST(BitControlUint32, BitOff11BitMulti) {
   EXPECT_EQ(b.Get(), 0);
 }
 
+/**
+ * @brief 0ビット目のtoggleテスト
+ *
+ */
 TEST(BitControlUint32, BitToggle0Bit) {
   const uint32_t BIT = 0;
   mhl::BitControlUint32 b;
@@ -162,6 +166,10 @@ TEST(BitControlUint32, BitToggle0Bit) {
   EXPECT_EQ(b.Get(), 0);
 }
 
+/**
+ * @brief 1ビット目のtoggleテスト
+ *
+ */
 TEST(BitControlUint32, BitToggle1Bit) {
   const uint32_t BIT = 1;
   mhl::BitControlUint32 b;
@@ -171,6 +179,10 @@ TEST(BitControlUint32, BitToggle1Bit) {
   EXPECT_EQ(b.Get(), 0);
 }
 
+/**
+ * @brief 8ビット目のtoggleテスト
+ *
+ */
 TEST(BitControlUint32, BitToggle8Bit) {
   const uint32_t BIT = 8;
   mhl::BitControlUint32 b;
@@ -180,6 +192,10 @@ TEST(BitControlUint32, BitToggle8Bit) {
   EXPECT_EQ(b.Get(), 0);
 }
 
+/**
+ * @brief 31ビット目のtoggleテスト
+ *
+ */
 TEST(BitControlUint32, BitToggle31Bit) {
   const uint32_t BIT = 31;
   mhl::BitControlUint32 b;
@@ -189,62 +205,95 @@ TEST(BitControlUint32, BitToggle31Bit) {
   EXPECT_EQ(b.Get(), 0);
 }
 
-TEST(BitControlUint32, GetZero) {}
-
-/*
-
-void test_code::TestBitControlUint32::TestGetZero() {
-  mhl::BitControlUint32 b(0);
-  AssertEquals(b.Get() == 0, "");
+/**
+ * @brief 0の値取得テスト
+ *
+ */
+TEST(BitControlUint32, GetZero) {
+  const uint32_t VALUE = 0;
+  mhl::BitControlUint32 b(VALUE);
+  EXPECT_EQ(b.Get(), VALUE);
 }
 
-void test_code::TestBitControlUint32::TestGet122() {
+/**
+ * @brief 122の値取得テスト
+ *
+ */
+TEST(BitControlUint32, Get122) {
   const uint32_t VALUE = 122;
   mhl::BitControlUint32 b(VALUE);
-  AssertEquals(b.Get() == VALUE, "");
+  EXPECT_EQ(b.Get(), VALUE);
 }
 
-void test_code::TestBitControlUint32::TestGet12345() {
+/**
+ * @brief 12345の値取得テスト
+ *
+ */
+TEST(BitControlUint32, Get12345) {
   const uint32_t VALUE = 12345;
   mhl::BitControlUint32 b(VALUE);
-  AssertEquals(b.Get() == VALUE, "");
+  EXPECT_EQ(b.Get(), VALUE);
 }
 
-void test_code::TestBitControlUint32::TestGetUint32Max() {
+/**
+ * @brief UintMAX値取得テスト
+ *
+ */
+TEST(BitControlUint32, GetUint32Max) {
   const uint32_t VALUE = 0xffffffffui32;
   mhl::BitControlUint32 b(VALUE);
-  AssertEquals(b.Get() == VALUE, "");
+  EXPECT_EQ(b.Get(), VALUE);
 }
 
-void test_code::TestBitControlUint32::TestGetBitOnZero() {
+/**
+ * @brief 0ビット目を立てるテスト
+ *
+ */
+TEST(BitControlUint32, GetBitOnZero) {
+  const uint32_t BIT = 0;
+  mhl::BitControlUint32 b;
+  EXPECT_EQ(b.GetBit(0), false);
+  b.BitOn(BIT);
+  EXPECT_EQ(b.GetBit(0), true);
+}
+
+/**
+ * @brief 0ビット目を立てないテスト
+ *
+ */
+TEST(BitControlUint32, GetBitOffZero) {
   const uint32_t BIT = 0;
   mhl::BitControlUint32 b;
   b.BitOn(BIT);
-  AssertEquals((b.GetBit(0) == true), "");
-}
-
-void test_code::TestBitControlUint32::TestGetBitOffZero() {
-  const uint32_t BIT = 0;
-  mhl::BitControlUint32 b;
+  EXPECT_EQ(b.GetBit(BIT), true);
   b.BitOff(BIT);
-  AssertEquals((b.GetBit(0) == false), "");
+  EXPECT_EQ(b.GetBit(BIT), false);
 }
 
-void test_code::TestBitControlUint32::TestGetBitOn7() {
+/**
+ * @brief 7ビット目を立てるテスト
+ *
+ */
+TEST(BitControlUint32, GetBitOn7) {
+  const uint32_t BIT = 7;
+  mhl::BitControlUint32 b;
+  EXPECT_EQ(b.GetBit(BIT), false);
+  b.BitOn(BIT);
+  EXPECT_EQ(b.GetBit(BIT), true);
+}
+
+/**
+ * @brief 7ビット目を立てないテスト
+ *
+ */
+TEST(BitControlUint32, GetBitOff7) {
   const uint32_t BIT = 7;
   mhl::BitControlUint32 b;
   b.BitOn(BIT);
-  AssertEquals((b.GetBit(BIT) == true), "");
+  EXPECT_EQ(b.GetBit(BIT), true);
+  b.BitOff(BIT);
+  EXPECT_EQ(b.GetBit(BIT), false);
 }
-
-void test_code::TestBitControlUint32::TestGetBitOff7() {
-  const uint32_t BIT = 7;
-  mhl::BitControlUint32 b;
-  b.BitOff(7);
-  AssertEquals((b.GetBit(BIT) == false), "");
-}
-
-*/
 
 }  // namespace bit_control_uint32
 }  // namespace bit
