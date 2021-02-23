@@ -64,6 +64,9 @@
     <Filter Include="ソース ファイル\mhl\debug">
       <UniqueIdentifier>{f31ad16c-346d-4305-934b-c4e146b167c3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\mhl\debug\stacktrace">
+      <UniqueIdentifier>{5f32733f-5c59-43d4-a286-e385b63c26af}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mhl\exception\argument_exception.hpp">
@@ -183,6 +186,9 @@
     <ClInclude Include="mhl\debug\mhl_assert.hpp">
       <Filter>ソース ファイル\mhl\debug</Filter>
     </ClInclude>
+    <ClInclude Include="mhl\debug\stacktrace\stacktrace_info.hpp">
+      <Filter>ソース ファイル\mhl\debug\stacktrace</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mh_library.cpp">
@@ -274,6 +280,9 @@
     </ClCompile>
     <ClCompile Include="mhl\output\console\output_console.cpp">
       <Filter>ソース ファイル\mhl\output\console</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\debug\stacktrace\stacktrace_info.cpp">
+      <Filter>ソース ファイル\mhl\debug\stacktrace</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

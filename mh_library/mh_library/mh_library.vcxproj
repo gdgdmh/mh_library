@@ -22,6 +22,7 @@
     <ClInclude Include="mhl\bit\bit_control_uint32.hpp" />
     <ClInclude Include="mhl\data\data_collection.hpp" />
     <ClInclude Include="mhl\debug\mhl_assert.hpp" />
+    <ClInclude Include="mhl\debug\stacktrace\stacktrace_info.hpp" />
     <ClInclude Include="mhl\exception\argument_exception.hpp" />
     <ClInclude Include="mhl\exception\unittest_exception.hpp" />
     <ClInclude Include="mhl\output\console\dummy_output_console.hpp" />
@@ -61,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mhl\bit\bit_control_uint32.cpp" />
+    <ClCompile Include="mhl\debug\stacktrace\stacktrace_info.cpp" />
     <ClCompile Include="mhl\exception\argument_exception.cpp" />
     <ClCompile Include="mhl\exception\unittest_exception.cpp" />
     <ClCompile Include="mhl\output\console\dummy_output_console.cpp" />
