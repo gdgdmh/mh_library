@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClInclude Include="mhl\bit\bit_control_uint32.hpp" />
     <ClInclude Include="mhl\data\data_collection.hpp" />
+    <ClInclude Include="mhl\debug\mhl_assert.hpp" />
     <ClInclude Include="mhl\exception\argument_exception.hpp" />
     <ClInclude Include="mhl\exception\unittest_exception.hpp" />
     <ClInclude Include="mhl\output\console\dummy_output_console.hpp" />

@@ -61,6 +61,9 @@
     <Filter Include="ソース ファイル\mhl\output\console">
       <UniqueIdentifier>{d6de1722-178e-46c2-8776-7665402c3fa3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\mhl\debug">
+      <UniqueIdentifier>{f31ad16c-346d-4305-934b-c4e146b167c3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mhl\exception\argument_exception.hpp">
@@ -176,6 +179,9 @@
     </ClInclude>
     <ClInclude Include="mhl\output\console\output_console.hpp">
       <Filter>ソース ファイル\mhl\output\console</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\debug\mhl_assert.hpp">
+      <Filter>ソース ファイル\mhl\debug</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
