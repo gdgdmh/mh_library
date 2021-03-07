@@ -36,6 +36,7 @@
     <ClInclude Include="a_pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="gt_mhl_debug_stacktrace_get_stacktrace_win.cpp" />
     <ClCompile Include="gt_mhl_debug_stacktrace_stacktrace_info.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="a_pch.cpp">

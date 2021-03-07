@@ -189,6 +189,15 @@
     <ClInclude Include="mhl\debug\stacktrace\stacktrace_info.hpp">
       <Filter>ソース ファイル\mhl\debug\stacktrace</Filter>
     </ClInclude>
+    <ClInclude Include="mhl\debug\stacktrace\get_stacktrace_win.hpp">
+      <Filter>ソース ファイル\mhl\debug\stacktrace</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\debug\stacktrace\istacktraceable.hpp">
+      <Filter>ソース ファイル\mhl\debug\stacktrace</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\test_program\test_stacktrace_test.hpp">
+      <Filter>ソース ファイル\mhl\test_program</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mh_library.cpp">
@@ -283,6 +292,12 @@
     </ClCompile>
     <ClCompile Include="mhl\debug\stacktrace\stacktrace_info.cpp">
       <Filter>ソース ファイル\mhl\debug\stacktrace</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\debug\stacktrace\get_stacktrace_win.cpp">
+      <Filter>ソース ファイル\mhl\debug\stacktrace</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\test_program\test_stacktrace_test.cpp">
+      <Filter>ソース ファイル\mhl\test_program</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,6 +1,12 @@
 ﻿#include "stacktrace_info.hpp"
 
 /**
+ * @brief デフォルトコンストラクタ
+ *
+ */
+mhl::StacktraceInfo::StacktraceInfo() : size_(0), addresses_(), symbols_() {}
+
+/**
  * @brief コンストラクタ
  *
  * @param size トレース数

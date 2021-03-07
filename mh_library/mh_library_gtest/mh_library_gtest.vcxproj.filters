@@ -13,6 +13,9 @@
     <ClCompile Include="gt_mhl_debug_stacktrace_stacktrace_info.cpp">
       <Filter>mh_library_gtest</Filter>
     </ClCompile>
+    <ClCompile Include="gt_mhl_debug_stacktrace_get_stacktrace_win.cpp">
+      <Filter>mh_library_gtest</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="mh_library_gtest">

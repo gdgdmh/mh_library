@@ -21,6 +21,12 @@ class StacktraceInfo {
 
  public:
   /**
+   * @brief デフォルトコンストラクタ
+   *
+   */
+  StacktraceInfo();
+
+  /**
    * @brief コンストラクタ
    *
    * @param size トレース数
