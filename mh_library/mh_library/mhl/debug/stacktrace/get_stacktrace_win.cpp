@@ -70,4 +70,27 @@ void mhl::GetStacktraceWin::GetStacktrace(mhl::StacktraceInfo& info) {
   info = stacktraceInfo;
 }
 
+/**
+ * @brief スタックトレース情報を文字列で返す
+ *
+ * @param stacktraceInfo 文字列を受け取る変数
+ * @param info スタックトレース情報
+ */
+void mhl::GetStacktraceWin::ToStringStacktrace(
+    std::string& stacktraceInfo, const mhl::StacktraceInfo& info) {
+
+  // 一応クリアしておく
+  stacktraceInfo = "";
+  const auto& symbols = info.GetSymbols();
+  size_t size = symbols.size();
+  for (size_t i = 0; i < size; ++i) {
+    stacktraceInfo += symbols.at(i).c_str();
+    if (i != (size - 1)) {
+      stacktraceInfo += "\n";
+    }
+  }
+
+    
+}
+
 #endif  // _MSC_VER
