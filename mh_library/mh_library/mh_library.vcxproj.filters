@@ -198,6 +198,9 @@
     <ClInclude Include="mhl\test_program\test_stacktrace_test.hpp">
       <Filter>ソース ファイル\mhl\test_program</Filter>
     </ClInclude>
+    <ClInclude Include="mhl\output\console\output_console_vs_sjis.hpp">
+      <Filter>ソース ファイル\mhl\output\console</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mh_library.cpp">
@@ -298,6 +301,9 @@
     </ClCompile>
     <ClCompile Include="mhl\test_program\test_stacktrace_test.cpp">
       <Filter>ソース ファイル\mhl\test_program</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\output\console\output_console_vs_sjis.cpp">
+      <Filter>ソース ファイル\mhl\output\console</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
