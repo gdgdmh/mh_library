@@ -3,7 +3,7 @@
 
 #include <string>
 
-#include "ioutput_console.hpp"
+#include "iconsole_outputable.hpp"
 
 namespace mhl {
 
@@ -12,7 +12,7 @@ namespace output {
 namespace console {
 
 // コンソール出力クラス
-class OutputConsole : public mhl::output::console::IOutputConsole {
+class OutputConsole : public mhl::output::console::IConsoleOutputable {
  public:
   /**
    * コンストラクタ

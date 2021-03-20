@@ -36,7 +36,7 @@ class TestCallbackTest : public mhl::UnitTestBase {
    * コンストラクタ
    */
   TestCallbackTest(
-      std::shared_ptr<mhl::output::console::IOutputConsole> output_console);
+      std::shared_ptr<mhl::output::console::IConsoleOutputable> output_console);
 
   /**
    * デストラクタ

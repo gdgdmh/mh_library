@@ -3,7 +3,7 @@
 
 #include <string>
 
-#include "ioutput_console.hpp"
+#include "iconsole_outputable.hpp"
 
 namespace mhl {
 
@@ -15,7 +15,7 @@ namespace console {
  * @brief VisualStudioの出力ウィンドウに出力
  *
  */
-class OutputConsoleVsSjis : public mhl::output::console::IOutputConsole {
+class OutputConsoleVsSjis : public mhl::output::console::IConsoleOutputable {
  public:
   /**
    * コンストラクタ

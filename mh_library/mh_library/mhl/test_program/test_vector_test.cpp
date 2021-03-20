@@ -12,7 +12,7 @@ test_program::TestVectorData::TestVectorData(int32_t a, int32_t b, int32_t c)
  * コンストラクタ
  */
 test_program::TestVectorTest::TestVectorTest(
-    std::shared_ptr<mhl::output::console::IOutputConsole> output_console)
+    std::shared_ptr<mhl::output::console::IConsoleOutputable> output_console)
     : UnitTestBase(output_console) {}
 
 /**

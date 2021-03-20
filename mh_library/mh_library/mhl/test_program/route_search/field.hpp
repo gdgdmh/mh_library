@@ -6,7 +6,7 @@
 #include <memory>
 #include <vector>
 
-#include "../../output/console/ioutput_console.hpp"
+#include "../../output/console/iconsole_outputable.hpp"
 #include "field_info.hpp"
 
 namespace test_program {
@@ -35,7 +35,7 @@ class Field {
    *
    * @param output_console
    */
-  void Print(const std::shared_ptr<mhl::output::console::IOutputConsole>&
+  void Print(const std::shared_ptr<mhl::output::console::IConsoleOutputable>&
                  output_console);
 
   /**

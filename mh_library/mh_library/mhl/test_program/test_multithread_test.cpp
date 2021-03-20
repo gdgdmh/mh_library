@@ -6,7 +6,7 @@
 #include <vector>
 
 test_program::MultiThreadTestTask::MultiThreadTestTask(
-    std::shared_ptr<mhl::output::console::IOutputConsole> output_console)
+    std::shared_ptr<mhl::output::console::IConsoleOutputable> output_console)
     : output_console_(output_console), id_(0), value_(0) {}
 
 test_program::MultiThreadTestTask::~MultiThreadTestTask() {}
@@ -26,7 +26,7 @@ void test_program::MultiThreadTestTask::Task2() {
  * コンストラクタ
  */
 test_program::TestMultithreadTest::TestMultithreadTest(
-    std::shared_ptr<mhl::output::console::IOutputConsole> output_console)
+    std::shared_ptr<mhl::output::console::IConsoleOutputable> output_console)
     : UnitTestBase(output_console) {}
 
 /**

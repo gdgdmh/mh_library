@@ -177,9 +177,6 @@
     <ClInclude Include="mhl\output\console\dummy_output_console.hpp">
       <Filter>ソース ファイル\mhl\output\console</Filter>
     </ClInclude>
-    <ClInclude Include="mhl\output\console\ioutput_console.hpp">
-      <Filter>ソース ファイル\mhl\output\console</Filter>
-    </ClInclude>
     <ClInclude Include="mhl\output\console\output_console.hpp">
       <Filter>ソース ファイル\mhl\output\console</Filter>
     </ClInclude>
@@ -202,6 +199,9 @@
       <Filter>ソース ファイル\mhl\output\console</Filter>
     </ClInclude>
     <ClInclude Include="mhl\output\console\ioutput_consoles.hpp">
+      <Filter>ソース ファイル\mhl\output\console</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\output\console\iconsole_outputable.hpp">
       <Filter>ソース ファイル\mhl\output\console</Filter>
     </ClInclude>
   </ItemGroup>

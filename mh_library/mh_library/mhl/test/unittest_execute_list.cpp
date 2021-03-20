@@ -1,7 +1,7 @@
 ﻿#include "unittest_execute_list.hpp"
 
 #include "../exception/unittest_exception.hpp"
-#include "../output/console/ioutput_console.hpp"
+#include "../output/console/iconsole_outputable.hpp"
 #include "../output/console/output_console.hpp"
 
 mhl::UnitTestExecuteList::UnitTestExecuteList() {}
@@ -14,7 +14,7 @@ void mhl::UnitTestExecuteList::Add(
 }
 
 bool mhl::UnitTestExecuteList::Execute() {
-  std::shared_ptr<mhl::output::console::IOutputConsole> console(
+  std::shared_ptr<mhl::output::console::IConsoleOutputable> console(
       new mhl::output::console::OutputConsole());
   try {
     console->PrintLine(

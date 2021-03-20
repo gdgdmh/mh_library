@@ -28,7 +28,7 @@
     <ClInclude Include="mhl\exception\argument_exception.hpp" />
     <ClInclude Include="mhl\exception\unittest_exception.hpp" />
     <ClInclude Include="mhl\output\console\dummy_output_console.hpp" />
-    <ClInclude Include="mhl\output\console\ioutput_console.hpp" />
+    <ClInclude Include="mhl\output\console\iconsole_outputable.hpp" />
     <ClInclude Include="mhl\output\console\ioutput_consoles.hpp" />
     <ClInclude Include="mhl\output\console\output_console.hpp" />
     <ClInclude Include="mhl\output\console\output_console_vs_sjis.hpp" />

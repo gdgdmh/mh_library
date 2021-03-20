@@ -30,7 +30,7 @@ void test_program::route_search::Field::Initialize(uint32_t fieldXSize,
  * @param output_console
  */
 void test_program::route_search::Field::Print(
-    const std::shared_ptr<mhl::output::console::IOutputConsole>&
+    const std::shared_ptr<mhl::output::console::IConsoleOutputable>&
         output_console) {
   for (const auto& y : field_) {
     std::string line = "";

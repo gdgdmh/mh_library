@@ -11,7 +11,7 @@
  * @param output_console コンソール出力クラス
  */
 test_program::route_search::TestRouteSearchTest::TestRouteSearchTest(
-    std::shared_ptr<mhl::output::console::IOutputConsole> output_console)
+    std::shared_ptr<mhl::output::console::IConsoleOutputable> output_console)
     : UnitTestBase(output_console) {
   block_set_.reset(new test_program::route_search::SetFieldBlockAlways());
 }

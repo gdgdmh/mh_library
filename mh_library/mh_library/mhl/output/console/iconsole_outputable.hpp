@@ -1,5 +1,5 @@
-﻿#ifndef MHL_OUTPUT_CONSOLE_IOUTPUTCONSOLE_HPP_
-#define MHL_OUTPUT_CONSOLE_IOUTPUTCONSOLE_HPP_
+﻿#ifndef MHL_OUTPUT_CONSOLE_ICONSOLE_OUTPUTABLE_HPP_
+#define MHL_OUTPUT_CONSOLE_ICONSOLE_OUTPUTABLE_HPP_
 
 #include <string>
 
@@ -9,13 +9,16 @@ namespace output {
 
 namespace console {
 
-// コンソール出力のインターフェースクラス
-class IOutputConsole {
+/**
+ * @brief コンソール出力インターフェース
+ *
+ */
+class IConsoleOutputable {
  public:
   /**
    * デストラクタ
    */
-  virtual ~IOutputConsole() {}
+  virtual ~IConsoleOutputable() {}
 
   /**
    * 文字列を出力する
@@ -34,4 +37,4 @@ class IOutputConsole {
 
 }  // namespace mhl
 
-#endif  // MHL_OUTPUT_CONSOLE_IOUTPUTCONSOLE_HPP_
+#endif  // MHL_OUTPUT_CONSOLE_ICONSOLE_OUTPUTABLE_HPP_

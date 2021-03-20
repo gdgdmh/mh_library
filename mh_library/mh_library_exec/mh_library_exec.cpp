@@ -6,7 +6,7 @@
 
 int main() {
   
-  std::shared_ptr<mhl::output::console::IOutputConsole> output(
+  std::shared_ptr<mhl::output::console::IConsoleOutputable> output(
       new mhl::output::console::OutputConsole());
   test_code::TestMhl test(output);
   test.ExecuteUnitTest();

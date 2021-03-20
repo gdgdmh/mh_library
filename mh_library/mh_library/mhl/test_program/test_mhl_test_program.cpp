@@ -1,6 +1,6 @@
 ﻿#include "test_mhl_test_program.hpp"
 
-#include "../output/console/ioutput_console.hpp"
+#include "../output/console/iconsole_outputable.hpp"
 #include "../output/console/output_console.hpp"
 #include "../test/unittest_execute_list.hpp"
 #include "../test_program/route_search/test_route_search_test.hpp"
@@ -19,7 +19,7 @@
  * コンストラクタ
  */
 test_program::TestMhlTestProgram::TestMhlTestProgram(
-    std::shared_ptr<mhl::output::console::IOutputConsole> output_console)
+    std::shared_ptr<mhl::output::console::IConsoleOutputable> output_console)
     : UnitTestBase(output_console) {}
 
 /**
@@ -30,7 +30,7 @@ test_program::TestMhlTestProgram::~TestMhlTestProgram() {}
 void test_program::TestMhlTestProgram::ExecuteUnitTest() {
   using namespace test_program;
   mhl::UnitTestExecuteList list;
-  std::shared_ptr<mhl::output::console::IOutputConsole> console(
+  std::shared_ptr<mhl::output::console::IConsoleOutputable> console(
       new mhl::output::console::OutputConsole());
   list.Add(
       std::shared_ptr<TestStacktraceTest>(new TestStacktraceTest(console)));

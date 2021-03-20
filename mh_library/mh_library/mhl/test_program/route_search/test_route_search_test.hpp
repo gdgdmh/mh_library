@@ -21,7 +21,7 @@ class TestRouteSearchTest : public mhl::UnitTestBase {
    * @param output_console コンソール出力クラス
    */
   TestRouteSearchTest(
-      std::shared_ptr<mhl::output::console::IOutputConsole> output_console);
+      std::shared_ptr<mhl::output::console::IConsoleOutputable> output_console);
 
   /**
    * @brief Destroy the Test Route Search Test object

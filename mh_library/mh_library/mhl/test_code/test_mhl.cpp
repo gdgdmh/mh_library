@@ -1,7 +1,7 @@
 ﻿#include "test_mhl.hpp"
 
 #include "../test/unittest_execute_list.hpp"
-#include "../output/console/ioutput_console.hpp"
+#include "../output/console/iconsole_outputable.hpp"
 #include "../output/console/output_console.hpp"
 #include "test_execute_method.hpp"
 #include "test_scene_stack.hpp"
@@ -14,7 +14,7 @@
  * コンストラクタ
  */
 test_code::TestMhl::TestMhl(
-    std::shared_ptr<mhl::output::console::IOutputConsole> output_console)
+    std::shared_ptr<mhl::output::console::IConsoleOutputable> output_console)
     : UnitTestBase(output_console) {}
 
 /**
@@ -24,7 +24,7 @@ test_code::TestMhl::~TestMhl() {}
 
 void test_code::TestMhl::ExecuteUnitTest() {
   mhl::UnitTestExecuteList list;
-  std::shared_ptr<mhl::output::console::IOutputConsole> console(
+  std::shared_ptr<mhl::output::console::IConsoleOutputable> console(
       new mhl::output::console::OutputConsole());
   list.Add(std::shared_ptr<test_code::TestDataCollection>(
       new test_code::TestDataCollection(console)));
