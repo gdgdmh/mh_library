@@ -4,7 +4,7 @@
 #include <memory>
 #include <string>
 
-#include "ioutput_console.hpp"
+#include "iconsole_outputable.hpp"
 
 namespace mhl {
 
@@ -37,7 +37,7 @@ class IOutputConsoles {
    * @brief 出力クラスを追加する
    *
    */
-  virtual void Add(std::shared_ptr<IOutputConsole>& output_console) = 0;
+  virtual void Add(std::shared_ptr<IConsoleOutputable>& output_console) = 0;
 
   /**
    * @brief 追加された出力クラスをクリアする
