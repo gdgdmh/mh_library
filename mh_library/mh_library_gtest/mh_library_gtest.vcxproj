@@ -39,6 +39,7 @@
     <ClCompile Include="gt_mhl_bit_bit_control_uint32.cpp" />
     <ClCompile Include="gt_mhl_debug_stacktrace_get_stacktrace_win.cpp" />
     <ClCompile Include="gt_mhl_debug_stacktrace_stacktrace_info.cpp" />
+    <ClCompile Include="gt_mhl_output_console_output_consoles.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="a_pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

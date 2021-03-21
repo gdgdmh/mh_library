@@ -16,6 +16,9 @@
     <ClCompile Include="gt_mhl_bit_bit_control_uint32.cpp">
       <Filter>mh_library_gtest</Filter>
     </ClCompile>
+    <ClCompile Include="gt_mhl_output_console_output_consoles.cpp">
+      <Filter>mh_library_gtest</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="mh_library_gtest">
