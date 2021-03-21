@@ -1,10 +1,11 @@
-﻿#ifndef MHL_OUTPUT_CONSOLE_ICONSOLEOUTPUTABLES_HPP_
-#define MHL_OUTPUT_CONSOLE_ICONSOLEOUTPUTABLES_HPP_
+﻿#ifndef MHL_OUTPUT_CONSOLE_OUTPUTCONSOLES_HPP_
+#define MHL_OUTPUT_CONSOLE_OUTPUTCONSOLES_HPP_
 
-#include <memory>
 #include <string>
+#include <vector>
 
 #include "iconsole_outputable.hpp"
+#include "iconsole_outputables.hpp"
 
 namespace mhl {
 
@@ -13,44 +14,52 @@ namespace output {
 namespace console {
 
 /**
- * @brief 複数環境コンソール出力クラス
+ * @brief 複数コンソール出力クラス
  *
  */
-class IConsoleOutputables {
+class OutputConsoles : public mhl::output::console::IConsoleOutputables {
  public:
+  /**
+   * コンストラクタ
+   */
+  OutputConsoles();
+
   /**
    * デストラクタ
    */
-  virtual ~IConsoleOutputables() {}
+  virtual ~OutputConsoles();
 
   /**
    * 文字列を出力する
    */
-  virtual void Print(std::string string) = 0;
+  void Print(std::string string);
 
   /**
    * 改行付き文字列を出力する
    */
-  virtual void PrintLine(std::string string) = 0;
+  void PrintLine(std::string string);
 
   /**
    * @brief 出力クラスを追加する
    *
    */
-  virtual void Add(std::shared_ptr<IConsoleOutputable>& output_console) = 0;
+  void Add(std::shared_ptr<IConsoleOutputable>& output_console);
 
   /**
    * @brief 追加された出力クラスをクリアする
    *
    */
-  virtual void Clear() = 0;
+  void Clear();
 
   /**
    * @brief 現在登録されている出力クラスの個数を取得する
    *
    * @return size_t 出力クラスの個数
    */
-  virtual size_t Size() = 0;
+  size_t Size();
+
+ private:
+  std::vector<std::shared_ptr<IConsoleOutputable> > output_;
 };
 
 }  // namespace console
@@ -59,4 +68,4 @@ class IConsoleOutputables {
 
 }  // namespace mhl
 
-#endif  // MHL_OUTPUT_CONSOLE_ICONSOLEOUTPUTABLES_HPP_
+#endif  // MHL_OUTPUT_CONSOLE_OUTPUTCONSOLES_HPP_

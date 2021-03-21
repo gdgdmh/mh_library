@@ -14,6 +14,7 @@
 #include "../test_program/test_multithread_test.hpp"
 #include "../test_program/test_stacktrace_test.hpp"
 #include "../test_program/test_vector_test.hpp"
+#include "../test_program/test_output_consoles_test.hpp"
 
 /**
  * コンストラクタ
@@ -45,6 +46,7 @@ void test_program::TestMhlTestProgram::ExecuteUnitTest() {
   list.Add(std::shared_ptr<TestFermatTest>(new TestFermatTest(console)));
   list.Add(std::shared_ptr<route_search::TestRouteSearchTest>(
       new route_search::TestRouteSearchTest(console)));
+  list.Add(std::shared_ptr<TestOutputConsolesTest>(new TestOutputConsolesTest(console)));
   // できればマルチスレッドは最後の実行したい(マルチスレッドが途中だと原因がわからなくなる可能性があるかもしれない)
   list.Add(
       std::shared_ptr<TestMultithreadTest>(new TestMultithreadTest(console)));
