@@ -20,7 +20,7 @@
  * コンストラクタ
  */
 test_program::TestMhlTestProgram::TestMhlTestProgram(
-    std::shared_ptr<mhl::output::console::IConsoleOutputable> output_console)
+    std::shared_ptr<mhl::output::console::IConsoleOutputables> output_console)
     : UnitTestBase(output_console) {}
 
 /**
@@ -31,25 +31,28 @@ test_program::TestMhlTestProgram::~TestMhlTestProgram() {}
 void test_program::TestMhlTestProgram::ExecuteUnitTest() {
   using namespace test_program;
   mhl::UnitTestExecuteList list;
-  std::shared_ptr<mhl::output::console::IConsoleOutputable> console(
-      new mhl::output::console::OutputConsole());
-  list.Add(
-      std::shared_ptr<TestStacktraceTest>(new TestStacktraceTest(console)));
+  list.Add(std::shared_ptr<TestStacktraceTest>(
+      new TestStacktraceTest(output_console_)));
   list.Add(std::shared_ptr<TestCppNewFunctionTest>(
-      new TestCppNewFunctionTest(console)));
+      new TestCppNewFunctionTest(output_console_)));
+  list.Add(std::shared_ptr<TestInstanceOfTest>(
+      new TestInstanceOfTest(output_console_)));
   list.Add(
-      std::shared_ptr<TestInstanceOfTest>(new TestInstanceOfTest(console)));
-  list.Add(std::shared_ptr<TestBinaryTest>(new TestBinaryTest(console)));
-  list.Add(std::shared_ptr<TestVectorTest>(new TestVectorTest(console)));
-  list.Add(std::shared_ptr<TestDelegateTest>(new TestDelegateTest(console)));
-  list.Add(std::shared_ptr<TestMoveTest>(new TestMoveTest(console)));
-  list.Add(std::shared_ptr<TestFermatTest>(new TestFermatTest(console)));
+      std::shared_ptr<TestBinaryTest>(new TestBinaryTest(output_console_)));
+  list.Add(
+      std::shared_ptr<TestVectorTest>(new TestVectorTest(output_console_)));
+  list.Add(
+      std::shared_ptr<TestDelegateTest>(new TestDelegateTest(output_console_)));
+  list.Add(std::shared_ptr<TestMoveTest>(new TestMoveTest(output_console_)));
+  list.Add(
+      std::shared_ptr<TestFermatTest>(new TestFermatTest(output_console_)));
   list.Add(std::shared_ptr<route_search::TestRouteSearchTest>(
-      new route_search::TestRouteSearchTest(console)));
-  list.Add(std::shared_ptr<TestOutputConsolesTest>(new TestOutputConsolesTest(console)));
+      new route_search::TestRouteSearchTest(output_console_)));
+  list.Add(std::shared_ptr<TestOutputConsolesTest>(
+      new TestOutputConsolesTest(output_console_)));
   // できればマルチスレッドは最後の実行したい(マルチスレッドが途中だと原因がわからなくなる可能性があるかもしれない)
-  list.Add(
-      std::shared_ptr<TestMultithreadTest>(new TestMultithreadTest(console)));
+  list.Add(std::shared_ptr<TestMultithreadTest>(
+      new TestMultithreadTest(output_console_)));
   // execute test
   if (!list.Execute()) {
     AssertEquals(false, "TestMhlTestProgram::ExecuteUnitTest failure");

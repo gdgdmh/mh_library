@@ -13,7 +13,7 @@ class TestMhlTestProgram : public mhl::UnitTestBase {
   /**
    * コンストラクタ
    */
-  TestMhlTestProgram(std::shared_ptr<mhl::output::console::IConsoleOutputable> output_console);
+  TestMhlTestProgram(std::shared_ptr<mhl::output::console::IConsoleOutputables> output_console);
 
   /**
    * デストラクタ

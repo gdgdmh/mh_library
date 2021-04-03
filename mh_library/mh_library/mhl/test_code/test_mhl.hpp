@@ -13,7 +13,8 @@ class TestMhl : public mhl::UnitTestBase {
   /**
    * コンストラクタ
    */
-  TestMhl(std::shared_ptr<mhl::output::console::IConsoleOutputable> output_console);
+  TestMhl(std::shared_ptr<mhl::output::console::IConsoleOutputables>
+              output_console);
 
   /**
    * デストラクタ

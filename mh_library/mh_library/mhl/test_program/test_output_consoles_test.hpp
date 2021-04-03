@@ -15,7 +15,7 @@ class TestOutputConsolesTest : public mhl::UnitTestBase {
    * コンストラクタ
    */
   TestOutputConsolesTest(
-      std::shared_ptr<mhl::output::console::IConsoleOutputable> output_console);
+      std::shared_ptr<mhl::output::console::IConsoleOutputables> output_console);
 
   /**
    * デストラクタ

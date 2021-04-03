@@ -15,10 +15,10 @@ class TestMoveDummy {
    *
    * @param output_console
    */
-  TestMoveDummy(std::shared_ptr<mhl::output::console::IConsoleOutputable>& output_console);
+  TestMoveDummy(std::shared_ptr<mhl::output::console::IConsoleOutputables>& output_console);
 
  private:
-  std::shared_ptr<mhl::output::console::IConsoleOutputable> output_console_;
+  std::shared_ptr<mhl::output::console::IConsoleOutputables> output_console_;
 };
 
 /**
@@ -32,7 +32,7 @@ class TestMoveTest : public mhl::UnitTestBase {
    *
    * @param output_console
    */
-  TestMoveTest(std::shared_ptr<mhl::output::console::IConsoleOutputable> output_console);
+  TestMoveTest(std::shared_ptr<mhl::output::console::IConsoleOutputables> output_console);
 
   /**
    * @brief Destroy the Test Move Test object

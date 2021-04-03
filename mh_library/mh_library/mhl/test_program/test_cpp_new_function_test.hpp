@@ -27,7 +27,7 @@ class TestCppNewFunctionTest : public mhl::UnitTestBase {
   /**
    * コンストラクタ
    */
-  TestCppNewFunctionTest(std::shared_ptr<mhl::output::console::IConsoleOutputable> output_console);
+  TestCppNewFunctionTest(std::shared_ptr<mhl::output::console::IConsoleOutputables> output_console);
 
   /**
    * デストラクタ

@@ -6,7 +6,7 @@
  * コンストラクタ
  */
 test_program::TestInstanceOfTest::TestInstanceOfTest(
-    std::shared_ptr<mhl::output::console::IConsoleOutputable> output_console)
+    std::shared_ptr<mhl::output::console::IConsoleOutputables> output_console)
   : UnitTestBase(output_console) {
 }
 

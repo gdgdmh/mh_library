@@ -6,7 +6,7 @@
  * コンストラクタ
  */
 test_code::TestBitControlUint32::TestBitControlUint32(
-    std::shared_ptr<mhl::output::console::IConsoleOutputable> output_console)
+    std::shared_ptr<mhl::output::console::IConsoleOutputables> output_console)
     : UnitTestBase(output_console) {}
 
 /**

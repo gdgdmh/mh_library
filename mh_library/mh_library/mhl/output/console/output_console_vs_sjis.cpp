@@ -28,6 +28,7 @@ void mhl::output::console::OutputConsoleVsSjis::Print(std::string string) {
  */
 void mhl::output::console::OutputConsoleVsSjis::PrintLine(std::string string) {
 #ifdef _MSC_VER
-  OutputDebugStringA(string.c_str());
+  string += "\n";
+  OutputDebugStringA(string.c_str() );
 #endif  // _MSC_VER
 }

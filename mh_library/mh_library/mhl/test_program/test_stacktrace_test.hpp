@@ -19,7 +19,7 @@ class TestStacktraceTest : public mhl::UnitTestBase {
    * コンストラクタ
    */
   TestStacktraceTest(
-      std::shared_ptr<mhl::output::console::IConsoleOutputable> output_console);
+      std::shared_ptr<mhl::output::console::IConsoleOutputables> output_console);
 
   /**
    * デストラクタ

@@ -34,7 +34,7 @@ void test_program::CallbackOuter::Execute(CallbackOuterComplete callback) {
  * コンストラクタ
  */
 test_program::TestCallbackTest::TestCallbackTest(
-    std::shared_ptr<mhl::output::console::IConsoleOutputable> output_console)
+    std::shared_ptr<mhl::output::console::IConsoleOutputables> output_console)
     : UnitTestBase(output_console) {}
 
 /**
