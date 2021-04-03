@@ -15,6 +15,7 @@
 #include "../test_program/test_stacktrace_test.hpp"
 #include "../test_program/test_vector_test.hpp"
 #include "../test_program/test_output_consoles_test.hpp"
+#include "../test_program/test_component_test.hpp"
 
 /**
  * コンストラクタ
@@ -46,6 +47,8 @@ void test_program::TestMhlTestProgram::ExecuteUnitTest() {
   list.Add(std::shared_ptr<TestMoveTest>(new TestMoveTest(output_console_)));
   list.Add(
       std::shared_ptr<TestFermatTest>(new TestFermatTest(output_console_)));
+  list.Add(std::shared_ptr<TestComponentTest>(
+      new TestComponentTest(output_console_)));
   list.Add(std::shared_ptr<route_search::TestRouteSearchTest>(
       new route_search::TestRouteSearchTest(output_console_)));
   list.Add(std::shared_ptr<TestOutputConsolesTest>(

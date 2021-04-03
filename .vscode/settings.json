@@ -41,6 +41,22 @@
     "xtr1common": "cpp",
     "xutility": "cpp",
     "chrono": "cpp",
-    "thread": "cpp"
+    "thread": "cpp",
+    "algorithm": "cpp",
+    "atomic": "cpp",
+    "compare": "cpp",
+    "ctime": "cpp",
+    "functional": "cpp",
+    "iomanip": "cpp",
+    "map": "cpp",
+    "mutex": "cpp",
+    "ratio": "cpp",
+    "set": "cpp",
+    "sstream": "cpp",
+    "unordered_map": "cpp",
+    "xhash": "cpp",
+    "xlocmon": "cpp",
+    "xloctime": "cpp",
+    "xtree": "cpp"
   }
 }

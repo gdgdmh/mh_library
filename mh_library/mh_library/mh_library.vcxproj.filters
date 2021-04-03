@@ -210,6 +210,9 @@
     <ClInclude Include="mhl\test_program\test_output_consoles_test.hpp">
       <Filter>ソース ファイル\mhl\test_program</Filter>
     </ClInclude>
+    <ClInclude Include="mhl\test_program\test_component_test.hpp">
+      <Filter>ソース ファイル\mhl\test_program</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mh_library.cpp">
@@ -318,6 +321,9 @@
       <Filter>ソース ファイル\mhl\output\console</Filter>
     </ClCompile>
     <ClCompile Include="mhl\test_program\test_output_consoles_test.cpp">
+      <Filter>ソース ファイル\mhl\test_program</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\test_program\test_component_test.cpp">
       <Filter>ソース ファイル\mhl\test_program</Filter>
     </ClCompile>
   </ItemGroup>
