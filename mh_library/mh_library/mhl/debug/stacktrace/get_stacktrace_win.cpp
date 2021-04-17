@@ -40,33 +40,64 @@ void mhl::GetStacktraceWin::GetStacktrace(mhl::StacktraceInfo& info) {
       ((kMaxNameSize + 1) * sizeof(char));  // シンボル情報サイズ
   // メモリ確保
   SYMBOL_INFO* symbol = (SYMBOL_INFO*)calloc(kSymbolInfoSize, 1);
-
   if (symbol == nullptr) {
     // メモリ確保失敗
     return;
   }
+  IMAGEHLP_LINE64* line = (IMAGEHLP_LINE64*)malloc(sizeof(IMAGEHLP_LINE64));
+  if (line == nullptr) {
+    free(symbol);
+    symbol = nullptr;
+    return;
+  }
+  line->SizeOfStruct = sizeof(IMAGEHLP_LINE64);
 
   std::vector<mhl::StacktraceInfo::AddressType> addresses;
   std::vector<mhl::StacktraceInfo::SymbolString> symbols;
+  std::vector<mhl::StacktraceInfo::FileName> file_names;
+  std::vector<mhl::StacktraceInfo::LineNumber> line_numbers;
 
   symbol->MaxNameLen = kMaxNameSize;
   symbol->SizeOfStruct = sizeof(SYMBOL_INFO);
   addresses.reserve(static_cast<size_t>(trace_size));
   symbols.reserve(static_cast<size_t>(trace_size));
+  file_names.reserve(static_cast<size_t>(trace_size));
+  line_numbers.reserve(static_cast<size_t>(trace_size));
 
+  DWORD displacement = 0;
   for (uint16_t i = 0; i < trace_size; ++i) {
+    DWORD64 address = (DWORD64)(traces[i]);
     // トレースアドレスからシンボル情報を取得
-    SymFromAddr(current_process, (DWORD64)(traces[i]), 0, symbol);
+    SymFromAddr(current_process, address, 0, symbol);
+    // 行の情報などを取得
+    const char* file_name = "";
+    DWORD line_number = 0;
+    if (!SymGetLineFromAddr64(current_process, address, &displacement, line)) {
+      // 取得失敗
+      file_name = "";
+      line_number = 0;
+    } else {
+      file_name = line->FileName;
+      line_number = line->LineNumber;
+    }
+
     // アドレスを追加
     addresses.emplace_back(traces[i]);
     // シンボル名を追加
     symbols.emplace_back(std::string(symbol->Name));
+    // ファイル名
+    file_names.emplace_back(std::string(file_name));
+    // 行番号
+    line_numbers.emplace_back(line_number);
   }
+  free(line);
+  line = nullptr;
   free(symbol);
   symbol = nullptr;
 
   mhl::StacktraceInfo stacktraceInfo(trace_size, std::move(addresses),
-                                     std::move(symbols));
+                                     std::move(symbols), std::move(file_names),
+                                     std::move(line_numbers));
   info = stacktraceInfo;
 }
 
@@ -78,7 +109,6 @@ void mhl::GetStacktraceWin::GetStacktrace(mhl::StacktraceInfo& info) {
  */
 void mhl::GetStacktraceWin::ToStringStacktrace(
     std::string& stacktraceInfo, const mhl::StacktraceInfo& info) {
-
   // 一応クリアしておく
   stacktraceInfo = "";
   const auto& symbols = info.GetSymbols();
@@ -89,8 +119,6 @@ void mhl::GetStacktraceWin::ToStringStacktrace(
       stacktraceInfo += "\n";
     }
   }
-
-    
 }
 
 #endif  // _MSC_VER

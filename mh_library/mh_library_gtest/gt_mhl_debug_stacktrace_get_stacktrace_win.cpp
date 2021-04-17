@@ -22,6 +22,8 @@ TEST(Debug_Stacktrace_GetStacktraceWin, Get) {
   // サイズは同一
   EXPECT_EQ(info.GetSize(), info.GetAddresses().size());
   EXPECT_EQ(info.GetSize(), info.GetSymbols().size());
+  EXPECT_EQ(info.GetSize(), info.GetFileNames().size());
+  EXPECT_EQ(info.GetSize(), info.GetLineNumbers().size());
 }
 
 }  // namespace stacktrace_info

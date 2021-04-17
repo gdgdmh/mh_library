@@ -15,7 +15,11 @@ TEST(Debug_Stacktrace_StacktraceInfo, GetSizeZero) {
   constexpr uint32_t kSize = 0;
   std::vector<mhl::StacktraceInfo::AddressType> addresses;
   std::vector<mhl::StacktraceInfo::SymbolString> symbols;
-  mhl::StacktraceInfo s(kSize, std::move(addresses), std::move(symbols));
+  std::vector<mhl::StacktraceInfo::FileName> file_names;
+  std::vector<mhl::StacktraceInfo::LineNumber> line_numbers;
+
+  mhl::StacktraceInfo s(kSize, std::move(addresses), std::move(symbols),
+                        std::move(file_names), std::move(line_numbers));
   EXPECT_EQ(s.GetSize(), kSize);
 }
 
@@ -27,7 +31,10 @@ TEST(Debug_Stacktrace_StacktraceInfo, GetSize1) {
   constexpr uint32_t kSize = 1;
   std::vector<mhl::StacktraceInfo::AddressType> addresses;
   std::vector<mhl::StacktraceInfo::SymbolString> symbols;
-  mhl::StacktraceInfo s(kSize, std::move(addresses), std::move(symbols));
+  std::vector<mhl::StacktraceInfo::FileName> file_names;
+  std::vector<mhl::StacktraceInfo::LineNumber> line_numbers;
+  mhl::StacktraceInfo s(kSize, std::move(addresses), std::move(symbols),
+                        std::move(file_names), std::move(line_numbers));
   EXPECT_EQ(s.GetSize(), kSize);
 }
 
@@ -39,7 +46,10 @@ TEST(Debug_Stacktrace_StacktraceInfo, GetSize100) {
   constexpr uint32_t kSize = 100;
   std::vector<mhl::StacktraceInfo::AddressType> addresses;
   std::vector<mhl::StacktraceInfo::SymbolString> symbols;
-  mhl::StacktraceInfo s(kSize, std::move(addresses), std::move(symbols));
+  std::vector<mhl::StacktraceInfo::FileName> file_names;
+  std::vector<mhl::StacktraceInfo::LineNumber> line_numbers;
+  mhl::StacktraceInfo s(kSize, std::move(addresses), std::move(symbols),
+                        std::move(file_names), std::move(line_numbers));
   EXPECT_EQ(s.GetSize(), kSize);
 }
 
@@ -51,8 +61,11 @@ TEST(Debug_Stacktrace_StacktraceInfo, GetAddressZero) {
   constexpr size_t kSize = 0;
   std::vector<mhl::StacktraceInfo::AddressType> addresses;
   std::vector<mhl::StacktraceInfo::SymbolString> symbols;
+  std::vector<mhl::StacktraceInfo::FileName> file_names;
+  std::vector<mhl::StacktraceInfo::LineNumber> line_numbers;
   addresses.clear();
-  mhl::StacktraceInfo s(kSize, std::move(addresses), std::move(symbols));
+  mhl::StacktraceInfo s(kSize, std::move(addresses), std::move(symbols),
+                        std::move(file_names), std::move(line_numbers));
   EXPECT_EQ(s.GetAddresses().size(), kSize);
 }
 
@@ -64,8 +77,11 @@ TEST(Debug_Stacktrace_StacktraceInfo, GetAddress1) {
   constexpr uint32_t kSize = 1;
   std::vector<mhl::StacktraceInfo::AddressType> addresses;
   std::vector<mhl::StacktraceInfo::SymbolString> symbols;
+  std::vector<mhl::StacktraceInfo::FileName> file_names;
+  std::vector<mhl::StacktraceInfo::LineNumber> line_numbers;
   addresses.emplace_back(nullptr);
-  mhl::StacktraceInfo s(kSize, std::move(addresses), std::move(symbols));
+  mhl::StacktraceInfo s(kSize, std::move(addresses), std::move(symbols),
+                        std::move(file_names), std::move(line_numbers));
   EXPECT_EQ(s.GetAddresses().size(), kSize);
   EXPECT_EQ(s.GetAddresses().at(0), nullptr);
 }
@@ -78,9 +94,12 @@ TEST(Debug_Stacktrace_StacktraceInfo, GetAddress2) {
   constexpr uint32_t kSize = 2;
   std::vector<mhl::StacktraceInfo::AddressType> addresses;
   std::vector<mhl::StacktraceInfo::SymbolString> symbols;
+  std::vector<mhl::StacktraceInfo::FileName> file_names;
+  std::vector<mhl::StacktraceInfo::LineNumber> line_numbers;
   addresses.emplace_back(static_cast<void*>(0));
   addresses.emplace_back(nullptr);
-  mhl::StacktraceInfo s(kSize, std::move(addresses), std::move(symbols));
+  mhl::StacktraceInfo s(kSize, std::move(addresses), std::move(symbols),
+                        std::move(file_names), std::move(line_numbers));
   EXPECT_EQ(s.GetAddresses().size(), kSize);
   EXPECT_EQ(s.GetAddresses().at(0), static_cast<void*>(0));
   EXPECT_EQ(s.GetAddresses().at(1), nullptr);
@@ -94,7 +113,10 @@ TEST(Debug_Stacktrace_StacktraceInfo, GetSymbolZero) {
   constexpr uint32_t kSize = 0;
   std::vector<mhl::StacktraceInfo::AddressType> addresses;
   std::vector<mhl::StacktraceInfo::SymbolString> symbols;
-  mhl::StacktraceInfo s(kSize, std::move(addresses), std::move(symbols));
+  std::vector<mhl::StacktraceInfo::FileName> file_names;
+  std::vector<mhl::StacktraceInfo::LineNumber> line_numbers;
+  mhl::StacktraceInfo s(kSize, std::move(addresses), std::move(symbols),
+                        std::move(file_names), std::move(line_numbers));
   EXPECT_EQ(s.GetSymbols().size(), kSize);
 }
 
@@ -106,8 +128,11 @@ TEST(Debug_Stacktrace_StacktraceInfo, GetSymbol1) {
   constexpr uint32_t kSize = 1;
   std::vector<mhl::StacktraceInfo::AddressType> addresses;
   std::vector<mhl::StacktraceInfo::SymbolString> symbols;
+  std::vector<mhl::StacktraceInfo::FileName> file_names;
+  std::vector<mhl::StacktraceInfo::LineNumber> line_numbers;
   symbols.emplace_back("ABC");
-  mhl::StacktraceInfo s(kSize, std::move(addresses), std::move(symbols));
+  mhl::StacktraceInfo s(kSize, std::move(addresses), std::move(symbols),
+                        std::move(file_names), std::move(line_numbers));
   EXPECT_EQ(s.GetSymbols().size(), kSize);
   EXPECT_EQ(s.GetSymbols().at(0), "ABC");
 }
@@ -120,12 +145,93 @@ TEST(Debug_Stacktrace_StacktraceInfo, GetSymbol2) {
   constexpr uint32_t kSize = 2;
   std::vector<mhl::StacktraceInfo::AddressType> addresses;
   std::vector<mhl::StacktraceInfo::SymbolString> symbols;
+  std::vector<mhl::StacktraceInfo::FileName> file_names;
+  std::vector<mhl::StacktraceInfo::LineNumber> line_numbers;
   symbols.emplace_back("あいうえお");
   symbols.emplace_back("かきくけこ");
-  mhl::StacktraceInfo s(kSize, std::move(addresses), std::move(symbols));
+  mhl::StacktraceInfo s(kSize, std::move(addresses), std::move(symbols),
+                        std::move(file_names), std::move(line_numbers));
   EXPECT_EQ(s.GetSymbols().size(), kSize);
   EXPECT_EQ(s.GetSymbols().at(0), "あいうえお");
   EXPECT_EQ(s.GetSymbols().at(1), "かきくけこ");
+}
+
+TEST(Debug_Stacktrace_StacktraceInfo, GetFileNameZero) {
+  constexpr uint32_t kSize = 0;
+  std::vector<mhl::StacktraceInfo::AddressType> addresses;
+  std::vector<mhl::StacktraceInfo::SymbolString> symbols;
+  std::vector<mhl::StacktraceInfo::FileName> file_names;
+  std::vector<mhl::StacktraceInfo::LineNumber> line_numbers;
+  mhl::StacktraceInfo s(kSize, std::move(addresses), std::move(symbols),
+                        std::move(file_names), std::move(line_numbers));
+  EXPECT_EQ(s.GetFileNames().size(), kSize);
+}
+
+TEST(Debug_Stacktrace_StacktraceInfo, GetFileName1) {
+  constexpr uint32_t kSize = 1;
+  std::vector<mhl::StacktraceInfo::AddressType> addresses;
+  std::vector<mhl::StacktraceInfo::SymbolString> symbols;
+  std::vector<mhl::StacktraceInfo::FileName> file_names;
+  std::vector<mhl::StacktraceInfo::LineNumber> line_numbers;
+  file_names.emplace_back("ABC");
+  mhl::StacktraceInfo s(kSize, std::move(addresses), std::move(symbols),
+                        std::move(file_names), std::move(line_numbers));
+  EXPECT_EQ(s.GetFileNames().size(), kSize);
+  EXPECT_EQ(s.GetFileNames().at(0), "ABC");
+}
+
+TEST(Debug_Stacktrace_StacktraceInfo, GetFileName2) {
+  constexpr uint32_t kSize = 2;
+  std::vector<mhl::StacktraceInfo::AddressType> addresses;
+  std::vector<mhl::StacktraceInfo::SymbolString> symbols;
+  std::vector<mhl::StacktraceInfo::FileName> file_names;
+  std::vector<mhl::StacktraceInfo::LineNumber> line_numbers;
+  file_names.emplace_back("あいうえお");
+  file_names.emplace_back("かきくけこ");
+  mhl::StacktraceInfo s(kSize, std::move(addresses), std::move(symbols),
+                        std::move(file_names), std::move(line_numbers));
+  EXPECT_EQ(s.GetFileNames().size(), kSize);
+  EXPECT_EQ(s.GetFileNames().at(0), "あいうえお");
+  EXPECT_EQ(s.GetFileNames().at(1), "かきくけこ");
+}
+
+TEST(Debug_Stacktrace_StacktraceInfo, GetLineNumberZero) {
+  constexpr uint32_t kSize = 0;
+  std::vector<mhl::StacktraceInfo::AddressType> addresses;
+  std::vector<mhl::StacktraceInfo::SymbolString> symbols;
+  std::vector<mhl::StacktraceInfo::FileName> file_names;
+  std::vector<mhl::StacktraceInfo::LineNumber> line_numbers;
+  mhl::StacktraceInfo s(kSize, std::move(addresses), std::move(symbols),
+                        std::move(file_names), std::move(line_numbers));
+  EXPECT_EQ(s.GetLineNumbers().size(), kSize);
+}
+
+TEST(Debug_Stacktrace_StacktraceInfo, GetLineNumber1) {
+  constexpr uint32_t kSize = 1;
+  std::vector<mhl::StacktraceInfo::AddressType> addresses;
+  std::vector<mhl::StacktraceInfo::SymbolString> symbols;
+  std::vector<mhl::StacktraceInfo::FileName> file_names;
+  std::vector<mhl::StacktraceInfo::LineNumber> line_numbers;
+  line_numbers.emplace_back(3);
+  mhl::StacktraceInfo s(kSize, std::move(addresses), std::move(symbols),
+                        std::move(file_names), std::move(line_numbers));
+  EXPECT_EQ(s.GetLineNumbers().size(), kSize);
+  EXPECT_EQ(s.GetLineNumbers().at(0), 3);
+}
+
+TEST(Debug_Stacktrace_StacktraceInfo, GetLineNumber2) {
+  constexpr uint32_t kSize = 2;
+  std::vector<mhl::StacktraceInfo::AddressType> addresses;
+  std::vector<mhl::StacktraceInfo::SymbolString> symbols;
+  std::vector<mhl::StacktraceInfo::FileName> file_names;
+  std::vector<mhl::StacktraceInfo::LineNumber> line_numbers;
+  line_numbers.emplace_back(3);
+  line_numbers.emplace_back(999);
+  mhl::StacktraceInfo s(kSize, std::move(addresses), std::move(symbols),
+                        std::move(file_names), std::move(line_numbers));
+  EXPECT_EQ(s.GetLineNumbers().size(), kSize);
+  EXPECT_EQ(s.GetLineNumbers().at(0), 3);
+  EXPECT_EQ(s.GetLineNumbers().at(1), 999);
 }
 
 }  // namespace stacktrace_info

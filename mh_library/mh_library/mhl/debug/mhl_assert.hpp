@@ -16,10 +16,10 @@ namespace debug {
 
 class MhlAssert {
  public:
-  static void AssertEquals(bool value1, bool value2) {}
-  static void AssertEquals(int8_t value1, int8_t value2);
-  static void AssertEquals(uint8_t value1, uint8_t value2);
-  static void AssertEquals(int16_t value1, int16_t value2);
+  static void Assert(bool value1, bool value2);
+  static void Assert(int8_t value1, int8_t value2);
+  static void Assert(uint8_t value1, uint8_t value2);
+  static void Assert(int16_t value1, int16_t value2);
   static void AssertEquals(uint16_t value1, uint16_t value2);
   static void AssertEquals(int32_t value1, int32_t value2);
   static void AssertEquals(uint32_t value1, uint32_t value2);
