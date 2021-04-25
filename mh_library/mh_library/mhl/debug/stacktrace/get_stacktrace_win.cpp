@@ -2,6 +2,7 @@
 #ifdef _MSC_VER
 
 #include "get_stacktrace_win.hpp"
+#include "../../util/string/std_string_formatter.hpp"
 
 #include <imagehlp.h>
 
@@ -112,9 +113,20 @@ void mhl::GetStacktraceWin::ToStringStacktrace(
   // 一応クリアしておく
   stacktraceInfo = "";
   const auto& symbols = info.GetSymbols();
+  const auto& file_name = info.GetFileNames();
+  const auto& line_number = info.GetLineNumbers();
   size_t size = symbols.size();
   for (size_t i = 0; i < size; ++i) {
+    stacktraceInfo += mhl::StdStringFormatter::Format(
+        "%s line:%u(%s)", symbols.at(i).c_str(),
+        line_number.at(i), file_name.at(i).c_str());
+    /*
     stacktraceInfo += symbols.at(i).c_str();
+    stacktraceInfo += " file_name:";
+    stacktraceInfo += file_name.at(i).c_str();
+    stacktraceInfo += " line:";
+    stacktraceInfo += mhl::StdStringFormatter::Format("%d", line_number.at(i));
+    */
     if (i != (size - 1)) {
       stacktraceInfo += "\n";
     }
