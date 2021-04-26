@@ -33,6 +33,7 @@
     <ClInclude Include="mhl\output\console\output_console.hpp" />
     <ClInclude Include="mhl\output\console\output_consoles.hpp" />
     <ClInclude Include="mhl\output\console\output_console_vs_sjis.hpp" />
+    <ClInclude Include="mhl\rand\mt_rand.hpp" />
     <ClInclude Include="mhl\scene\isceneable.hpp" />
     <ClInclude Include="mhl\scene\scene_stack.hpp" />
     <ClInclude Include="mhl\test\unittest_base.hpp" />
@@ -59,6 +60,7 @@
     <ClInclude Include="mhl\test_program\test_instance_of_test.hpp" />
     <ClInclude Include="mhl\test_program\test_mhl_test_program.hpp" />
     <ClInclude Include="mhl\test_program\test_move_test.hpp" />
+    <ClInclude Include="mhl\test_program\test_mt_rand_test.hpp" />
     <ClInclude Include="mhl\test_program\test_multithread_test.hpp" />
     <ClInclude Include="mhl\test_program\test_output_consoles_test.hpp" />
     <ClInclude Include="mhl\test_program\test_stacktrace_test.hpp" />
@@ -78,6 +80,7 @@
     <ClCompile Include="mhl\output\console\output_console.cpp" />
     <ClCompile Include="mhl\output\console\output_consoles.cpp" />
     <ClCompile Include="mhl\output\console\output_console_vs_sjis.cpp" />
+    <ClCompile Include="mhl\rand\mt_rand.cpp" />
     <ClCompile Include="mhl\scene\scene_stack.cpp" />
     <ClCompile Include="mhl\test\unittest_execute_list.cpp" />
     <ClCompile Include="mhl\test_code\bit\test_bit_control_uint32.cpp" />
@@ -101,6 +104,7 @@
     <ClCompile Include="mhl\test_program\test_instance_of_test.cpp" />
     <ClCompile Include="mhl\test_program\test_mhl_test_program.cpp" />
     <ClCompile Include="mhl\test_program\test_move_test.cpp" />
+    <ClCompile Include="mhl\test_program\test_mt_rand_test.cpp" />
     <ClCompile Include="mhl\test_program\test_multithread_test.cpp" />
     <ClCompile Include="mhl\test_program\test_output_consoles_test.cpp" />
     <ClCompile Include="mhl\test_program\test_stacktrace_test.cpp" />

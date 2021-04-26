@@ -10,6 +10,7 @@
 #include "../test_program/test_delegate_test.hpp"
 #include "../test_program/test_fermat_test.hpp"
 #include "../test_program/test_instance_of_test.hpp"
+#include "../test_program/test_mt_rand_test.hpp"
 #include "../test_program/test_move_test.hpp"
 #include "../test_program/test_multithread_test.hpp"
 #include "../test_program/test_stacktrace_test.hpp"
@@ -53,6 +54,7 @@ void test_program::TestMhlTestProgram::ExecuteUnitTest() {
       new route_search::TestRouteSearchTest(output_console_)));
   list.Add(std::shared_ptr<TestOutputConsolesTest>(
       new TestOutputConsolesTest(output_console_)));
+  list.Add(std::shared_ptr<TestMtRandTest>(new TestMtRandTest(output_console_)));
   // できればマルチスレッドは最後の実行したい(マルチスレッドが途中だと原因がわからなくなる可能性があるかもしれない)
   list.Add(std::shared_ptr<TestMultithreadTest>(
       new TestMultithreadTest(output_console_)));
