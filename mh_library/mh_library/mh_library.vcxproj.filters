@@ -67,7 +67,10 @@
     <Filter Include="ソース ファイル\mhl\debug\stacktrace">
       <UniqueIdentifier>{5f32733f-5c59-43d4-a286-e385b63c26af}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\mhl\rand">
+    <Filter Include="ソース ファイル\mhl\system">
+      <UniqueIdentifier>{60c1167a-7c7d-4575-a9fe-28e89b82425b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\mhl\system\rand">
       <UniqueIdentifier>{46222974-627c-48e6-a326-e3c1b501440b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -216,11 +219,11 @@
     <ClInclude Include="mhl\test_program\test_component_test.hpp">
       <Filter>ソース ファイル\mhl\test_program</Filter>
     </ClInclude>
-    <ClInclude Include="mhl\rand\mt_rand.hpp">
-      <Filter>ソース ファイル\mhl\rand</Filter>
-    </ClInclude>
     <ClInclude Include="mhl\test_program\test_mt_rand_test.hpp">
       <Filter>ソース ファイル\mhl\test_program</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\system\rand\mt_rand.hpp">
+      <Filter>ソース ファイル\mhl\system\rand</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -335,11 +338,11 @@
     <ClCompile Include="mhl\test_program\test_component_test.cpp">
       <Filter>ソース ファイル\mhl\test_program</Filter>
     </ClCompile>
-    <ClCompile Include="mhl\rand\mt_rand.cpp">
-      <Filter>ソース ファイル\mhl\rand</Filter>
-    </ClCompile>
     <ClCompile Include="mhl\test_program\test_mt_rand_test.cpp">
       <Filter>ソース ファイル\mhl\test_program</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\system\rand\mt_rand.cpp">
+      <Filter>ソース ファイル\mhl\system\rand</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

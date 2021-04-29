@@ -6,6 +6,7 @@
 #include <memory>
 
 #include "../test/unittest_base.hpp"
+#include "../system/rand/mt_rand.hpp"
 
 namespace test_program {
 
@@ -27,6 +28,9 @@ class TestMtRandTest : public mhl::UnitTestBase {
   virtual ~TestMtRandTest();
 
   void ExecuteUnitTest();
+
+private:
+  mhl::MtRand mt_;
 };
 
 }  // namespace test_program
