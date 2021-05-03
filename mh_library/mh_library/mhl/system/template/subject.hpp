@@ -1,9 +1,9 @@
-﻿#ifndef MHL_UTIL_TEMPLATE_SUBJECT_HPP_
-#define MHL_UTIL_TEMPLATE_SUBJECT_HPP_
+﻿#ifndef MHL_SYSTEM_TEMPLATE_SUBJECT_HPP_
+#define MHL_SYSTEM_TEMPLATE_SUBJECT_HPP_
 
 #include <vector>
 
-#include "IObservable.hpp"
+#include "iobservable.hpp"
 
 namespace mhl {
 
@@ -34,4 +34,4 @@ class Subject {
 };
 }  // namespace mhl
 
-#endif  // MH_LIBRARY_UTIL_TEMPLATE_SUBJECT_HPP_
+#endif  // MHL_SYSTEM_TEMPLATE_SUBJECT_HPP_

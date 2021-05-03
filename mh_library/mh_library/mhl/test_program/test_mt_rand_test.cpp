@@ -1,6 +1,6 @@
 ﻿#include "test_mt_rand_test.hpp"
 
-#include "../util/string/std_string_formatter.hpp"
+#include "../string/format/formatter.hpp"
 #include "../system/rand/mt_rand.hpp"
 
 /**
@@ -26,7 +26,7 @@ void test_program::TestMtRandTest::ExecuteUnitTest() {
     for (int32_t i = 0; i < 10; ++i) {
       uint32_t rnd = mt_->getRandUint32(0, 10);
       output_console_->Print(
-          mhl::StdStringFormatter::Format("%u,", rnd));
+          mhl::Formatter::Format("%u,", rnd));
     }
   }
   output_console_->PrintLine("");
@@ -36,7 +36,7 @@ void test_program::TestMtRandTest::ExecuteUnitTest() {
     for (int32_t i = 0; i < 10; ++i) {
       uint32_t rnd = mt_->getRandUint32(0, 10);
       output_console_->Print(
-          mhl::StdStringFormatter::Format("%u,", rnd));
+          mhl::Formatter::Format("%u,", rnd));
     }
   }
   output_console_->PrintLine("");

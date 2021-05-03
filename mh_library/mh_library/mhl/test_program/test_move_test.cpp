@@ -61,4 +61,6 @@ void test_program::TestMoveTest::TestVector() {
   dummyV.emplace_back(dummyB);
   // vectorのコピーが発生しない
   std::vector<TestMoveDummy>&& tmp = std::move(dummyV);
+  // warning対策
+  (void)tmp;
 }

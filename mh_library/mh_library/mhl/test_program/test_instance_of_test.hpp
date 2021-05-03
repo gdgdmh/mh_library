@@ -31,15 +31,13 @@ public:
  */
 class Enemy : public IAttack {
 public:
-  Enemy() : hp_(0) {
+  Enemy() {
   }
 
   virtual void Attack(std::shared_ptr<mhl::output::console::IConsoleOutputables> output_console) {
     output_console->PrintLine("Enemy Attack");
   }
 
-private:
-  int hp_; // HP
 };
 
 /**

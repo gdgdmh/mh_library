@@ -6,7 +6,7 @@
 
 #include "../exception/unittest_exception.hpp"
 #include "../output/console/iconsole_outputables.hpp"
-#include "../util/string/std_string_formatter.hpp"
+#include "../string/format/formatter.hpp"
 
 namespace mhl {
 
@@ -25,11 +25,11 @@ class UnitTestBase {
 #define AssertEquals(expected, msg)                                           \
   if (!(expected)) {                                                          \
     std::string msg1 =                                                        \
-        mhl::StdStringFormatter::Format("UnitTestBase Assert %s ", (#msg));   \
-    std::string msg2 = mhl::StdStringFormatter::Format("file %s ", __FILE__); \
+        mhl::Formatter::Format("UnitTestBase Assert %s ", (#msg));   \
+    std::string msg2 = mhl::Formatter::Format("file %s ", __FILE__); \
     std::string msg3 =                                                        \
-        mhl::StdStringFormatter::Format("function %s ", __FUNCTION__);        \
-    std::string msg4 = mhl::StdStringFormatter::Format("line %d ", __LINE__); \
+        mhl::Formatter::Format("function %s ", __FUNCTION__);        \
+    std::string msg4 = mhl::Formatter::Format("line %d ", __LINE__); \
     throw mhl::UnitTestException(msg1 + msg2 + msg3 + msg4, 0);               \
   }
 #endif

@@ -37,6 +37,7 @@ class TestComponentBase {
 class TestAttackComponent : public TestComponentBase {
  public:
   TestAttackComponent(uint64_t id) : TestComponentBase(id) {}
+  virtual ~TestAttackComponent() {}
 
  public:
   void Initialize() override {}

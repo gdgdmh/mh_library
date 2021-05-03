@@ -16,15 +16,6 @@
     <Filter Include="ソース ファイル\mhl">
       <UniqueIdentifier>{8e468bc4-e621-4c5f-bc35-5b408db5a3bc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\mhl\util">
-      <UniqueIdentifier>{1a35acb6-56cb-42f7-983f-d6eedd3fe8bb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\mhl\util\template">
-      <UniqueIdentifier>{1ccf713f-32c1-452b-bbce-c4a990a93cba}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ソース ファイル\mhl\util\string">
-      <UniqueIdentifier>{25220865-6293-4a9c-94ad-2357e31b5942}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ソース ファイル\mhl\test">
       <UniqueIdentifier>{3b4606ca-4150-4994-a268-d340cf0729ce}</UniqueIdentifier>
     </Filter>
@@ -73,6 +64,15 @@
     <Filter Include="ソース ファイル\mhl\system\rand">
       <UniqueIdentifier>{46222974-627c-48e6-a326-e3c1b501440b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\mhl\string">
+      <UniqueIdentifier>{816125d8-e076-4a64-800d-77dbd9b3c3d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\mhl\string\format">
+      <UniqueIdentifier>{4ab53908-1922-4c93-967e-7758d416fa06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\mhl\system\template">
+      <UniqueIdentifier>{523badcc-4544-4d72-bba0-86421284929c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mhl\exception\argument_exception.hpp">
@@ -104,18 +104,6 @@
     </ClInclude>
     <ClInclude Include="mhl\test_code\test_subject.hpp">
       <Filter>ソース ファイル\mhl\test_code</Filter>
-    </ClInclude>
-    <ClInclude Include="mhl\util\string\std_string_formatter.hpp">
-      <Filter>ソース ファイル\mhl\util\string</Filter>
-    </ClInclude>
-    <ClInclude Include="mhl\util\template\iexecute_method.hpp">
-      <Filter>ソース ファイル\mhl\util\template</Filter>
-    </ClInclude>
-    <ClInclude Include="mhl\util\template\iobservable.hpp">
-      <Filter>ソース ファイル\mhl\util\template</Filter>
-    </ClInclude>
-    <ClInclude Include="mhl\util\template\subject.hpp">
-      <Filter>ソース ファイル\mhl\util\template</Filter>
     </ClInclude>
     <ClInclude Include="mhl\bit\bit_control_uint32.hpp">
       <Filter>ソース ファイル\mhl\bit</Filter>
@@ -227,6 +215,18 @@
     </ClInclude>
     <ClInclude Include="mhl\system\rand\irand_getable.hpp">
       <Filter>ソース ファイル\mhl\system\rand</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\string\format\formatter.hpp">
+      <Filter>ソース ファイル\mhl\string\format</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\system\template\iexecute_method.hpp">
+      <Filter>ソース ファイル\mhl\system\template</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\system\template\iobservable.hpp">
+      <Filter>ソース ファイル\mhl\system\template</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\system\template\subject.hpp">
+      <Filter>ソース ファイル\mhl\system\template</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

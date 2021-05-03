@@ -1,7 +1,7 @@
 ﻿#include "test_route_search_test.hpp"
 
 #include "../../exception/argument_exception.hpp"
-#include "../../util/string/std_string_formatter.hpp"
+#include "../../string/format/formatter.hpp"
 #include "set_field_block_always.hpp"
 
 /**
@@ -39,6 +39,6 @@ void test_program::route_search::TestRouteSearchTest::ExecuteUnitTest() {
     throw a;
   } catch (mhl::exception::ArgumentException ae) {
     output_console_->PrintLine(
-        mhl::StdStringFormatter::Format("%s:%d", ae.what(), ae.GetResult()));
+        mhl::Formatter::Format("%s:%d", ae.what(), ae.GetResult()));
   }
 }

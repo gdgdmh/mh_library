@@ -1,5 +1,5 @@
-﻿#ifndef MHL_UTIL_STRING_STDSTRINGFORMATTER_HPP_
-#define MHL_UTIL_STRING_STDSTRINGFORMATTER_HPP_
+﻿#ifndef MHL_STRING_FORMAT_FORMATTER_HPP_
+#define MHL_STRING_FORMAT_FORMATTER_HPP_
 
 #include <string>
 #include <vector>
@@ -7,7 +7,7 @@
 namespace mhl {
 
 // コンソール出力のインターフェースクラス
-class StdStringFormatter {
+class Formatter {
  public:
   /**
    * 指定された形式に基づいて文字列に変換し、別の文字列に挿入する
@@ -26,4 +26,4 @@ class StdStringFormatter {
 
 }  // namespace mhl
 
-#endif  // MH_LIBRARY_UTIL_STRING_STDSTRINGFORMATTER_HPP_
+#endif  // MHL_STRING_FORMAT_FORMATTER_HPP_

@@ -4,7 +4,7 @@
 #include <memory>
 
 #include "../test/unittest_base.hpp"
-#include "../util/string/std_string_formatter.hpp"
+#include "../string/format/formatter.hpp"
 
 namespace test_program {
 

@@ -4,7 +4,7 @@
 #include <memory>
 
 #include "../test/unittest_base.hpp"
-#include "../util/string/std_string_formatter.hpp"
+#include "../string/format/formatter.hpp"
 
 namespace test_program {
 
@@ -24,7 +24,7 @@ class TestDog {
    * @param value 値
    */
   void woof(int value) {
-    console->PrintLine(mhl::StdStringFormatter::Format("woof %d", value));
+    console->PrintLine(mhl::Formatter::Format("woof %d", value));
   }
 
  private:
@@ -47,7 +47,7 @@ class TestCat {
    * @param value 値
    */
   void meow(int value) {
-    console->PrintLine(mhl::StdStringFormatter::Format("meow %d", value));
+    console->PrintLine(mhl::Formatter::Format("meow %d", value));
   }
 
  private:

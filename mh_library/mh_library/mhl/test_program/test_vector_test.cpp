@@ -34,7 +34,6 @@ void test_program::TestVectorTest::ExecuteUnitTest() {
   SetVector(v1, v2);
   // CopyVector(v2);
   CopyVector2(v2);
-  v_;
 }
 
 /*

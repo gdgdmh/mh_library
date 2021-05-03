@@ -4,7 +4,7 @@
 #include <list>
 #include <memory>
 
-#include "ISceneable.hpp"
+#include "isceneable.hpp"
 
 namespace mhl {
 

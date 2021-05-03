@@ -4,9 +4,9 @@
 #include <memory>
 
 #include "../test/unittest_base.hpp"
-#include "../util/template/iexecute_method.hpp"
-#include "../util/template/iobservable.hpp"
-#include "../util/template/subject.hpp"
+#include "../system/template/iexecute_method.hpp"
+#include "../system/template/iobservable.hpp"
+#include "../system/template/subject.hpp"
 
 namespace test_code {
 
