@@ -225,6 +225,9 @@
     <ClInclude Include="mhl\system\rand\mt_rand.hpp">
       <Filter>ソース ファイル\mhl\system\rand</Filter>
     </ClInclude>
+    <ClInclude Include="mhl\system\rand\irand_getable.hpp">
+      <Filter>ソース ファイル\mhl\system\rand</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mh_library.cpp">

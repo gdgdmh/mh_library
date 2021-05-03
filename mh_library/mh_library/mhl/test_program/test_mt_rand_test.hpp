@@ -6,7 +6,7 @@
 #include <memory>
 
 #include "../test/unittest_base.hpp"
-#include "../system/rand/mt_rand.hpp"
+#include "../system/rand/irand_getable.hpp"
 
 namespace test_program {
 
@@ -30,7 +30,7 @@ class TestMtRandTest : public mhl::UnitTestBase {
   void ExecuteUnitTest();
 
 private:
-  mhl::MtRand mt_;
+  std::shared_ptr<mhl::IRandGetable> mt_;
 };
 
 }  // namespace test_program

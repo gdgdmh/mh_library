@@ -35,6 +35,7 @@
     <ClInclude Include="mhl\output\console\output_console_vs_sjis.hpp" />
     <ClInclude Include="mhl\scene\isceneable.hpp" />
     <ClInclude Include="mhl\scene\scene_stack.hpp" />
+    <ClInclude Include="mhl\system\rand\irand_getable.hpp" />
     <ClInclude Include="mhl\system\rand\mt_rand.hpp" />
     <ClInclude Include="mhl\test\unittest_base.hpp" />
     <ClInclude Include="mhl\test\unittest_execute_list.hpp" />
