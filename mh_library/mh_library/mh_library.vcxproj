@@ -21,7 +21,9 @@
   <ItemGroup>
     <ClInclude Include="mhl\bit\bit_control_uint32.hpp" />
     <ClInclude Include="mhl\data\data_collection.hpp" />
-    <ClInclude Include="mhl\debug\mhl_assert.hpp" />
+    <ClInclude Include="mhl\debug\assert\iassert_primitive_checker.hpp" />
+    <ClInclude Include="mhl\debug\assert\iassert_processor.hpp" />
+    <ClInclude Include="mhl\debug\assert\mhl_assert.hpp" />
     <ClInclude Include="mhl\debug\stacktrace\get_stacktrace_win.hpp" />
     <ClInclude Include="mhl\debug\stacktrace\istacktraceable.hpp" />
     <ClInclude Include="mhl\debug\stacktrace\stacktrace_info.hpp" />

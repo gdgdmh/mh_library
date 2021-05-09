@@ -73,6 +73,9 @@
     <Filter Include="ソース ファイル\mhl\system\template">
       <UniqueIdentifier>{523badcc-4544-4d72-bba0-86421284929c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\mhl\debug\assert">
+      <UniqueIdentifier>{794fff47-a65c-4cd5-9a0f-a89549aeff70}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mhl\exception\argument_exception.hpp">
@@ -174,9 +177,6 @@
     <ClInclude Include="mhl\output\console\output_console.hpp">
       <Filter>ソース ファイル\mhl\output\console</Filter>
     </ClInclude>
-    <ClInclude Include="mhl\debug\mhl_assert.hpp">
-      <Filter>ソース ファイル\mhl\debug</Filter>
-    </ClInclude>
     <ClInclude Include="mhl\debug\stacktrace\stacktrace_info.hpp">
       <Filter>ソース ファイル\mhl\debug\stacktrace</Filter>
     </ClInclude>
@@ -227,6 +227,15 @@
     </ClInclude>
     <ClInclude Include="mhl\system\template\subject.hpp">
       <Filter>ソース ファイル\mhl\system\template</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\debug\assert\mhl_assert.hpp">
+      <Filter>ソース ファイル\mhl\debug\assert</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\debug\assert\iassert_primitive_checker.hpp">
+      <Filter>ソース ファイル\mhl\debug\assert</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\debug\assert\iassert_processor.hpp">
+      <Filter>ソース ファイル\mhl\debug\assert</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

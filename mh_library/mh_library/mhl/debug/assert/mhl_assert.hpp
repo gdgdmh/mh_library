@@ -1,13 +1,15 @@
-﻿#ifndef MHL_DEBUG_MHL_ASSERT_HPP_
-#define MHL_DEBUG_MHL_ASSERT_HPP_
+﻿#ifndef MHL_DEBUG_ASSERT_MHL_ASSERT_HPP_
+#define MHL_DEBUG_ASSERT_MHL_ASSERT_HPP_
 
 #include <cassert>
 
-#include "./stacktrace/get_stacktrace_win.hpp"
+#include "../stacktrace/get_stacktrace_win.hpp"
 
 namespace mhl {
 
 namespace debug {
+
+namespace assert {
 
 #ifndef MHL_ASSERT
 // 一時しのぎのassert
@@ -27,8 +29,10 @@ class MhlAssert {
   static void AssertEquals(double value1, double value2);
 };
 
+}  // namespace assert
+
 }  // namespace debug
 
 }  // namespace mhl
 
-#endif  // MHL_DEBUG_MHL_ASSERT_HPP_
+#endif  // MHL_DEBUG_ASSERT_MHL_ASSERT_HPP_
