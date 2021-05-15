@@ -13,8 +13,8 @@ namespace get_stacktrace_win {
  *
  */
 TEST(Debug_Stacktrace_GetStacktraceWin, Get) {
-  mhl::GetStacktraceWin getStacktrace;
-  mhl::StacktraceInfo info;
+  mhl::debug::stacktrace::GetStacktraceWin getStacktrace;
+  mhl::debug::stacktrace::StacktraceInfo info;
   getStacktrace.GetStacktrace(info);
 
   // 取得できるスタックトレースは1より大きいはず

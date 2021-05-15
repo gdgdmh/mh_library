@@ -37,8 +37,14 @@ void test_program::TestDebugAssertTest::ExecuteUnitTest() {
             new mhl::output::console::OutputConsoleVsSjis());
     output_console->Add(c);
   }
+
+  std::unique_ptr<mhl::debug::stacktrace::IStacktraceable> stacktrace =
+      std::unique_ptr<mhl::debug::stacktrace::GetStacktraceWin>(
+          new mhl::debug::stacktrace::GetStacktraceWin());
   
-  mhl::debug::assert::MhlAssert ast(std::move(checker), std::move(processor), std::move(output_console));
+  mhl::debug::assert::MhlAssert ast(std::move(checker), std::move(processor),
+                                    std::move(output_console),
+                                    std::move(stacktrace));
 
   int32_t value1 = 0;
   int32_t value2 = 1;

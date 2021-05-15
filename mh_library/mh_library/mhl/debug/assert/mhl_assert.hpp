@@ -4,10 +4,11 @@
 #include <cassert>
 #include <memory>
 
+#include "../../output/console/iconsole_outputables.hpp"
 #include "../stacktrace/get_stacktrace_win.hpp"
+#include "../stacktrace/istacktraceable.hpp"
 #include "iassert_checker.hpp"
 #include "iassert_processor.hpp"
-#include "../../output/console/iconsole_outputables.hpp"
 
 namespace mhl {
 
@@ -28,9 +29,12 @@ class MhlAssert {
    * @param checker アサーションチェックインターフェース
    * @param assert_process アサーション処理インターフェース
    */
-  MhlAssert(std::unique_ptr<IAssertChecker>&& checker,
-            std::unique_ptr<IAssertProcessor>&& assert_process,
-            std::unique_ptr<mhl::output::console::IConsoleOutputables>&& output_console);
+  MhlAssert(
+      std::unique_ptr<IAssertChecker>&& checker,
+      std::unique_ptr<IAssertProcessor>&& assert_process,
+      std::unique_ptr<mhl::output::console::IConsoleOutputables>&&
+          output_console,
+      std::unique_ptr<mhl::debug::stacktrace::IStacktraceable>&& stacktrace);
 
   /**
    * @brief デストラクタ
@@ -69,6 +73,12 @@ class MhlAssert {
    */
   void ErrorProcess();
 
+  /**
+   * @brief スタックトレースの出力
+   *
+   */
+  void PrintStackTrace();
+
  private:
   // アサーションチェックインターフェース
   std::unique_ptr<IAssertChecker> checker_;
@@ -76,6 +86,8 @@ class MhlAssert {
   std::unique_ptr<IAssertProcessor> assert_process_;
   // コンソール出力
   std::unique_ptr<mhl::output::console::IConsoleOutputables> output_console_;
+  // スタックトレース情報
+  std::unique_ptr<mhl::debug::stacktrace::IStacktraceable> stacktrace_;
 };
 
 }  // namespace assert

@@ -8,6 +8,10 @@
 
 namespace mhl {
 
+namespace debug {
+
+namespace stacktrace {
+
 /**
  * @brief スタックトレース情報
  *
@@ -95,6 +99,9 @@ class StacktraceInfo {
   std::vector<FileName> file_names_;      // ファイル名
   std::vector<LineNumber> line_numbers_;  // 行番号
 };
+}  // namespace stacktrace
+
+}  // namespace debug
 
 }  // namespace mhl
 

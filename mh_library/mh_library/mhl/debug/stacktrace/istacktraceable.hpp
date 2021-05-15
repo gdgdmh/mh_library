@@ -4,6 +4,11 @@
 #include "stacktrace_info.hpp"
 
 namespace mhl {
+
+namespace debug {
+
+namespace stacktrace {
+
 /**
  * @brief スタックトレース情報取得インターフェース
  *
@@ -16,7 +21,7 @@ class IStacktraceable {
    *
    * @param info スタックトレース情報
    */
-  virtual void GetStacktrace(mhl::StacktraceInfo& info) = 0;
+  virtual void GetStacktrace(mhl::debug::stacktrace::StacktraceInfo& info) = 0;
 
   /**
    * @brief スタックトレース情報を文字列で返す
@@ -25,8 +30,11 @@ class IStacktraceable {
    * @param info スタックトレース情報
    */
   virtual void ToStringStacktrace(std::string& stacktraceInfo,
-                                  const mhl::StacktraceInfo& info) = 0;
+      const mhl::debug::stacktrace::StacktraceInfo& info) = 0;
 };
+}  // namespace stacktrace
+
+}  // namespace debug
 
 }  // namespace mhl
 

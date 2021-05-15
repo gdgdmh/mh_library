@@ -12,20 +12,21 @@
  * @brief コンストラクタ
  *
  */
-mhl::GetStacktraceWin::GetStacktraceWin() {}
+mhl::debug::stacktrace::GetStacktraceWin::GetStacktraceWin() {}
 
 /**
  * @brief デストラクタ
  *
  */
-mhl::GetStacktraceWin::~GetStacktraceWin() {}
+mhl::debug::stacktrace::GetStacktraceWin::~GetStacktraceWin() {}
 
 /**
  * @brief スタックトレース情報を取得する
  *
  * @param info スタックトレース情報
  */
-void mhl::GetStacktraceWin::GetStacktrace(mhl::StacktraceInfo& info) {
+void mhl::debug::stacktrace::GetStacktraceWin::GetStacktrace(
+    mhl::debug::stacktrace::StacktraceInfo& info) {
   constexpr size_t kMaxSize = 256;     // 最大トレースサイズ
   void* traces[kMaxSize] = {nullptr};  // トレース配列
   // 現在のプロセスを取得
@@ -53,10 +54,10 @@ void mhl::GetStacktraceWin::GetStacktrace(mhl::StacktraceInfo& info) {
   }
   line->SizeOfStruct = sizeof(IMAGEHLP_LINE64);
 
-  std::vector<mhl::StacktraceInfo::AddressType> addresses;
-  std::vector<mhl::StacktraceInfo::SymbolString> symbols;
-  std::vector<mhl::StacktraceInfo::FileName> file_names;
-  std::vector<mhl::StacktraceInfo::LineNumber> line_numbers;
+  std::vector<mhl::debug::stacktrace::StacktraceInfo::AddressType> addresses;
+  std::vector<mhl::debug::stacktrace::StacktraceInfo::SymbolString> symbols;
+  std::vector<mhl::debug::stacktrace::StacktraceInfo::FileName> file_names;
+  std::vector<mhl::debug::stacktrace::StacktraceInfo::LineNumber> line_numbers;
 
   symbol->MaxNameLen = kMaxNameSize;
   symbol->SizeOfStruct = sizeof(SYMBOL_INFO);
@@ -96,7 +97,8 @@ void mhl::GetStacktraceWin::GetStacktrace(mhl::StacktraceInfo& info) {
   free(symbol);
   symbol = nullptr;
 
-  mhl::StacktraceInfo stacktraceInfo(trace_size, std::move(addresses),
+  mhl::debug::stacktrace::StacktraceInfo stacktraceInfo(
+      trace_size, std::move(addresses),
                                      std::move(symbols), std::move(file_names),
                                      std::move(line_numbers));
   info = stacktraceInfo;
@@ -108,8 +110,9 @@ void mhl::GetStacktraceWin::GetStacktrace(mhl::StacktraceInfo& info) {
  * @param stacktraceInfo 文字列を受け取る変数
  * @param info スタックトレース情報
  */
-void mhl::GetStacktraceWin::ToStringStacktrace(
-    std::string& stacktraceInfo, const mhl::StacktraceInfo& info) {
+void mhl::debug::stacktrace::GetStacktraceWin::ToStringStacktrace(
+    std::string& stacktraceInfo,
+    const mhl::debug::stacktrace::StacktraceInfo& info) {
   // 一応クリアしておく
   stacktraceInfo = "";
   const auto& symbols = info.GetSymbols();

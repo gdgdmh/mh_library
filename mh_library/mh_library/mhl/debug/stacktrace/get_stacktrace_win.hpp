@@ -12,6 +12,10 @@
 
 namespace mhl {
 
+namespace debug {
+
+namespace stacktrace {
+
 /**
  * @brief Windows版スタックトレース情報取得
  *
@@ -36,7 +40,7 @@ class GetStacktraceWin : public IStacktraceable {
    *
    * @param info スタックトレース情報を返す変数
    */
-  void GetStacktrace(mhl::StacktraceInfo& info) override;
+  void GetStacktrace(mhl::debug::stacktrace::StacktraceInfo& info) override;
 
   /**
    * @brief スタックトレース情報を文字列で返す
@@ -45,8 +49,11 @@ class GetStacktraceWin : public IStacktraceable {
    * @param info スタックトレース情報
    */
   virtual void ToStringStacktrace(std::string& stacktraceInfo,
-                                  const mhl::StacktraceInfo& info) override;
+      const mhl::debug::stacktrace::StacktraceInfo& info) override;
 };
+}  // namespace stacktrace
+
+}  // namespace debug
 
 }  // namespace mhl
 

@@ -36,8 +36,8 @@ void test_program::TestMhlTestProgram::ExecuteUnitTest() {
   mhl::UnitTestExecuteList list;
   // --- 普段は使わない ---
   // アサーションのテスト
-  list.Add(std::shared_ptr<TestDebugAssertTest>(
-    new TestDebugAssertTest(output_console_)));
+  //list.Add(std::shared_ptr<TestDebugAssertTest>(
+  //  new TestDebugAssertTest(output_console_)));
   // ----------------------
   list.Add(std::shared_ptr<TestStacktraceTest>(
       new TestStacktraceTest(output_console_)));

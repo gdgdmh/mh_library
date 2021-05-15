@@ -16,8 +16,9 @@ test_program::TestStacktraceTest::TestStacktraceTest(
 test_program::TestStacktraceTest::~TestStacktraceTest() {}
 
 void test_program::TestStacktraceTest::ExecuteUnitTest() {
-  std::shared_ptr<mhl::IStacktraceable> stacktrace(new mhl::GetStacktraceWin());
-  mhl::StacktraceInfo info;
+  std::shared_ptr<mhl::debug::stacktrace::IStacktraceable> stacktrace(
+      new mhl::debug::stacktrace::GetStacktraceWin());
+  mhl::debug::stacktrace::StacktraceInfo info;
   stacktrace->GetStacktrace(info);
   std::string s;
   stacktrace->ToStringStacktrace(s, info);

@@ -11,10 +11,12 @@
 mhl::debug::assert::MhlAssert::MhlAssert(
     std::unique_ptr<IAssertChecker>&& checker,
     std::unique_ptr<IAssertProcessor>&& assert_process,
-    std::unique_ptr<mhl::output::console::IConsoleOutputables>&& output_console)
+    std::unique_ptr<mhl::output::console::IConsoleOutputables>&& output_console,
+    std::unique_ptr<mhl::debug::stacktrace::IStacktraceable>&& stacktrace)
     : checker_(std::move(checker)),
       assert_process_(std::move(assert_process)),
-      output_console_(std::move(output_console)) {}
+      output_console_(std::move(output_console)),
+      stacktrace_(std::move(stacktrace)) {}
 
 /**
  * @brief デストラクタ
@@ -34,6 +36,7 @@ void mhl::debug::assert::MhlAssert::Assert(bool value) {
   }
   // trueならアサーション
   if (!checker_->Check(value)) {
+    PrintStackTrace();
     assert_process_->Assert();
   }
 }
@@ -54,6 +57,7 @@ void mhl::debug::assert::MhlAssert::Assert(bool value,
   // パラメーターをチェックして一致しないならアサーション
   if (!checker_->Check(value)) {
     output_console_->PrintLine(message);
+    PrintStackTrace();
     assert_process_->Assert();
   }
 }
@@ -74,6 +78,9 @@ bool mhl::debug::assert::MhlAssert::IsValid() {
   if (!output_console_) {
     return false;
   }
+  if (!stacktrace_) {
+    return false;
+  }
   return true;
 }
 
@@ -85,4 +92,16 @@ void mhl::debug::assert::MhlAssert::ErrorProcess() {
   mhl::exception::ArgumentException exception_data(
       "MhlAssert(not set interface)", 0);
   throw exception_data;
+}
+
+/**
+ * @brief スタックトレースの出力
+ *
+ */
+void mhl::debug::assert::MhlAssert::PrintStackTrace() {
+  mhl::debug::stacktrace::StacktraceInfo info;
+  stacktrace_->GetStacktrace(info);
+  std::string stacktrace_str;
+  stacktrace_->ToStringStacktrace(stacktrace_str, info);
+  output_console_->PrintLine(stacktrace_str);
 }

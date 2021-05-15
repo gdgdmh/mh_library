@@ -4,7 +4,7 @@
  * @brief デフォルトコンストラクタ
  *
  */
-mhl::StacktraceInfo::StacktraceInfo()
+mhl::debug::stacktrace::StacktraceInfo::StacktraceInfo()
     : size_(0), addresses_(), symbols_(), file_names_(), line_numbers_() {}
 
 /**
@@ -16,7 +16,7 @@ mhl::StacktraceInfo::StacktraceInfo()
  * @param file_names ファイル名
  * @param line_numbers 行番号
  */
-mhl::StacktraceInfo::StacktraceInfo(
+mhl::debug::stacktrace::StacktraceInfo::StacktraceInfo(
     uint32_t size, const std::vector<AddressType>&& addresses,
     const std::vector<SymbolString>&& symbols,
     const std::vector<FileName>&& file_names,
@@ -39,4 +39,4 @@ mhl::StacktraceInfo::StacktraceInfo(
  * @brief デストラクタ
  *
  */
-mhl::StacktraceInfo::~StacktraceInfo() {}
+mhl::debug::stacktrace::StacktraceInfo::~StacktraceInfo() {}
