@@ -21,7 +21,9 @@
   <ItemGroup>
     <ClInclude Include="mhl\bit\bit_control_uint32.hpp" />
     <ClInclude Include="mhl\data\data_collection.hpp" />
-    <ClInclude Include="mhl\debug\assert\iassert_primitive_checker.hpp" />
+    <ClInclude Include="mhl\debug\assert\assert_checker.hpp" />
+    <ClInclude Include="mhl\debug\assert\assert_process.hpp" />
+    <ClInclude Include="mhl\debug\assert\iassert_checker.hpp" />
     <ClInclude Include="mhl\debug\assert\iassert_processor.hpp" />
     <ClInclude Include="mhl\debug\assert\mhl_assert.hpp" />
     <ClInclude Include="mhl\debug\stacktrace\get_stacktrace_win.hpp" />
@@ -62,6 +64,7 @@
     <ClInclude Include="mhl\test_program\test_callback_test.hpp" />
     <ClInclude Include="mhl\test_program\test_component_test.hpp" />
     <ClInclude Include="mhl\test_program\test_cpp_new_function_test.hpp" />
+    <ClInclude Include="mhl\test_program\test_debug_assert_test.hpp" />
     <ClInclude Include="mhl\test_program\test_delegate_test.hpp" />
     <ClInclude Include="mhl\test_program\test_fermat_test.hpp" />
     <ClInclude Include="mhl\test_program\test_instance_of_test.hpp" />
@@ -75,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mhl\bit\bit_control_uint32.cpp" />
+    <ClCompile Include="mhl\debug\assert\mhl_assert.cpp" />
     <ClCompile Include="mhl\debug\stacktrace\get_stacktrace_win.cpp" />
     <ClCompile Include="mhl\debug\stacktrace\stacktrace_info.cpp" />
     <ClCompile Include="mhl\exception\argument_exception.cpp" />
@@ -102,6 +106,7 @@
     <ClCompile Include="mhl\test_program\test_callback_test.cpp" />
     <ClCompile Include="mhl\test_program\test_component_test.cpp" />
     <ClCompile Include="mhl\test_program\test_cpp_new_function_test.cpp" />
+    <ClCompile Include="mhl\test_program\test_debug_assert_test.cpp" />
     <ClCompile Include="mhl\test_program\test_delegate_test.cpp" />
     <ClCompile Include="mhl\test_program\test_fermat_test.cpp" />
     <ClCompile Include="mhl\test_program\test_instance_of_test.cpp" />
@@ -138,7 +143,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>ClangCL</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">

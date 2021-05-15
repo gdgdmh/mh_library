@@ -2,8 +2,12 @@
 #define MHL_DEBUG_ASSERT_MHL_ASSERT_HPP_
 
 #include <cassert>
+#include <memory>
 
 #include "../stacktrace/get_stacktrace_win.hpp"
+#include "iassert_checker.hpp"
+#include "iassert_processor.hpp"
+#include "../../output/console/iconsole_outputables.hpp"
 
 namespace mhl {
 
@@ -18,15 +22,60 @@ namespace assert {
 
 class MhlAssert {
  public:
-  static void Assert(bool value1, bool value2);
-  static void Assert(int8_t value1, int8_t value2);
-  static void Assert(uint8_t value1, uint8_t value2);
-  static void Assert(int16_t value1, int16_t value2);
-  static void AssertEquals(uint16_t value1, uint16_t value2);
-  static void AssertEquals(int32_t value1, int32_t value2);
-  static void AssertEquals(uint32_t value1, uint32_t value2);
-  static void AssertEquals(float value1, float value2);
-  static void AssertEquals(double value1, double value2);
+  /**
+   * @brief コンストラクタ
+   *
+   * @param checker アサーションチェックインターフェース
+   * @param assert_process アサーション処理インターフェース
+   */
+  MhlAssert(std::unique_ptr<IAssertChecker>&& checker,
+            std::unique_ptr<IAssertProcessor>&& assert_process,
+            std::unique_ptr<mhl::output::console::IConsoleOutputables>&& output_console);
+
+  /**
+   * @brief デストラクタ
+   *
+   */
+  virtual ~MhlAssert();
+
+  /**
+   * @brief valueをチェックし、trueならアサーション処理をする
+   *
+   * @param value trueならアサーション処理をする
+   */
+  void Assert(bool value);
+
+  /**
+   * @brief valueをチェックし、trueならアサーション処理をする
+   *        アサーション処理をした際にメッセージを出力する
+   *
+   * @param value trueならアサーション処理をする
+   * @param message アサーション処理実行時にメッセージを出力
+   */
+  void Assert(bool value, const std::string& message);
+
+ private:
+  /**
+   * @brief パラメータの設定がされているかチェック
+   *
+   * @return true 設定されている
+   * @return false 設定されてない
+   */
+  bool IsValid();
+
+  /**
+   * @brief エラー処理(例外を発生させる)
+   *
+   */
+  void ErrorProcess();
+
+ private:
+  // アサーションチェックインターフェース
+  std::unique_ptr<IAssertChecker> checker_;
+  // アサーション処理
+  std::unique_ptr<IAssertProcessor> assert_process_;
+  // コンソール出力
+  std::unique_ptr<mhl::output::console::IConsoleOutputables> output_console_;
 };
 
 }  // namespace assert

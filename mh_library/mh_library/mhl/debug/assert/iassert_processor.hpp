@@ -15,6 +15,9 @@ namespace assert {
  */
 class IAssertProcessor {
  public:
+
+  virtual ~IAssertProcessor() {}
+
   /**
    * @brief アサーション処理
    *

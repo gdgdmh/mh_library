@@ -84,9 +84,6 @@
     <ClInclude Include="mhl\exception\unittest_exception.hpp">
       <Filter>ソース ファイル\mhl\exception</Filter>
     </ClInclude>
-    <ClInclude Include="mhl\scene\isceneable.hpp">
-      <Filter>ソース ファイル\mhl\scene</Filter>
-    </ClInclude>
     <ClInclude Include="mhl\scene\scene_stack.hpp">
       <Filter>ソース ファイル\mhl\scene</Filter>
     </ClInclude>
@@ -231,11 +228,23 @@
     <ClInclude Include="mhl\debug\assert\mhl_assert.hpp">
       <Filter>ソース ファイル\mhl\debug\assert</Filter>
     </ClInclude>
-    <ClInclude Include="mhl\debug\assert\iassert_primitive_checker.hpp">
-      <Filter>ソース ファイル\mhl\debug\assert</Filter>
-    </ClInclude>
     <ClInclude Include="mhl\debug\assert\iassert_processor.hpp">
       <Filter>ソース ファイル\mhl\debug\assert</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\debug\assert\assert_process.hpp">
+      <Filter>ソース ファイル\mhl\debug\assert</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\scene\isceneable.hpp">
+      <Filter>ソース ファイル\mhl\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\debug\assert\iassert_checker.hpp">
+      <Filter>ソース ファイル\mhl\debug\assert</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\debug\assert\assert_checker.hpp">
+      <Filter>ソース ファイル\mhl\debug\assert</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\test_program\test_debug_assert_test.hpp">
+      <Filter>ソース ファイル\mhl\test_program</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -355,6 +364,12 @@
     </ClCompile>
     <ClCompile Include="mhl\system\rand\mt_rand.cpp">
       <Filter>ソース ファイル\mhl\system\rand</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\debug\assert\mhl_assert.cpp">
+      <Filter>ソース ファイル\mhl\debug\assert</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\test_program\test_debug_assert_test.cpp">
+      <Filter>ソース ファイル\mhl\test_program</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

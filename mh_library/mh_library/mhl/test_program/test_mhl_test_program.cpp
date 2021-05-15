@@ -17,6 +17,7 @@
 #include "../test_program/test_vector_test.hpp"
 #include "../test_program/test_output_consoles_test.hpp"
 #include "../test_program/test_component_test.hpp"
+#include "../test_program/test_debug_assert_test.hpp"
 
 /**
  * コンストラクタ
@@ -33,6 +34,11 @@ test_program::TestMhlTestProgram::~TestMhlTestProgram() {}
 void test_program::TestMhlTestProgram::ExecuteUnitTest() {
   using namespace test_program;
   mhl::UnitTestExecuteList list;
+  // --- 普段は使わない ---
+  // アサーションのテスト
+  list.Add(std::shared_ptr<TestDebugAssertTest>(
+    new TestDebugAssertTest(output_console_)));
+  // ----------------------
   list.Add(std::shared_ptr<TestStacktraceTest>(
       new TestStacktraceTest(output_console_)));
   list.Add(std::shared_ptr<TestCppNewFunctionTest>(

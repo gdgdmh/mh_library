@@ -28,5 +28,5 @@ void test_program::TestOutputConsolesTest::ExecuteUnitTest() {
       new mhl::output::console::OutputConsoleVsSjis);
   o.Add(output_console);
   o.Add(output_vs);
-  o.PrintLine("TestOutputConsolesTest::ExecuteUnitTest() テスト");
+  o.PrintLine("TestOutputConsolesTest::ExecuteUnitTest()テスト");
 }
