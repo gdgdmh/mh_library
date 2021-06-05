@@ -22,6 +22,7 @@
     <ClInclude Include="mhl\bit\bit_control_uint32.hpp" />
     <ClInclude Include="mhl\data\data_collection.hpp" />
     <ClInclude Include="mhl\debug\assert\assert_checker.hpp" />
+    <ClInclude Include="mhl\debug\assert\assert_dummy.hpp" />
     <ClInclude Include="mhl\debug\assert\assert_process.hpp" />
     <ClInclude Include="mhl\debug\assert\iassert_checker.hpp" />
     <ClInclude Include="mhl\debug\assert\iassert_processor.hpp" />
