@@ -246,6 +246,9 @@
     <ClInclude Include="mhl\test_program\test_debug_assert_test.hpp">
       <Filter>ソース ファイル\mhl\test_program</Filter>
     </ClInclude>
+    <ClInclude Include="mhl\debug\assert\assert_dummy.hpp">
+      <Filter>ソース ファイル\mhl\debug\assert</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mh_library.cpp">
