@@ -12,7 +12,11 @@ namespace assert_dummy {
  *
  */
 TEST(AssertDummy, ConstructorDefault) {
+  // Arrange
   mhl::debug::assert::AssertDummy assert_dummy;
+  // Act
+
+  // Assert
   EXPECT_EQ(assert_dummy.IsCalled(), false);
 }
 
@@ -21,8 +25,11 @@ TEST(AssertDummy, ConstructorDefault) {
  *
  */
 TEST(AssertDummy, AssertTrue) {
+  // Arrange
   mhl::debug::assert::AssertDummy assert_dummy;
+  // Act
   assert_dummy.Assert();
+  // Assert
   EXPECT_EQ(assert_dummy.IsCalled(), true);
 }
 
@@ -31,8 +38,11 @@ TEST(AssertDummy, AssertTrue) {
  *
  */
 TEST(AssertDummy, ResetFalse) {
+  // Arrange
   mhl::debug::assert::AssertDummy assert_dummy;
+  // Act
   assert_dummy.Reset();
+  // Assert
   EXPECT_EQ(assert_dummy.IsCalled(), false);
 }
 
@@ -41,10 +51,13 @@ TEST(AssertDummy, ResetFalse) {
  *
  */
 TEST(AssertDummy, AssertAfterResetFalse) {
+  // Arrange
   mhl::debug::assert::AssertDummy assert_dummy;
   assert_dummy.Assert();
   EXPECT_EQ(assert_dummy.IsCalled(), true);
+  // Act
   assert_dummy.Reset();
+  // Assert
   EXPECT_EQ(assert_dummy.IsCalled(), false);
 }
 
