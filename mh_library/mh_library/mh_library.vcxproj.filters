@@ -225,9 +225,6 @@
     <ClInclude Include="mhl\system\template\subject.hpp">
       <Filter>ソース ファイル\mhl\system\template</Filter>
     </ClInclude>
-    <ClInclude Include="mhl\debug\assert\mhl_assert.hpp">
-      <Filter>ソース ファイル\mhl\debug\assert</Filter>
-    </ClInclude>
     <ClInclude Include="mhl\debug\assert\iassert_processor.hpp">
       <Filter>ソース ファイル\mhl\debug\assert</Filter>
     </ClInclude>
@@ -247,6 +244,9 @@
       <Filter>ソース ファイル\mhl\test_program</Filter>
     </ClInclude>
     <ClInclude Include="mhl\debug\assert\assert_dummy.hpp">
+      <Filter>ソース ファイル\mhl\debug\assert</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\debug\assert\mhl_assertion.hpp">
       <Filter>ソース ファイル\mhl\debug\assert</Filter>
     </ClInclude>
   </ItemGroup>
@@ -368,11 +368,11 @@
     <ClCompile Include="mhl\system\rand\mt_rand.cpp">
       <Filter>ソース ファイル\mhl\system\rand</Filter>
     </ClCompile>
-    <ClCompile Include="mhl\debug\assert\mhl_assert.cpp">
-      <Filter>ソース ファイル\mhl\debug\assert</Filter>
-    </ClCompile>
     <ClCompile Include="mhl\test_program\test_debug_assert_test.cpp">
       <Filter>ソース ファイル\mhl\test_program</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\debug\assert\mhl_assertion.cpp">
+      <Filter>ソース ファイル\mhl\debug\assert</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

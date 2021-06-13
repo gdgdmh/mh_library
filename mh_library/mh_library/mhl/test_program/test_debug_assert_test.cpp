@@ -1,6 +1,6 @@
 ﻿#include "test_debug_assert_test.hpp"
 
-#include "../debug/assert/mhl_assert.hpp"
+#include "../debug/assert/mhl_assertion.hpp"
 #include "../debug/assert/assert_checker.hpp"
 #include "../debug/assert/assert_process.hpp"
 #include "../output/console/output_consoles.hpp"
@@ -42,7 +42,7 @@ void test_program::TestDebugAssertTest::ExecuteUnitTest() {
       std::unique_ptr<mhl::debug::stacktrace::GetStacktraceWin>(
           new mhl::debug::stacktrace::GetStacktraceWin());
   
-  mhl::debug::assert::MhlAssert ast(std::move(checker), std::move(processor),
+  mhl::debug::assert::MhlAssertion ast(std::move(checker), std::move(processor),
                                     std::move(output_console),
                                     std::move(stacktrace));
 

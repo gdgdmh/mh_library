@@ -1,6 +1,6 @@
 ﻿#include "set_field_block_always.hpp"
 
-#include "../../debug/assert/mhl_assert.hpp"
+//#include "../../debug/assert/mhl_assert.hpp"
 
 /**
  * @brief Set the Field Block Always object
