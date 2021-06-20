@@ -76,6 +76,9 @@
     <Filter Include="ソース ファイル\mhl\debug\assert">
       <UniqueIdentifier>{794fff47-a65c-4cd5-9a0f-a89549aeff70}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\mhl\system\singleton">
+      <UniqueIdentifier>{5f41b4a2-2232-41fa-99a7-4d86cc7b8d00}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mhl\exception\argument_exception.hpp">
@@ -249,6 +252,12 @@
     <ClInclude Include="mhl\debug\assert\mhl_assertion.hpp">
       <Filter>ソース ファイル\mhl\debug\assert</Filter>
     </ClInclude>
+    <ClInclude Include="mhl\debug\assert\mhl_assert.hpp">
+      <Filter>ソース ファイル\mhl\debug\assert</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\system\singleton\singleton_cleanup.hpp">
+      <Filter>ソース ファイル\mhl\system\singleton</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mh_library.cpp">
@@ -373,6 +382,12 @@
     </ClCompile>
     <ClCompile Include="mhl\debug\assert\mhl_assertion.cpp">
       <Filter>ソース ファイル\mhl\debug\assert</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\debug\assert\mhl_assert.cpp">
+      <Filter>ソース ファイル\mhl\debug\assert</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\system\singleton\singleton_cleanup.cpp">
+      <Filter>ソース ファイル\mhl\system\singleton</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
