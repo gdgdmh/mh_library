@@ -25,6 +25,9 @@
     <ClCompile Include="gt_mhl_debug_assert_assert_dummy.cpp">
       <Filter>mh_library_gtest</Filter>
     </ClCompile>
+    <ClCompile Include="gt_mhl_system_singleton_singleton_cleanup.cpp">
+      <Filter>mh_library_gtest</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="mh_library_gtest">
