@@ -5,6 +5,35 @@
 
 namespace test_program {
 
+class SingletonTest {
+ public:
+  SingletonTest() : value_(0) {}
+  virtual ~SingletonTest() {}
+
+ public:
+  /**
+   * @brief クリーンアップ処理
+   *
+   */
+  void Cleanup() { value_ = -1; }
+
+  /**
+   * @brief 値のリセット
+   *
+   */
+  void Reset() { value_ = 0; }
+
+  /**
+   * @brief 値取得処理
+   *
+   * @return int32_t 値
+   */
+  int32_t Get() { return value_; }
+
+ private:
+  int32_t value_;
+};
+
 /**
  * @brief シングルトンのテスト
  *
@@ -27,8 +56,16 @@ class TestSingletonTest : public mhl::UnitTestBase {
   /**
    * @brief クリーンアップのテスト
    *
+   * @return true 成功
+   * @return false 失敗
    */
-  void TestCleanup();
+  bool TestCleanup();
+
+  /**
+   * @brief シングルトンテスト
+   *
+   */
+  void TestSingleton();
 
  private:
 };

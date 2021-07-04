@@ -14,7 +14,8 @@ namespace singleton {
 
 /**
  * @brief シングルトンクリーンアップ
- *
+ * MhSingletonで使用するため、単体では使用しないこと
+ * 例外はユニットテスト時のみ
  */
 class SingletonCleanup {
  public:

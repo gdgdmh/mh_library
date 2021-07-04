@@ -17,8 +17,23 @@ class TestCounter {
   TestCounter() {}
   virtual ~TestCounter() {}
 
+  /**
+   * @brief 開放処理 わかりやすいように-1を設定
+   *
+   */
   static void Release() { counter_ = -1; }
+
+  /**
+   * @brief 取得
+   *
+   * @return int32_t 値の取得
+   */
   static int32_t Get() { return counter_; }
+
+  /**
+   * @brief リセット わかりやすいように0を設定
+   *
+   */
   static void Reset() { counter_ = 0; }
 
  private:

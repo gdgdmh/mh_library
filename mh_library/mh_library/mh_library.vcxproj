@@ -44,6 +44,7 @@
     <ClInclude Include="mhl\string\format\formatter.hpp" />
     <ClInclude Include="mhl\system\rand\irand_getable.hpp" />
     <ClInclude Include="mhl\system\rand\mt_rand.hpp" />
+    <ClInclude Include="mhl\system\singleton\mh_singleton.hpp" />
     <ClInclude Include="mhl\system\singleton\singleton_cleanup.hpp" />
     <ClInclude Include="mhl\system\template\iexecute_method.hpp" />
     <ClInclude Include="mhl\system\template\iobservable.hpp" />
