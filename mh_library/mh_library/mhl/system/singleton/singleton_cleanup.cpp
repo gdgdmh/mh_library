@@ -26,6 +26,19 @@ bool mhl::system::singleton::SingletonCleanup::Initialize() {
 }
 
 /**
+ * @brief 終了処理
+ */
+void mhl::system::singleton::SingletonCleanup::Finalize() {
+  std::lock_guard<std::mutex> lock(mutex_);
+  for (int32_t i = cleanup_function_size_ - 1; i >= 0; --i) {
+    if (cleanup_function_[i] != nullptr) {
+      cleanup_function_[i] = nullptr;
+    }
+  }
+  cleanup_function_size_ = 0;
+}
+
+/**
  * @brief クリーンアップ関数追加
  *
  * @param function 追加するクリーンアップ関数
@@ -54,10 +67,8 @@ void mhl::system::singleton::SingletonCleanup::Execute() {
   for (int32_t i = cleanup_function_size_ - 1; i >= 0; --i) {
     if (cleanup_function_[i] != nullptr) {
       cleanup_function_[i]();
-      cleanup_function_[i] = nullptr;
     }
   }
-  cleanup_function_size_ = 0;
 }
 
 /**

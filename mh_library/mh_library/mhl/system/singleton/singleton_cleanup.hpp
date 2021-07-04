@@ -32,9 +32,14 @@ class SingletonCleanup {
    * @brief 初期化
    *
    * @return true 成功
-   * @return false 失敗
+   * @return false 失敗(既にクリーンアップ関数が追加されてるのでFinalize)
    */
   static bool Initialize();
+
+  /**
+   * @brief 終了処理
+   */
+  static void Finalize();
 
   /**
    * @brief クリーンアップ関数追加

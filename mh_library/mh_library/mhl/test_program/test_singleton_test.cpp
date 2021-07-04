@@ -31,4 +31,6 @@ void test_program::TestSingletonTest::TestCleanup() {
   sc.Add([this]() { output_console_->PrintLine("Add2"); });
 
   sc.Execute();
+
+  sc.Finalize();
 }
