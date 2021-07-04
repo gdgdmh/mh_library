@@ -1,5 +1,6 @@
 ﻿#include "test_mhl_test_program.hpp"
 
+// 特に順序はないので下に追加していく
 #include "../output/console/iconsole_outputable.hpp"
 #include "../output/console/output_console.hpp"
 #include "../test/unittest_execute_list.hpp"
@@ -18,6 +19,7 @@
 #include "../test_program/test_output_consoles_test.hpp"
 #include "../test_program/test_component_test.hpp"
 #include "../test_program/test_debug_assert_test.hpp"
+#include "../test_program/test_singleton_test.hpp"
 
 /**
  * コンストラクタ
@@ -61,6 +63,7 @@ void test_program::TestMhlTestProgram::ExecuteUnitTest() {
   list.Add(std::shared_ptr<TestOutputConsolesTest>(
       new TestOutputConsolesTest(output_console_)));
   list.Add(std::shared_ptr<TestMtRandTest>(new TestMtRandTest(output_console_)));
+  list.Add(std::shared_ptr<TestSingletonTest>(new TestSingletonTest(output_console_)));
   // できればマルチスレッドは最後の実行したい(マルチスレッドが途中だと原因がわからなくなる可能性があるかもしれない)
   list.Add(std::shared_ptr<TestMultithreadTest>(
       new TestMultithreadTest(output_console_)));

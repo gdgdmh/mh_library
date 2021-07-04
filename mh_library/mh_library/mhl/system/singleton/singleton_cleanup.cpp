@@ -26,6 +26,19 @@ bool mhl::system::singleton::SingletonCleanup::Initialize() {
 }
 
 /**
+ * @brief 終了処理
+ */
+void mhl::system::singleton::SingletonCleanup::Finalize() {
+  std::lock_guard<std::mutex> lock(mutex_);
+  for (int32_t i = cleanup_function_size_ - 1; i >= 0; --i) {
+    if (cleanup_function_[i] != nullptr) {
+      cleanup_function_[i] = nullptr;
+    }
+  }
+  cleanup_function_size_ = 0;
+}
+
+/**
  * @brief クリーンアップ関数追加
  *
  * @param function 追加するクリーンアップ関数
@@ -54,8 +67,30 @@ void mhl::system::singleton::SingletonCleanup::Execute() {
   for (int32_t i = cleanup_function_size_ - 1; i >= 0; --i) {
     if (cleanup_function_[i] != nullptr) {
       cleanup_function_[i]();
-      cleanup_function_[i] = nullptr;
     }
   }
-  cleanup_function_size_ = 0;
+}
+
+/**
+ * @brief クリーンアップ関数の取得
+ *
+ * @param index 取得するクリーンアップ関数のindex
+ * @return const mhl::system::singleton::SingletonCleanup::CleanupFunction*
+ * クリーンアップ関数
+ */
+const mhl::system::singleton::SingletonCleanup::CleanupFunction*
+mhl::system::singleton::SingletonCleanup::GetFunction(int32_t index) {
+  if ((index < 0) || (index >= kMaxSize)) {
+    return nullptr;
+  }
+  return &cleanup_function_[index];
+}
+
+/**
+ * @brief サイズ取得
+ *
+ * @return int32_t 登録されてるクリーンアップ関数の数
+ */
+int32_t mhl::system::singleton::SingletonCleanup::GetSize() {
+  return cleanup_function_size_;
 }

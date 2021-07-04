@@ -6,6 +6,7 @@
 #include "mhl/output/console/output_console.hpp"
 #include "mhl/output/console/output_consoles.hpp"
 #include "mhl/output/console/output_console_vs_sjis.hpp"
+#include "mhl/system/singleton/singleton_cleanup.hpp"
 
 int main() {
   std::shared_ptr<mhl::output::console::IConsoleOutputables> output(
@@ -25,6 +26,8 @@ int main() {
   testProgram.ExecuteUnitTest();
 
   output->PrintLine("--- main test -------------------------------------------------------");
-  //test_program::TestCallbackTest ct(output);
-  //ct.ExecuteUnitTest();
+
+  // シングルトン終了処理
+  mhl::system::singleton::SingletonCleanup::Execute();
+  mhl::system::singleton::SingletonCleanup::Finalize();
 }

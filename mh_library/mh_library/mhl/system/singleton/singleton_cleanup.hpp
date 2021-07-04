@@ -14,7 +14,8 @@ namespace singleton {
 
 /**
  * @brief シングルトンクリーンアップ
- *
+ * MhSingletonで使用するため、単体では使用しないこと
+ * 例外はユニットテスト時のみ
  */
 class SingletonCleanup {
  public:
@@ -32,9 +33,14 @@ class SingletonCleanup {
    * @brief 初期化
    *
    * @return true 成功
-   * @return false 失敗
+   * @return false 失敗(既にクリーンアップ関数が追加されてるのでFinalize)
    */
   static bool Initialize();
+
+  /**
+   * @brief 終了処理
+   */
+  static void Finalize();
 
   /**
    * @brief クリーンアップ関数追加
@@ -50,6 +56,23 @@ class SingletonCleanup {
    *
    */
   static void Execute();
+
+  /**
+   * @brief クリーンアップ関数の取得
+   *
+   * @param index 取得するクリーンアップ関数のindex
+   * @return const mhl::system::singleton::SingletonCleanup::CleanupFunction*
+   * クリーンアップ関数
+   */
+  static const mhl::system::singleton::SingletonCleanup::CleanupFunction*
+  GetFunction(int32_t index);
+
+  /**
+   * @brief サイズ取得
+   *
+   * @return int32_t 登録されてるクリーンアップ関数の数
+   */
+  static int32_t GetSize();
 
  private:
   // 排他処理用のmutex

@@ -258,6 +258,12 @@
     <ClInclude Include="mhl\system\singleton\singleton_cleanup.hpp">
       <Filter>ソース ファイル\mhl\system\singleton</Filter>
     </ClInclude>
+    <ClInclude Include="mhl\test_program\test_singleton_test.hpp">
+      <Filter>ソース ファイル\mhl\test_program</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\system\singleton\mh_singleton.hpp">
+      <Filter>ソース ファイル\mhl\system\singleton</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mh_library.cpp">
@@ -388,6 +394,9 @@
     </ClCompile>
     <ClCompile Include="mhl\system\singleton\singleton_cleanup.cpp">
       <Filter>ソース ファイル\mhl\system\singleton</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\test_program\test_singleton_test.cpp">
+      <Filter>ソース ファイル\mhl\test_program</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
