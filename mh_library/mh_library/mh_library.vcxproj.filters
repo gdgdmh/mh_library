@@ -79,6 +79,9 @@
     <Filter Include="ソース ファイル\mhl\system\singleton">
       <UniqueIdentifier>{5f41b4a2-2232-41fa-99a7-4d86cc7b8d00}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\mhl\system\service_locator">
+      <UniqueIdentifier>{2f2899a8-b6c9-4801-a6a0-68d58c13975f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mhl\exception\argument_exception.hpp">
@@ -263,6 +266,9 @@
     </ClInclude>
     <ClInclude Include="mhl\system\singleton\mh_singleton.hpp">
       <Filter>ソース ファイル\mhl\system\singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\system\service_locator\service_locator.hpp">
+      <Filter>ソース ファイル\mhl\system\service_locator</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
