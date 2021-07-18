@@ -5,7 +5,7 @@
 
 namespace mhl {
 
-namespace locator {
+namespace service_locator {
 
 /**
  * @brief サービスロケーターテンプレート
@@ -18,13 +18,13 @@ class ServiceLocator {
    * @brief コンストラクタ
    *
    */
-  ServiceLocator();
+  ServiceLocator() : service_(nullptr) {}
 
   /**
    * @brief デストラクタ
    *
    */
-  virtual ~ServiceLocator();
+  virtual ~ServiceLocator() { service_.reset(); }
 
   /**
    * @brief サービスの取得
@@ -33,16 +33,19 @@ class ServiceLocator {
    *
    * @return T* サービスオブジェクトのポインタ
    */
-  virtual T* get();
+  virtual T* get() { return service_.get(); }
 
   /**
    * @brief サービスを設定する
    *
    */
-  void Provide(T* service);
+  void Provide(T* service) { service_.reset(service_); }
+
+ private:
+  std::unique_ptr<T> service_;
 };
 
-}  // namespace locator
+}  // namespace service_locator
 
 }  // namespace mhl
 
