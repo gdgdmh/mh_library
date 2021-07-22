@@ -24,7 +24,8 @@ class TestDog {
    * @param value 値
    */
   void woof(int value) {
-    console->PrintLine(mhl::Formatter::Format("woof %d", value));
+    console->PrintLine(
+        mhl::string::format::Formatter::Format("woof %d", value));
   }
 
  private:
@@ -47,7 +48,8 @@ class TestCat {
    * @param value 値
    */
   void meow(int value) {
-    console->PrintLine(mhl::Formatter::Format("meow %d", value));
+    console->PrintLine(
+        mhl::string::format::Formatter::Format("meow %d", value));
   }
 
  private:

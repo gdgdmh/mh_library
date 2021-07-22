@@ -35,8 +35,8 @@ void test_program::TestBinaryTest::TestIntTest() {
         std::vector<int>::iterator lower_it =
             std::lower_bound(v.begin(), v.end(), 5);
         if (lower_it != v.end() && (*lower_it) == 5) {
-          std::string s =
-              mhl::Formatter::Format("low 5 find -> %d", (*lower_it));
+          std::string s = mhl::string::format::Formatter::Format(
+              "low 5 find -> %d", (*lower_it));
           output_console_->PrintLine(s);
         } else {
           output_console_->PrintLine("low 5 find -> not found");
@@ -48,7 +48,8 @@ void test_program::TestBinaryTest::TestIntTest() {
   {
     std::vector<int>::iterator it = std::lower_bound(v.begin(), v.end(), 11);
     if (it != v.end()) {
-      std::string s2 = mhl::Formatter::Format("low none -> %d", (*it));
+      std::string s2 =
+          mhl::string::format::Formatter::Format("low none -> %d", (*it));
       output_console_->PrintLine(s2);
     }
   }
@@ -56,7 +57,8 @@ void test_program::TestBinaryTest::TestIntTest() {
   {
     std::vector<int>::iterator it = std::lower_bound(v.begin(), v.end(), 7);
     if (it != v.end()) {
-      std::string s = mhl::Formatter::Format("low 7 find -> %d", (*it));
+      std::string s =
+          mhl::string::format::Formatter::Format("low 7 find -> %d", (*it));
       output_console_->PrintLine(s);
     }
   }
@@ -64,7 +66,8 @@ void test_program::TestBinaryTest::TestIntTest() {
   {
     std::vector<int>::iterator it = std::lower_bound(v.begin(), v.end(), 9);
     if (it != v.end()) {
-      std::string s = mhl::Formatter::Format("low 9 find -> %d", (*it));
+      std::string s =
+          mhl::string::format::Formatter::Format("low 9 find -> %d", (*it));
       output_console_->PrintLine(s);
     }
   }
@@ -75,7 +78,8 @@ void test_program::TestBinaryTest::TestIntTest() {
     {
       std::vector<int>::iterator it = std::upper_bound(v.begin(), v.end(), 7);
       if (it != v.end()) {
-        std::string s = mhl::Formatter::Format("up 7 find -> %d", (*it));
+        std::string s =
+            mhl::string::format::Formatter::Format("up 7 find -> %d", (*it));
         output_console_->PrintLine(s);
       }
     }
@@ -83,7 +87,8 @@ void test_program::TestBinaryTest::TestIntTest() {
     {
       std::vector<int>::iterator it = std::upper_bound(v.begin(), v.end(), 0);
       if (it != v.end()) {
-        std::string s = mhl::Formatter::Format("up 0 find -> %d", (*it));
+        std::string s =
+            mhl::string::format::Formatter::Format("up 0 find -> %d", (*it));
         output_console_->PrintLine(s);
       }
     }
@@ -93,7 +98,8 @@ void test_program::TestBinaryTest::TestIntTest() {
     {
       std::vector<int>::iterator it = std::upper_bound(v.begin(), v.end(), -1);
       if (it != v.end()) {
-        std::string s = mhl::Formatter::Format("up -1 find -> %d", (*it));
+        std::string s =
+            mhl::string::format::Formatter::Format("up -1 find -> %d", (*it));
         output_console_->PrintLine(s);
       }
     }
@@ -103,7 +109,7 @@ void test_program::TestBinaryTest::TestIntTest() {
 void test_program::TestBinaryTest::TestBinaryClassTest() {
   std::vector<TestBinaryClass> v;
   for (int i = 0; i < 10000; ++i) {
-    TestBinaryClass t(i, mhl::Formatter::Format("%d", i));
+    TestBinaryClass t(i, mhl::string::format::Formatter::Format("%d", i));
     v.push_back(t);
   }
   // lower_bound
@@ -114,8 +120,8 @@ void test_program::TestBinaryTest::TestBinaryClassTest() {
           return a.GetId() < b.GetId();
       });
     if (it != v.end()) {
-      std::string s =
-          mhl::Formatter::Format("lower 500 find -> id %d val %s",
+      std::string s = mhl::string::format::Formatter::Format(
+          "lower 500 find -> id %d val %s",
                                  (*it).GetId(), (*it).GetValue().c_str());
       output_console_->PrintLine(s);
     }

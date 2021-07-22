@@ -28,6 +28,7 @@
     <ClInclude Include="mhl\debug\assert\iassert_processor.hpp" />
     <ClInclude Include="mhl\debug\assert\mhl_assert.hpp" />
     <ClInclude Include="mhl\debug\assert\mhl_assertion.hpp" />
+    <ClInclude Include="mhl\debug\debug.hpp" />
     <ClInclude Include="mhl\debug\stacktrace\get_stacktrace_win.hpp" />
     <ClInclude Include="mhl\debug\stacktrace\istacktraceable.hpp" />
     <ClInclude Include="mhl\debug\stacktrace\stacktrace_info.hpp" />
@@ -50,6 +51,7 @@
     <ClInclude Include="mhl\system\template\iexecute_method.hpp" />
     <ClInclude Include="mhl\system\template\iobservable.hpp" />
     <ClInclude Include="mhl\system\template\subject.hpp" />
+    <ClInclude Include="mhl\system\variable_length_arguments\get_variable_length_arguments.hpp" />
     <ClInclude Include="mhl\test\unittest_base.hpp" />
     <ClInclude Include="mhl\test\unittest_execute_list.hpp" />
     <ClInclude Include="mhl\test_code\bit\test_bit_control_uint32.hpp" />
@@ -72,6 +74,7 @@
     <ClInclude Include="mhl\test_program\test_debug_assert_test.hpp" />
     <ClInclude Include="mhl\test_program\test_delegate_test.hpp" />
     <ClInclude Include="mhl\test_program\test_fermat_test.hpp" />
+    <ClInclude Include="mhl\test_program\test_free_test.hpp" />
     <ClInclude Include="mhl\test_program\test_instance_of_test.hpp" />
     <ClInclude Include="mhl\test_program\test_mhl_test_program.hpp" />
     <ClInclude Include="mhl\test_program\test_move_test.hpp" />
@@ -86,6 +89,7 @@
     <ClCompile Include="mhl\bit\bit_control_uint32.cpp" />
     <ClCompile Include="mhl\debug\assert\mhl_assert.cpp" />
     <ClCompile Include="mhl\debug\assert\mhl_assertion.cpp" />
+    <ClCompile Include="mhl\debug\debug.cpp" />
     <ClCompile Include="mhl\debug\stacktrace\get_stacktrace_win.cpp" />
     <ClCompile Include="mhl\debug\stacktrace\stacktrace_info.cpp" />
     <ClCompile Include="mhl\exception\argument_exception.cpp" />
@@ -117,6 +121,7 @@
     <ClCompile Include="mhl\test_program\test_debug_assert_test.cpp" />
     <ClCompile Include="mhl\test_program\test_delegate_test.cpp" />
     <ClCompile Include="mhl\test_program\test_fermat_test.cpp" />
+    <ClCompile Include="mhl\test_program\test_free_test.cpp" />
     <ClCompile Include="mhl\test_program\test_instance_of_test.cpp" />
     <ClCompile Include="mhl\test_program\test_mhl_test_program.cpp" />
     <ClCompile Include="mhl\test_program\test_move_test.cpp" />

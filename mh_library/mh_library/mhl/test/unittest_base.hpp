@@ -25,11 +25,14 @@ class UnitTestBase {
 #define AssertEquals(expected, msg)                                           \
   if (!(expected)) {                                                          \
     std::string msg1 =                                                        \
-        mhl::Formatter::Format("UnitTestBase Assert %s ", (#msg));   \
-    std::string msg2 = mhl::Formatter::Format("file %s ", __FILE__); \
+        mhl::string::format::Formatter::Format(                               \
+        "UnitTestBase Assert %s ", (#msg));                                   \
+    std::string msg2 =                                                        \
+        mhl::string::format::Formatter::Format("file %s ", __FILE__);         \
     std::string msg3 =                                                        \
-        mhl::Formatter::Format("function %s ", __FUNCTION__);        \
-    std::string msg4 = mhl::Formatter::Format("line %d ", __LINE__); \
+        mhl::string::format::Formatter::Format("function %s ", __FUNCTION__); \
+    std::string msg4 =                                                        \
+        mhl::string::format::Formatter::Format("line %d ", __LINE__);         \
     throw mhl::UnitTestException(msg1 + msg2 + msg3 + msg4, 0);               \
   }
 #endif
