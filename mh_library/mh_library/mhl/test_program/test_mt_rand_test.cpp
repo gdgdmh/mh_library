@@ -26,7 +26,7 @@ void test_program::TestMtRandTest::ExecuteUnitTest() {
     for (int32_t i = 0; i < 10; ++i) {
       uint32_t rnd = mt_->getRandUint32(0, 10);
       output_console_->Print(
-          mhl::Formatter::Format("%u,", rnd));
+          mhl::string::format::Formatter::Format("%u,", rnd));
     }
   }
   output_console_->PrintLine("");
@@ -36,7 +36,7 @@ void test_program::TestMtRandTest::ExecuteUnitTest() {
     for (int32_t i = 0; i < 10; ++i) {
       uint32_t rnd = mt_->getRandUint32(0, 10);
       output_console_->Print(
-          mhl::Formatter::Format("%u,", rnd));
+          mhl::string::format::Formatter::Format("%u,", rnd));
     }
   }
   output_console_->PrintLine("");

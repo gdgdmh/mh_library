@@ -120,7 +120,7 @@ void mhl::debug::stacktrace::GetStacktraceWin::ToStringStacktrace(
   const auto& line_number = info.GetLineNumbers();
   size_t size = symbols.size();
   for (size_t i = 0; i < size; ++i) {
-    stacktraceInfo += mhl::Formatter::Format(
+    stacktraceInfo += mhl::string::format::Formatter::Format(
         "%s line:%u(%s)", symbols.at(i).c_str(),
         line_number.at(i), file_name.at(i).c_str());
     /*

@@ -44,6 +44,7 @@
     <ClCompile Include="gt_mhl_rand_mt_rand.cpp" />
     <ClCompile Include="gt_mhl_system_singleton_mh_singleton.cpp" />
     <ClCompile Include="gt_mhl_system_singleton_singleton_cleanup.cpp" />
+    <ClCompile Include="gt_mhl_system_variable_length_arguments_get_variable_length_arguments.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="a_pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

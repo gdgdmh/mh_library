@@ -38,7 +38,7 @@ void test_program::route_search::TestRouteSearchTest::ExecuteUnitTest() {
     mhl::exception::ArgumentException a("test error", 0);
     throw a;
   } catch (mhl::exception::ArgumentException ae) {
-    output_console_->PrintLine(
-        mhl::Formatter::Format("%s:%d", ae.what(), ae.GetResult()));
+    output_console_->PrintLine(mhl::string::format::Formatter::Format(
+        "%s:%d", ae.what(), ae.GetResult()));
   }
 }
