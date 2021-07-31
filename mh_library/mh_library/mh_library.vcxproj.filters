@@ -85,6 +85,9 @@
     <Filter Include="ソース ファイル\mhl\system\variable_length_arguments">
       <UniqueIdentifier>{0d48b98f-b1d4-41e0-bdff-46c6fcc62e85}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\mhl\debug\service_locator">
+      <UniqueIdentifier>{c5cdcfe8-424c-4629-88f3-817750f23432}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mhl\exception\argument_exception.hpp">
@@ -282,6 +285,9 @@
     <ClInclude Include="mhl\system\variable_length_arguments\get_variable_length_arguments.hpp">
       <Filter>ソース ファイル\mhl\system\variable_length_arguments</Filter>
     </ClInclude>
+    <ClInclude Include="mhl\debug\service_locator\log\debug_log.hpp">
+      <Filter>ソース ファイル\mhl\debug\service_locator</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mh_library.cpp">
@@ -421,6 +427,9 @@
     </ClCompile>
     <ClCompile Include="mhl\test_program\test_free_test.cpp">
       <Filter>ソース ファイル\mhl\test_program</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\debug\service_locator\log\debug_log.cpp">
+      <Filter>ソース ファイル\mhl\debug\service_locator</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
