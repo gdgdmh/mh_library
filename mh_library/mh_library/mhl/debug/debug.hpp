@@ -23,17 +23,11 @@ class Debug {
    */
   virtual ~Debug();
 
-  /**
-   * @brief デバッグ出力(コンソール)
-   *
-   * @param format
-   * @param ...
-   */
-  static void Log(const char* format, ...);
+  // サービスロケーター取得
 };
 
 }  // namespace debug
 
 }  // namespace mhl
 
-#endif  // MHL_DEBUG_STACKTRACE_STACKTRACE_INFO_HPP_
+#endif  // MHL_DEBUG_DEBUG_HPP_
