@@ -18,4 +18,4 @@ mhl::debug::Debug::~Debug() {}
  * @param format
  * @param ...
  */
-void mhl::debug::Debug::Log(const char* format, ...) {}
+//void mhl::debug::Debug::Log(const char* format, ...) {}
