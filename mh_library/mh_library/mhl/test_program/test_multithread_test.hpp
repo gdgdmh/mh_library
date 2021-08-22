@@ -17,7 +17,10 @@ class MultiThreadTestTask {
   void Add() { ++value_; }
   int GetId() const { return id_; }
   int GetValue() const { return value_; }
-  void Print() { output_console_->PrintLine(mhl::Formatter::Format("ID %d value %d", id_, value_)); }
+  void Print() {
+    output_console_->PrintLine(
+        mhl::string::format::Formatter::Format("ID %d value %d", id_, value_));
+  }
   void Task1();
   void Task2();
 

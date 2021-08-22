@@ -82,6 +82,21 @@
     <Filter Include="ソース ファイル\mhl\system\service_locator">
       <UniqueIdentifier>{2f2899a8-b6c9-4801-a6a0-68d58c13975f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\mhl\system\variable_length_arguments">
+      <UniqueIdentifier>{0d48b98f-b1d4-41e0-bdff-46c6fcc62e85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\mhl\debug\service_locator">
+      <UniqueIdentifier>{c5cdcfe8-424c-4629-88f3-817750f23432}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\mhl\output\log">
+      <UniqueIdentifier>{ebf9a423-33eb-4505-9661-9b088c1dae2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\mhl\system\file">
+      <UniqueIdentifier>{c257fe77-09c4-4fe1-8e29-7890f369cf4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\mhl\system\file\text">
+      <UniqueIdentifier>{6be70a5f-5c4f-421c-8df7-6a98c2b85b17}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mhl\exception\argument_exception.hpp">
@@ -270,6 +285,48 @@
     <ClInclude Include="mhl\system\service_locator\service_locator.hpp">
       <Filter>ソース ファイル\mhl\system\service_locator</Filter>
     </ClInclude>
+    <ClInclude Include="mhl\debug\debug.hpp">
+      <Filter>ソース ファイル\mhl\debug</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\test_program\test_free_test.hpp">
+      <Filter>ソース ファイル\mhl\test_program</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\system\variable_length_arguments\get_variable_length_arguments.hpp">
+      <Filter>ソース ファイル\mhl\system\variable_length_arguments</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\debug\service_locator\log\debug_log.hpp">
+      <Filter>ソース ファイル\mhl\debug\service_locator</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\output\log\ilog_outputable.hpp">
+      <Filter>ソース ファイル\mhl\output\log</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\output\log\ilog_outputables.hpp">
+      <Filter>ソース ファイル\mhl\output\log</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\output\log\output_log.hpp">
+      <Filter>ソース ファイル\mhl\output\log</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\system\file\text\itextfile_writer.hpp">
+      <Filter>ソース ファイル\mhl\system\file\text</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\system\file\text\textfile_writer.hpp">
+      <Filter>ソース ファイル\mhl\system\file\text</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\system\file\text\textfile_write_mode.hpp">
+      <Filter>ソース ファイル\mhl\system\file\text</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\system\file\ifile_deleter.hpp">
+      <Filter>ソース ファイル\mhl\system\file</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\system\file\file_deleter.hpp">
+      <Filter>ソース ファイル\mhl\system\file</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\system\file\ifile_exists_checker.hpp">
+      <Filter>ソース ファイル\mhl\system\file</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\system\file\file_exists_checker_win.hpp">
+      <Filter>ソース ファイル\mhl\system\file</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mh_library.cpp">
@@ -403,6 +460,27 @@
     </ClCompile>
     <ClCompile Include="mhl\test_program\test_singleton_test.cpp">
       <Filter>ソース ファイル\mhl\test_program</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\debug\debug.cpp">
+      <Filter>ソース ファイル\mhl\debug</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\test_program\test_free_test.cpp">
+      <Filter>ソース ファイル\mhl\test_program</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\debug\service_locator\log\debug_log.cpp">
+      <Filter>ソース ファイル\mhl\debug\service_locator</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\output\log\output_log.cpp">
+      <Filter>ソース ファイル\mhl\output\log</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\system\file\text\textfile_writer.cpp">
+      <Filter>ソース ファイル\mhl\system\file\text</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\system\file\file_deleter.cpp">
+      <Filter>ソース ファイル\mhl\system\file</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\system\file\file_exists_checker_win.cpp">
+      <Filter>ソース ファイル\mhl\system\file</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

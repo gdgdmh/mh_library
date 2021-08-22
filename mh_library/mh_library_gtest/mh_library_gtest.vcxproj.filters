@@ -31,6 +31,18 @@
     <ClCompile Include="gt_mhl_system_singleton_mh_singleton.cpp">
       <Filter>mh_library_gtest</Filter>
     </ClCompile>
+    <ClCompile Include="gt_mhl_system_variable_length_arguments_get_variable_length_arguments.cpp">
+      <Filter>mh_library_gtest</Filter>
+    </ClCompile>
+    <ClCompile Include="gt_mhl_system_file_file_deleter.cpp">
+      <Filter>mh_library_gtest</Filter>
+    </ClCompile>
+    <ClCompile Include="gt_mhl_system_file_text_textfile_writer.cpp">
+      <Filter>mh_library_gtest</Filter>
+    </ClCompile>
+    <ClCompile Include="gt_mhl_system_file_file_exist_checker_win.cpp">
+      <Filter>mh_library_gtest</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="mh_library_gtest">

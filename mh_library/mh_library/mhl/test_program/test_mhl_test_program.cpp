@@ -20,6 +20,7 @@
 #include "../test_program/test_component_test.hpp"
 #include "../test_program/test_debug_assert_test.hpp"
 #include "../test_program/test_singleton_test.hpp"
+#include "../test_program/test_free_test.hpp"
 
 /**
  * コンストラクタ
@@ -64,6 +65,7 @@ void test_program::TestMhlTestProgram::ExecuteUnitTest() {
       new TestOutputConsolesTest(output_console_)));
   list.Add(std::shared_ptr<TestMtRandTest>(new TestMtRandTest(output_console_)));
   list.Add(std::shared_ptr<TestSingletonTest>(new TestSingletonTest(output_console_)));
+  list.Add(std::make_shared<TestFreeTest>(output_console_));
   // できればマルチスレッドは最後の実行したい(マルチスレッドが途中だと原因がわからなくなる可能性があるかもしれない)
   list.Add(std::shared_ptr<TestMultithreadTest>(
       new TestMultithreadTest(output_console_)));

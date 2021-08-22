@@ -2,9 +2,12 @@
 #define MHL_STRING_FORMAT_FORMATTER_HPP_
 
 #include <string>
-#include <vector>
+
+#include "../../system/variable_length_arguments/get_variable_length_arguments.hpp"
 
 namespace mhl {
+namespace string {
+namespace format {
 
 // コンソール出力のインターフェースクラス
 class Formatter {
@@ -17,13 +20,14 @@ class Formatter {
    */
   template <typename... Args>
   static std::string Format(const std::string& fmt, Args... args) {
-    size_t len = std::snprintf(nullptr, 0, fmt.c_str(), args...);
-    std::vector<char> buf(len + 1);
-    std::snprintf(&buf[0], len + 1, fmt.c_str(), args...);
-    return std::string(&buf[0], &buf[0] + len);
+    mhl::system::variable_length_arguments::GetVariableLengthArguments g;
+    std::string s;
+    g.ToString(s, fmt.c_str(), args...);
+    return s;
   }
 };
-
+}  // namespace format
+}  // namespace string
 }  // namespace mhl
 
 #endif  // MHL_STRING_FORMAT_FORMATTER_HPP_
