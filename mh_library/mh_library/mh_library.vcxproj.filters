@@ -91,6 +91,12 @@
     <Filter Include="ソース ファイル\mhl\output\log">
       <UniqueIdentifier>{ebf9a423-33eb-4505-9661-9b088c1dae2a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\mhl\system\file">
+      <UniqueIdentifier>{c257fe77-09c4-4fe1-8e29-7890f369cf4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\mhl\system\file\text">
+      <UniqueIdentifier>{6be70a5f-5c4f-421c-8df7-6a98c2b85b17}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mhl\exception\argument_exception.hpp">
@@ -300,6 +306,15 @@
     <ClInclude Include="mhl\output\log\output_log.hpp">
       <Filter>ソース ファイル\mhl\output\log</Filter>
     </ClInclude>
+    <ClInclude Include="mhl\system\file\text\itextfile_writer.hpp">
+      <Filter>ソース ファイル\mhl\system\file\text</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\system\file\text\textfile_writer.hpp">
+      <Filter>ソース ファイル\mhl\system\file\text</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\system\file\text\textfile_write_mode.hpp">
+      <Filter>ソース ファイル\mhl\system\file\text</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mh_library.cpp">
@@ -445,6 +460,9 @@
     </ClCompile>
     <ClCompile Include="mhl\output\log\output_log.cpp">
       <Filter>ソース ファイル\mhl\output\log</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\system\file\text\textfile_writer.cpp">
+      <Filter>ソース ファイル\mhl\system\file\text</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

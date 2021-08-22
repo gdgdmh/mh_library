@@ -47,6 +47,9 @@
     <ClInclude Include="mhl\scene\isceneable.hpp" />
     <ClInclude Include="mhl\scene\scene_stack.hpp" />
     <ClInclude Include="mhl\string\format\formatter.hpp" />
+    <ClInclude Include="mhl\system\file\text\itextfile_writer.hpp" />
+    <ClInclude Include="mhl\system\file\text\textfile_writer.hpp" />
+    <ClInclude Include="mhl\system\file\text\textfile_write_mode.hpp" />
     <ClInclude Include="mhl\system\rand\irand_getable.hpp" />
     <ClInclude Include="mhl\system\rand\mt_rand.hpp" />
     <ClInclude Include="mhl\system\service_locator\service_locator.hpp" />
@@ -105,6 +108,7 @@
     <ClCompile Include="mhl\output\console\output_console_vs_sjis.cpp" />
     <ClCompile Include="mhl\output\log\output_log.cpp" />
     <ClCompile Include="mhl\scene\scene_stack.cpp" />
+    <ClCompile Include="mhl\system\file\text\textfile_writer.cpp" />
     <ClCompile Include="mhl\system\rand\mt_rand.cpp" />
     <ClCompile Include="mhl\system\singleton\singleton_cleanup.cpp" />
     <ClCompile Include="mhl\test\unittest_execute_list.cpp" />
