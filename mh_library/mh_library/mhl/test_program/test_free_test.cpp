@@ -3,8 +3,9 @@
 #include <stdint.h>
 
 #include "../system/variable_length_arguments/get_variable_length_arguments.hpp"
-#include "../system/file/text/itextfile_writer.hpp"
 #include "../system/file/text/textfile_writer.hpp"
+#include "../system/file/file_deleter.hpp"
+#include "../system/file/file_exist_checker_win.hpp"
 
 /**
  * コンストラクタ
@@ -20,7 +21,11 @@ test_program::TestFreeTest::~TestFreeTest() {}
 
 void test_program::TestFreeTest::ExecuteUnitTest() {
   TestGetVariableLengthArguments();
+  TestFileExistsChecker();
   TestTextfileWriter();
+  TestFileExistsChecker();
+  TestFileDeleter();
+  TestFileExistsChecker();
 }
 
 void test_program::TestFreeTest::TestGetVariableLengthArguments() {
@@ -46,4 +51,16 @@ void test_program::TestFreeTest::TestTextfileWriter() {
   tw.WriteLine("aaa");
   tw.WriteLine("bbb");
   tw.Close();
+}
+
+void test_program::TestFreeTest::TestFileExistsChecker() {
+  mhl::system::file::FileExistCheckerWin fc;
+  if (fc.IsExists("test.txt")) {
+  } else {
+  }
+}
+
+void test_program::TestFreeTest::TestFileDeleter() {
+  mhl::system::file::FileDeleter fd;
+  fd.DeleteFile("test.txt");
 }
