@@ -26,7 +26,7 @@ class IFileDeleter {
    * @return true ファイル削除に成功
    * @return false ファイル削除に失敗
    */
-  virtual bool DeleteFile(const std::string& filePath) = 0;
+  virtual bool Delete(const std::string& filePath) = 0;
 };
 }  // namespace file
 }  // namespace system

@@ -1,5 +1,5 @@
-﻿#ifndef MHL_SYSTEM_FILE_IFILE_EXIST_CHECKER_HPP_
-#define MHL_SYSTEM_FILE_IFILE_EXIST_CHECKER_HPP_
+﻿#ifndef MHL_SYSTEM_FILE_IFILE_EXISTS_CHECKER_HPP_
+#define MHL_SYSTEM_FILE_IFILE_EXISTS_CHECKER_HPP_
 
 #include <string>
 
@@ -11,13 +11,13 @@ namespace file {
  * @brief ファイル存在確認インターフェースクラス
  *
  */
-class IFileExistChecker {
+class IFileExistsChecker {
  public:
   /**
    * @brief デストラクタ
    *
    */
-  virtual ~IFileExistChecker() {}
+  virtual ~IFileExistsChecker() {}
 
   /**
    * @brief ファイルが存在するかチェック
@@ -32,4 +32,4 @@ class IFileExistChecker {
 }  // namespace system
 }  // namespace mhl
 
-#endif  // MHL_SYSTEM_FILE_IFILE_EXIST_CHECKER_HPP_
+#endif  // MHL_SYSTEM_FILE_IFILE_EXISTS_CHECKER_HPP_

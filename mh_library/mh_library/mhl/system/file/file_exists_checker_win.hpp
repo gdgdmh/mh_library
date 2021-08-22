@@ -1,7 +1,7 @@
-﻿#ifndef MHL_SYSTEM_FILE_FILE_EXIST_CHECKER_HPP_
-#define MHL_SYSTEM_FILE_FILE_EXIST_CHECKER_HPP_
+﻿#ifndef MHL_SYSTEM_FILE_FILE_EXISTS_CHECKER_HPP_
+#define MHL_SYSTEM_FILE_FILE_EXISTS_CHECKER_HPP_
 
-#include "ifile_exist_checker.hpp"
+#include "ifile_exists_checker.hpp"
 
 namespace mhl {
 namespace system {
@@ -12,19 +12,19 @@ namespace file {
  * 存在チェックはいろいろな方法があるがWindows専用のチェック方法をとる
  *
  */
-class FileExistCheckerWin : public IFileExistChecker {
+class FileExistsCheckerWin : public IFileExistsChecker {
  public:
   /**
    * @brief コンストラクタ
    *
    */
-  FileExistCheckerWin();
+  FileExistsCheckerWin();
 
   /**
    * @brief デストラクタ
    *
    */
-  virtual ~FileExistCheckerWin() override;
+  virtual ~FileExistsCheckerWin() override;
 
   /**
    * @brief ファイルが存在するかチェック
@@ -39,4 +39,4 @@ class FileExistCheckerWin : public IFileExistChecker {
 }  // namespace system
 }  // namespace mhl
 
-#endif  // MHL_SYSTEM_FILE_FILE_EXIST_CHECKER_HPP_
+#endif  // MHL_SYSTEM_FILE_FILE_EXISTS_CHECKER_HPP_

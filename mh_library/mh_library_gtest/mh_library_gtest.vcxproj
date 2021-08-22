@@ -42,6 +42,9 @@
     <ClCompile Include="gt_mhl_debug_stacktrace_stacktrace_info.cpp" />
     <ClCompile Include="gt_mhl_output_console_output_consoles.cpp" />
     <ClCompile Include="gt_mhl_rand_mt_rand.cpp" />
+    <ClCompile Include="gt_mhl_system_file_file_exist_checker_win.cpp" />
+    <ClCompile Include="gt_mhl_system_file_file_deleter.cpp" />
+    <ClCompile Include="gt_mhl_system_file_text_textfile_writer.cpp" />
     <ClCompile Include="gt_mhl_system_singleton_mh_singleton.cpp" />
     <ClCompile Include="gt_mhl_system_singleton_singleton_cleanup.cpp" />
     <ClCompile Include="gt_mhl_system_variable_length_arguments_get_variable_length_arguments.cpp" />

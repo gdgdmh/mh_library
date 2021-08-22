@@ -1,11 +1,12 @@
 ﻿#include "test_free_test.hpp"
 
 #include <stdint.h>
+#include <shlobj.h>
 
 #include "../system/variable_length_arguments/get_variable_length_arguments.hpp"
 #include "../system/file/text/textfile_writer.hpp"
 #include "../system/file/file_deleter.hpp"
-#include "../system/file/file_exist_checker_win.hpp"
+#include "../system/file/file_exists_checker_win.hpp"
 
 /**
  * コンストラクタ
@@ -54,13 +55,38 @@ void test_program::TestFreeTest::TestTextfileWriter() {
 }
 
 void test_program::TestFreeTest::TestFileExistsChecker() {
-  mhl::system::file::FileExistCheckerWin fc;
-  if (fc.IsExists("test.txt")) {
+  mhl::system::file::FileExistsCheckerWin fc;
+
+  TCHAR path[MAX_PATH];
+  SHGetSpecialFolderPath(NULL, path, CSIDL_PERSONAL, 0);
+
+  //std::string s = path;
+#ifdef UNICODE
+  std::vector<char> buffer;
+  int32_t size = WideCharToMultiByte(CP_UTF8, 0, path, -1, NULL, 0, NULL, NULL);
+  if (size > 0) {
+    buffer.resize(size);
+    WideCharToMultiByte(CP_UTF8, 0, path, -1, static_cast<LPSTR>(&buffer[0]), static_cast<int32_t>(buffer.size()), NULL, NULL);
   } else {
+    // Error
+  }
+  std::string s(&buffer[0]);
+#else
+  std::string s(path);
+#endif // UNICODE
+
+
+  //if (fc.IsExists("test.txt")) {
+  if (fc.IsExists(s)) {
+    int aa=10;
+    aa=20;
+  } else {
+    int bb = 10;
+    bb = 20;
   }
 }
 
 void test_program::TestFreeTest::TestFileDeleter() {
   mhl::system::file::FileDeleter fd;
-  fd.DeleteFile("test.txt");
+  fd.Delete("test.txt");
 }

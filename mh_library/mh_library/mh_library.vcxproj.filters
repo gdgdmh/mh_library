@@ -321,10 +321,10 @@
     <ClInclude Include="mhl\system\file\file_deleter.hpp">
       <Filter>ソース ファイル\mhl\system\file</Filter>
     </ClInclude>
-    <ClInclude Include="mhl\system\file\ifile_exist_checker.hpp">
+    <ClInclude Include="mhl\system\file\ifile_exists_checker.hpp">
       <Filter>ソース ファイル\mhl\system\file</Filter>
     </ClInclude>
-    <ClInclude Include="mhl\system\file\file_exist_checker_win.hpp">
+    <ClInclude Include="mhl\system\file\file_exists_checker_win.hpp">
       <Filter>ソース ファイル\mhl\system\file</Filter>
     </ClInclude>
   </ItemGroup>
@@ -479,7 +479,7 @@
     <ClCompile Include="mhl\system\file\file_deleter.cpp">
       <Filter>ソース ファイル\mhl\system\file</Filter>
     </ClCompile>
-    <ClCompile Include="mhl\system\file\file_exist_checker_win.cpp">
+    <ClCompile Include="mhl\system\file\file_exists_checker_win.cpp">
       <Filter>ソース ファイル\mhl\system\file</Filter>
     </ClCompile>
   </ItemGroup>
