@@ -3,6 +3,8 @@
 #include <stdint.h>
 
 #include "../system/variable_length_arguments/get_variable_length_arguments.hpp"
+#include "../system/file/text/itextfile_writer.hpp"
+#include "../system/file/text/textfile_writer.hpp"
 
 /**
  * コンストラクタ
@@ -18,6 +20,7 @@ test_program::TestFreeTest::~TestFreeTest() {}
 
 void test_program::TestFreeTest::ExecuteUnitTest() {
   TestGetVariableLengthArguments();
+  TestTextfileWriter();
 }
 
 void test_program::TestFreeTest::TestGetVariableLengthArguments() {
@@ -35,4 +38,12 @@ void test_program::TestFreeTest::TestGetVariableLengthArguments() {
     int32_t tmp = 0;
     tmp = 10;
   }
+}
+
+void test_program::TestFreeTest::TestTextfileWriter() {
+  mhl::system::file::text::TextfileWriter tw;
+  tw.Open("test.txt", mhl::system::file::text::Mode::kNewWrite);
+  tw.WriteLine("aaa");
+  tw.WriteLine("bbb");
+  tw.Close();
 }

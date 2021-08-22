@@ -30,6 +30,7 @@ class TestFreeTest : public mhl::UnitTestBase {
 
  private:
   void TestGetVariableLengthArguments();
+  void TestTextfileWriter();
 };
 
 }  // namespace test_program
