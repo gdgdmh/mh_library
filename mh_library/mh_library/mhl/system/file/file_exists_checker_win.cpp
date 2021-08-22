@@ -1,4 +1,4 @@
-﻿#include "file_exist_checker_win.hpp"
+﻿#include "file_exists_checker_win.hpp"
 
 #include <Shlwapi.h>
 
@@ -8,13 +8,13 @@
  * @brief コンストラクタ
  *
  */
-mhl::system::file::FileExistCheckerWin::FileExistCheckerWin() {}
+mhl::system::file::FileExistsCheckerWin::FileExistsCheckerWin() {}
 
 /**
  * @brief デストラクタ
  *
  */
-mhl::system::file::FileExistCheckerWin::~FileExistCheckerWin() {}
+mhl::system::file::FileExistsCheckerWin::~FileExistsCheckerWin() {}
 
 /**
  * @brief ファイルが存在するかチェック
@@ -23,7 +23,7 @@ mhl::system::file::FileExistCheckerWin::~FileExistCheckerWin() {}
  * @return true ファイルが存在する
  * @return false ファイルが存在しない
  */
-bool mhl::system::file::FileExistCheckerWin::IsExists(const std::string& str) {
+bool mhl::system::file::FileExistsCheckerWin::IsExists(const std::string& str) {
   if (str.empty()) {
     return false;
   }

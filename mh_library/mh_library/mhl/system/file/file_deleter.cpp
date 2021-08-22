@@ -19,7 +19,7 @@ mhl::system::file::FileDeleter::~FileDeleter() {}
  * @return true ファイル削除に成功
  * @return false ファイル削除に失敗
  */
-bool mhl::system::file::FileDeleter::DeleteFile(const std::string& file_path) {
+bool mhl::system::file::FileDeleter::Delete(const std::string& file_path) {
   if (file_path.empty()) {
     return false;
   }

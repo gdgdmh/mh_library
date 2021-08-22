@@ -32,7 +32,7 @@ class FileDeleter : public IFileDeleter {
    * @return true ファイル削除に成功
    * @return false ファイル削除に失敗
    */
-  bool DeleteFile(const std::string& file_path) override;
+  bool Delete(const std::string& file_path) override;
 };
 }  // namespace file
 }  // namespace system
