@@ -315,6 +315,18 @@
     <ClInclude Include="mhl\system\file\text\textfile_write_mode.hpp">
       <Filter>ソース ファイル\mhl\system\file\text</Filter>
     </ClInclude>
+    <ClInclude Include="mhl\system\file\ifile_deleter.hpp">
+      <Filter>ソース ファイル\mhl\system\file</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\system\file\file_deleter.hpp">
+      <Filter>ソース ファイル\mhl\system\file</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\system\file\ifile_exist_checker.hpp">
+      <Filter>ソース ファイル\mhl\system\file</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\system\file\file_exist_checker_win.hpp">
+      <Filter>ソース ファイル\mhl\system\file</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mh_library.cpp">
@@ -463,6 +475,12 @@
     </ClCompile>
     <ClCompile Include="mhl\system\file\text\textfile_writer.cpp">
       <Filter>ソース ファイル\mhl\system\file\text</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\system\file\file_deleter.cpp">
+      <Filter>ソース ファイル\mhl\system\file</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\system\file\file_exist_checker_win.cpp">
+      <Filter>ソース ファイル\mhl\system\file</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -47,6 +47,10 @@
     <ClInclude Include="mhl\scene\isceneable.hpp" />
     <ClInclude Include="mhl\scene\scene_stack.hpp" />
     <ClInclude Include="mhl\string\format\formatter.hpp" />
+    <ClInclude Include="mhl\system\file\file_deleter.hpp" />
+    <ClInclude Include="mhl\system\file\file_exist_checker_win.hpp" />
+    <ClInclude Include="mhl\system\file\ifile_deleter.hpp" />
+    <ClInclude Include="mhl\system\file\ifile_exist_checker.hpp" />
     <ClInclude Include="mhl\system\file\text\itextfile_writer.hpp" />
     <ClInclude Include="mhl\system\file\text\textfile_writer.hpp" />
     <ClInclude Include="mhl\system\file\text\textfile_write_mode.hpp" />
@@ -108,6 +112,8 @@
     <ClCompile Include="mhl\output\console\output_console_vs_sjis.cpp" />
     <ClCompile Include="mhl\output\log\output_log.cpp" />
     <ClCompile Include="mhl\scene\scene_stack.cpp" />
+    <ClCompile Include="mhl\system\file\file_deleter.cpp" />
+    <ClCompile Include="mhl\system\file\file_exist_checker_win.cpp" />
     <ClCompile Include="mhl\system\file\text\textfile_writer.cpp" />
     <ClCompile Include="mhl\system\rand\mt_rand.cpp" />
     <ClCompile Include="mhl\system\singleton\singleton_cleanup.cpp" />
