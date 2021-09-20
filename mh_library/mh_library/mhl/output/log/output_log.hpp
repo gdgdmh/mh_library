@@ -3,9 +3,10 @@
 
 #include <memory>
 #include <string>
-#include <ostream>
+#include <vector>
 
-#include "ilog_outputable.hpp"
+#include "../../system/file/text/itextfile_writer.hpp"
+#include "ilog_outputables.hpp"
 
 namespace mhl {
 
@@ -14,14 +15,16 @@ namespace output {
 namespace log {
 
 // コンソール出力クラス
-class OutputLog : public mhl::output::log::ILogOutputable {
+class OutputLog : public mhl::output::log::ILogOutputables {
+ public:
+  using WriterInterface = mhl::system::file::text::ITextfileWriter;
+
  public:
   /**
    * @brief コンストラクタ
    *
-   * @param file_name ファイル名
    */
-  OutputLog(const std::string file_name);
+  OutputLog();
 
   /**
    * デストラクタ
@@ -29,20 +32,48 @@ class OutputLog : public mhl::output::log::ILogOutputable {
   virtual ~OutputLog();
 
   /**
-   * 文字列を出力する
+   * @brief 終了処理
+   *
+   * @return true 終了処理成功
+   * @return false 終了処理失敗
    */
-  void Print(std::string string);
+  bool Finalize() override;
 
   /**
-   * 改行付き文字列を出力する
+   * @brief 文字列を出力する
+   *
+   * @param string 出力する文字列
    */
-  void PrintLine(std::string string);
+  void Print(const std::string& string) override;
 
- public:
-  std::string file_path_;
-  std::shared_ptr<std::ofstream> out_stream_;
-  bool is_open_;
-  bool open_error_;
+  /**
+   * @brief 改行付き文字列を出力する
+   *
+   * @param string 出力する文字列
+   */
+  void PrintLine(const std::string& string) override;
+
+  /**
+   * @brief 出力クラスを追加する
+   *
+   */
+  void Add(std::shared_ptr<ILogOutputable>& output_log) override;
+
+  /**
+   * @brief 追加された出力クラスをクリアする
+   *
+   */
+  void Clear() override;
+
+  /**
+   * @brief 現在登録されている出力クラスの個数を取得する
+   *
+   * @return size_t 出力クラスの個数
+   */
+  size_t Size() const override;
+
+ private:
+  std::vector<std::shared_ptr<mhl::output::log::ILogOutputable> > outputable_;
 };
 
 }  // namespace log

@@ -4,6 +4,7 @@
 #include <memory>
 #include <string>
 
+#include "../../system/file/text/textfile_write_mode.hpp"
 #include "ilog_outputable.hpp"
 
 namespace mhl {
@@ -24,14 +25,26 @@ class ILogOutputables {
   virtual ~ILogOutputables() {}
 
   /**
-   * 文字列を出力する
+   * @brief 終了処理
+   *
+   * @return true 終了処理成功
+   * @return false 終了処理失敗
    */
-  virtual void Print(std::string string) = 0;
+  virtual bool Finalize() = 0;
 
   /**
-   * 改行付き文字列を出力する
+   * @brief 文字列を出力する
+   *
+   * @param string 出力する文字列
    */
-  virtual void PrintLine(std::string string) = 0;
+  virtual void Print(const std::string& string) = 0;
+
+  /**
+   * @brief 改行付き文字列を出力する
+   *
+   * @param string 出力する文字列
+   */
+  virtual void PrintLine(const std::string& string) = 0;
 
   /**
    * @brief 出力クラスを追加する
@@ -50,7 +63,7 @@ class ILogOutputables {
    *
    * @return size_t 出力クラスの個数
    */
-  virtual size_t Size() = 0;
+  virtual size_t Size() const = 0;
 };
 
 }  // namespace log
