@@ -6,7 +6,7 @@
 #include <vector>
 
 #include "../../system/file/text/itextfile_writer.hpp"
-#include "ilog_outputables.hpp"
+#include "ilog_outputable.hpp"
 
 namespace mhl {
 
@@ -14,22 +14,32 @@ namespace output {
 
 namespace log {
 
-// コンソール出力クラス
-class OutputLog : public mhl::output::log::ILogOutputables {
- public:
-  using WriterInterface = mhl::system::file::text::ITextfileWriter;
-
+// ログ出力クラス
+class OutputLog : public mhl::output::log::ILogOutputable {
  public:
   /**
    * @brief コンストラクタ
    *
+   * @param output ログ出力クラス
    */
-  OutputLog();
+  OutputLog(
+      const std::shared_ptr<mhl::system::file::text::ITextfileWriter>& writer);
 
   /**
    * デストラクタ
    */
   virtual ~OutputLog();
+
+  /**
+   * @brief 初期化
+   *
+   * @param file_name ログファイルパス
+   * @param mode ファイルオープンモード
+   * @return true 初期化成功
+   * @return false 初期化失敗
+   */
+  bool Initialize(const std::string& file_name,
+                  mhl::system::file::text::Mode mode) override;
 
   /**
    * @brief 終了処理
@@ -54,26 +64,15 @@ class OutputLog : public mhl::output::log::ILogOutputables {
   void PrintLine(const std::string& string) override;
 
   /**
-   * @brief 出力クラスを追加する
+   * @brief 初期化済みか
    *
+   * @return true 初期化済み
+   * @return false 未初期化
    */
-  void Add(std::shared_ptr<ILogOutputable>& output_log) override;
-
-  /**
-   * @brief 追加された出力クラスをクリアする
-   *
-   */
-  void Clear() override;
-
-  /**
-   * @brief 現在登録されている出力クラスの個数を取得する
-   *
-   * @return size_t 出力クラスの個数
-   */
-  size_t Size() const override;
+  bool IsInitialized() const override;
 
  private:
-  std::vector<std::shared_ptr<mhl::output::log::ILogOutputable> > outputable_;
+  std::shared_ptr<mhl::system::file::text::ITextfileWriter> writer_;
 };
 
 }  // namespace log
