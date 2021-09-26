@@ -1,11 +1,12 @@
-﻿#ifndef MHL_OUTPUT_LOG_ILOGOUTPUTABLES_HPP_
-#define MHL_OUTPUT_LOG_ILOGOUTPUTABLES_HPP_
+﻿#ifndef MHL_OUTPUT_LOG_OUTPUT_LOGS_HPP_
+#define MHL_OUTPUT_LOG_OUTPUT_LOGS_HPP_
 
 #include <memory>
 #include <string>
+#include <vector>
 
-#include "../../system/file/text/textfile_write_mode.hpp"
-#include "ilog_outputable.hpp"
+#include "../../system/file/text/itextfile_writer.hpp"
+#include "ilog_outputables.hpp"
 
 namespace mhl {
 
@@ -13,16 +14,22 @@ namespace output {
 
 namespace log {
 
-/**
- * @brief 複数環境ログ出力クラス
- *
- */
-class ILogOutputables {
+// コンソール出力クラス
+class OutputLogs : public mhl::output::log::ILogOutputables {
  public:
+  using WriterInterface = mhl::system::file::text::ITextfileWriter;
+
+ public:
+  /**
+   * @brief コンストラクタ
+   *
+   */
+  OutputLogs();
+
   /**
    * デストラクタ
    */
-  virtual ~ILogOutputables() {}
+  virtual ~OutputLogs();
 
   /**
    * @brief 終了処理
@@ -30,21 +37,21 @@ class ILogOutputables {
    * @return true 終了処理成功
    * @return false 終了処理失敗
    */
-  virtual bool Finalize() = 0;
+  bool Finalize() override;
 
   /**
    * @brief 文字列を出力する
    *
    * @param string 出力する文字列
    */
-  virtual void Print(const std::string& string) = 0;
+  void Print(const std::string& string) override;
 
   /**
    * @brief 改行付き文字列を出力する
    *
    * @param string 出力する文字列
    */
-  virtual void PrintLine(const std::string& string) = 0;
+  void PrintLine(const std::string& string) override;
 
   /**
    * @brief ログ出力クラスを追加する.初期化済みであることが前提
@@ -53,7 +60,7 @@ class ILogOutputables {
    * @return true 追加成功
    * @return false 初期化されてないなどの理由で追加しなかった
    */
-  virtual bool Add(const std::shared_ptr<ILogOutputable>& output_log) = 0;
+  bool Add(const std::shared_ptr<ILogOutputable>& output_log) override;
 
   /**
    * @brief 追加されたログ出力クラスをクリアする
@@ -61,14 +68,17 @@ class ILogOutputables {
    * @return true 成功
    * @return false どれかが失敗
    */
-  virtual bool Clear() = 0;
+  bool Clear() override;
 
   /**
    * @brief 現在登録されている出力クラスの個数を取得する
    *
    * @return size_t 出力クラスの個数
    */
-  virtual size_t Size() const = 0;
+  size_t Size() const override;
+
+ private:
+  std::vector<std::shared_ptr<mhl::output::log::ILogOutputable> > outputable_;
 };
 
 }  // namespace log
@@ -77,4 +87,4 @@ class ILogOutputables {
 
 }  // namespace mhl
 
-#endif  // MHL_OUTPUT_LOG_ILOGOUTPUTABLES_HPP_
+#endif  // MHL_OUTPUT_LOG_OUTPUT_LOGS_HPP_

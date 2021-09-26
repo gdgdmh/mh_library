@@ -7,6 +7,10 @@
 #include "../system/file/text/textfile_writer.hpp"
 #include "../system/file/file_deleter.hpp"
 #include "../system/file/file_exists_checker_win.hpp"
+#include "../output/log/ilog_outputable.hpp"
+#include "../output/log/ilog_outputables.hpp"
+#include "../output/log/output_log.hpp"
+#include "../output/log/output_logs.hpp"
 
 /**
  * コンストラクタ
@@ -27,6 +31,8 @@ void test_program::TestFreeTest::ExecuteUnitTest() {
   TestFileExistsChecker();
   TestFileDeleter();
   TestFileExistsChecker();
+  TestOutputLog();
+  TestOutputLogs();
 }
 
 void test_program::TestFreeTest::TestGetVariableLengthArguments() {
@@ -89,4 +95,67 @@ void test_program::TestFreeTest::TestFileExistsChecker() {
 void test_program::TestFreeTest::TestFileDeleter() {
   mhl::system::file::FileDeleter fd;
   fd.Delete("test.txt");
+}
+
+void test_program::TestFreeTest::TestOutputLog() {
+  const std::string& file_name = "testoutput.txt";
+
+  // テスト前に消しておく
+  mhl::system::file::FileDeleter fd;
+  fd.Delete(file_name);
+
+
+
+  std::shared_ptr<mhl::system::file::text::TextfileWriter> writer =
+      std::make_shared<mhl::system::file::text::TextfileWriter>();
+
+  mhl::output::log::OutputLog output_log(writer);
+
+  output_log.Initialize(file_name, mhl::system::file::text::Mode::kNewWrite);
+
+  output_log.PrintLine("testテストtest");
+  output_log.PrintLine("yaho-");
+
+  output_log.Finalize();
+
+  // テスト終了後消す
+  fd.Delete(file_name);
+}
+
+void test_program::TestFreeTest::TestOutputLogs() {
+  const std::string& file_name1 = "testoutput1.txt";
+  const std::string& file_name2 = "testoutput2.txt";
+
+  // テスト前に消しておく
+  mhl::system::file::FileDeleter fd;
+  fd.Delete(file_name1);
+  fd.Delete(file_name2);
+
+  mhl::output::log::OutputLogs output_logs;
+
+  {
+    std::shared_ptr<mhl::system::file::text::ITextfileWriter> writer =
+        std::make_shared<mhl::system::file::text::TextfileWriter>();
+    std::shared_ptr<mhl::output::log::ILogOutputable> output_log =
+        std::make_shared<mhl::output::log::OutputLog>(writer);
+    
+    output_log->Initialize(file_name1, mhl::system::file::text::Mode::kNewWrite);
+    output_logs.Add(output_log);
+  }
+  {
+    std::shared_ptr<mhl::system::file::text::ITextfileWriter> writer =
+        std::make_shared<mhl::system::file::text::TextfileWriter>();
+    std::shared_ptr<mhl::output::log::ILogOutputable> output_log =
+        std::make_shared<mhl::output::log::OutputLog>(writer);
+
+    output_log->Initialize(file_name2,
+                           mhl::system::file::text::Mode::kNewWrite);
+    output_logs.Add(output_log);
+  }
+  output_logs.PrintLine("abcえーびーしー");
+
+  output_logs.Finalize();
+
+  fd.Delete(file_name1);
+  fd.Delete(file_name2);
 }

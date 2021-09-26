@@ -33,6 +33,8 @@ class TestFreeTest : public mhl::UnitTestBase {
   void TestTextfileWriter();
   void TestFileExistsChecker();
   void TestFileDeleter();
+  void TestOutputLog();
+  void TestOutputLogs();
 };
 
 }  // namespace test_program
