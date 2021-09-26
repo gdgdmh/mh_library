@@ -1,17 +1,39 @@
 ﻿#include "output_log.hpp"
 
-#include <iostream>
-
 /**
  * @brief コンストラクタ
  *
+ * @param output ログ出力クラス
  */
-mhl::output::log::OutputLog::OutputLog() : outputable_() {}
+mhl::output::log::OutputLog::OutputLog(
+    const std::shared_ptr<mhl::system::file::text::ITextfileWriter>& writer)
+    : writer_(writer) {}
 
 /**
  * デストラクタ
  */
-mhl::output::log::OutputLog::~OutputLog() { outputable_.clear(); }
+mhl::output::log::OutputLog::~OutputLog() { Finalize(); }
+
+/**
+ * @brief 初期化
+ *
+ * @param file_name ログファイルパス
+ * @param mode ファイルオープンモード
+ * @return true 初期化成功
+ * @return false 初期化失敗
+ */
+bool mhl::output::log::OutputLog::Initialize(
+    const std::string& file_name, mhl::system::file::text::Mode mode) {
+  if (writer_.get() == nullptr) {
+    return false;
+  }
+  if (writer_->IsOpened()) {
+    
+    return true;
+  }
+  // ファイルオープンしてないときは開く
+  return writer_->Open(file_name, mode);
+}
 
 /**
  * @brief 終了処理
@@ -20,17 +42,16 @@ mhl::output::log::OutputLog::~OutputLog() { outputable_.clear(); }
  * @return false 終了処理失敗
  */
 bool mhl::output::log::OutputLog::Finalize() {
-  bool is_success = true;
-  for (auto output : outputable_) {
-    if (output.get() == nullptr) {
-      continue;
-    }
-    if (!output->Finalize()) {
-      output.reset();
-      is_success = false;
-    }
+  if (writer_.get() == nullptr) {
+    // 解放済み
+    return true;
   }
-  return is_success;
+  bool result = false;
+  if (writer_->IsOpened()) {
+    result = writer_->Close();
+  }
+  writer_.reset();
+  return result;
 }
 
 /**
@@ -39,12 +60,10 @@ bool mhl::output::log::OutputLog::Finalize() {
  * @param string 出力する文字列
  */
 void mhl::output::log::OutputLog::Print(const std::string& string) {
-  for (auto output : outputable_) {
-    if (output.get() == nullptr) {
-      continue;
-    }
-    output->Print(string);
+  if (writer_.get() == nullptr) {
+    return;
   }
+  writer_->Write(string);
 }
 
 /**
@@ -53,30 +72,21 @@ void mhl::output::log::OutputLog::Print(const std::string& string) {
  * @param string 出力する文字列
  */
 void mhl::output::log::OutputLog::PrintLine(const std::string& string) {
-  for (auto output : outputable_) {
-    if (output.get() == nullptr) {
-      continue;
-    }
-    output->PrintLine(string);
+  if (writer_.get() == nullptr) {
+    return;
   }
+  writer_->WriteLine(string);
 }
 
 /**
- * @brief 出力クラスを追加する
+ * @brief 初期化済みか
  *
+ * @return true 初期化済み
+ * @return false 未初期化
  */
-void mhl::output::log::OutputLog::Add(
-    std::shared_ptr<ILogOutputable>& output_log) {}
-
-/**
- * @brief 追加された出力クラスをクリアする
- *
- */
-void mhl::output::log::OutputLog::Clear() {}
-
-/**
- * @brief 現在登録されている出力クラスの個数を取得する
- *
- * @return size_t 出力クラスの個数
- */
-size_t mhl::output::log::OutputLog::Size() const { return outputable_.size(); }
+bool mhl::output::log::OutputLog::IsInitialized() const {
+  if (writer_.get() == nullptr) {
+    return false;
+  }
+  return writer_->IsOpened();
+}

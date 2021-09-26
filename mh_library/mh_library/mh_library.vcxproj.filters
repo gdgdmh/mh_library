@@ -303,9 +303,6 @@
     <ClInclude Include="mhl\output\log\ilog_outputables.hpp">
       <Filter>ソース ファイル\mhl\output\log</Filter>
     </ClInclude>
-    <ClInclude Include="mhl\output\log\output_log.hpp">
-      <Filter>ソース ファイル\mhl\output\log</Filter>
-    </ClInclude>
     <ClInclude Include="mhl\system\file\text\itextfile_writer.hpp">
       <Filter>ソース ファイル\mhl\system\file\text</Filter>
     </ClInclude>
@@ -326,6 +323,12 @@
     </ClInclude>
     <ClInclude Include="mhl\system\file\file_exists_checker_win.hpp">
       <Filter>ソース ファイル\mhl\system\file</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\output\log\output_logs.hpp">
+      <Filter>ソース ファイル\mhl\output\log</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\output\log\output_log.hpp">
+      <Filter>ソース ファイル\mhl\output\log</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -470,9 +473,6 @@
     <ClCompile Include="mhl\debug\service_locator\log\debug_log.cpp">
       <Filter>ソース ファイル\mhl\debug\service_locator</Filter>
     </ClCompile>
-    <ClCompile Include="mhl\output\log\output_log.cpp">
-      <Filter>ソース ファイル\mhl\output\log</Filter>
-    </ClCompile>
     <ClCompile Include="mhl\system\file\text\textfile_writer.cpp">
       <Filter>ソース ファイル\mhl\system\file\text</Filter>
     </ClCompile>
@@ -481,6 +481,12 @@
     </ClCompile>
     <ClCompile Include="mhl\system\file\file_exists_checker_win.cpp">
       <Filter>ソース ファイル\mhl\system\file</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\output\log\output_logs.cpp">
+      <Filter>ソース ファイル\mhl\output\log</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\output\log\output_log.cpp">
+      <Filter>ソース ファイル\mhl\output\log</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

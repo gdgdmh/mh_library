@@ -55,7 +55,7 @@ class ILogOutputable {
    * @brief 初期化済みか
    *
    * @return true 初期化済み
-   * @return false み初期化
+   * @return false 未初期化
    */
   virtual bool IsInitialized() const = 0;
 };
