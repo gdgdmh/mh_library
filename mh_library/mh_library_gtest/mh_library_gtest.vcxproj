@@ -32,6 +32,9 @@
   <ImportGroup Label="Shared" />
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(SolutionDir)/mh_library;$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <ItemGroup>
     <ClInclude Include="a_pch.h" />
   </ItemGroup>
@@ -41,6 +44,8 @@
     <ClCompile Include="gt_mhl_debug_stacktrace_get_stacktrace_win.cpp" />
     <ClCompile Include="gt_mhl_debug_stacktrace_stacktrace_info.cpp" />
     <ClCompile Include="gt_mhl_output_console_output_consoles.cpp" />
+    <ClCompile Include="gt_mhl_output_log_output_log.cpp" />
+    <ClCompile Include="gt_mhl_output_log_output_logs.cpp" />
     <ClCompile Include="gt_mhl_rand_mt_rand.cpp" />
     <ClCompile Include="gt_mhl_system_file_file_exist_checker_win.cpp" />
     <ClCompile Include="gt_mhl_system_file_file_deleter.cpp" />
