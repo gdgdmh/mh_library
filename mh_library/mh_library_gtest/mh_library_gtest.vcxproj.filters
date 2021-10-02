@@ -43,6 +43,12 @@
     <ClCompile Include="gt_mhl_system_file_file_exist_checker_win.cpp">
       <Filter>mh_library_gtest</Filter>
     </ClCompile>
+    <ClCompile Include="gt_mhl_output_log_output_log.cpp">
+      <Filter>mh_library_gtest</Filter>
+    </ClCompile>
+    <ClCompile Include="gt_mhl_output_log_output_logs.cpp">
+      <Filter>mh_library_gtest</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="mh_library_gtest">
