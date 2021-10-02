@@ -28,7 +28,6 @@ bool mhl::output::log::OutputLog::Initialize(
     return false;
   }
   if (writer_->IsOpened()) {
-    
     return true;
   }
   // ファイルオープンしてないときは開く
