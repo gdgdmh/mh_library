@@ -2,8 +2,7 @@
 #define MHL_TEST_CODE_TESTMHL_HPP_
 
 #include <memory>
-
-#include "../test/unittest_base.hpp"
+#include <mhl/test/unittest_base.hpp>
 
 namespace test_code {
 
@@ -24,6 +23,6 @@ class TestMhl : public mhl::UnitTestBase {
   void ExecuteUnitTest();
 };
 
-}  // namespace test
+}  // namespace test_code
 
 #endif  // MHL_TEST_CODE_TESTMHL_HPP_

@@ -4,10 +4,9 @@
 #include <stdint.h>
 
 #include <memory>
+#include <mhl/output/console/iconsole_outputable.hpp>
+#include <mhl/test_program/route_search/field_info.hpp>
 #include <vector>
-
-#include "../../output/console/iconsole_outputable.hpp"
-#include "field_info.hpp"
 
 namespace test_program {
 

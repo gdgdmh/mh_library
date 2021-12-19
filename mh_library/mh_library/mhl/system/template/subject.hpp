@@ -1,9 +1,8 @@
 ﻿#ifndef MHL_SYSTEM_TEMPLATE_SUBJECT_HPP_
 #define MHL_SYSTEM_TEMPLATE_SUBJECT_HPP_
 
+#include <mhl/system/template/iobservable.hpp>
 #include <vector>
-
-#include "iobservable.hpp"
 
 namespace mhl {
 
@@ -12,9 +11,7 @@ class Subject {
  public:
   virtual ~Subject() {}
 
-  void Add(IObservable& o) {
-    observers.push_back(&o);
-  }
+  void Add(IObservable& o) { observers.push_back(&o); }
 
   void Remove(IObservable& o) {
     observers.erase(std::remove(observers.begin(), observers.end(), &o));

@@ -1,7 +1,7 @@
 ﻿#include "test_stacktrace_test.hpp"
 
-#include "../debug/stacktrace/get_stacktrace_win.hpp"
-#include "../debug/stacktrace/istacktraceable.hpp"
+#include <mhl/debug/stacktrace/get_stacktrace_win.hpp>
+#include <mhl/debug/stacktrace/istacktraceable.hpp>
 
 /**
  * コンストラクタ

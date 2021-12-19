@@ -4,8 +4,7 @@
 #include <stdint.h>
 
 #include <memory>
-
-#include "field.hpp"
+#include <mhl/test_program/route_search/field.hpp>
 
 namespace test_program {
 

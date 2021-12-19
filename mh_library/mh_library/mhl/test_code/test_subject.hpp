@@ -2,11 +2,10 @@
 #define MHL_TEST_CODE_TESTSUBJECT_HPP_
 
 #include <memory>
-
-#include "../test/unittest_base.hpp"
-#include "../system/template/iexecute_method.hpp"
-#include "../system/template/iobservable.hpp"
-#include "../system/template/subject.hpp"
+#include <mhl/system/template/iexecute_method.hpp>
+#include <mhl/system/template/iobservable.hpp>
+#include <mhl/system/template/subject.hpp>
+#include <mhl/test/unittest_base.hpp>
 
 namespace test_code {
 
@@ -29,8 +28,8 @@ class TestSubject : public mhl::UnitTestBase {
   /**
    * コンストラクタ
    */
-  TestSubject(
-      std::shared_ptr<mhl::output::console::IConsoleOutputables> output_console);
+  TestSubject(std::shared_ptr<mhl::output::console::IConsoleOutputables>
+                  output_console);
 
   /**
    * デストラクタ
@@ -40,6 +39,6 @@ class TestSubject : public mhl::UnitTestBase {
   void ExecuteUnitTest();
 };
 
-}  // namespace test
+}  // namespace test_code
 
 #endif  // TEST_TESTSUBJECT_HPP_

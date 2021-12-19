@@ -2,8 +2,7 @@
 #define MHL_TEST_CODE_TEST_BIT_CONTROL_UINT32_HPP_
 
 #include <memory>
-
-#include "../../test/unittest_base.hpp"
+#include <mhl/test/unittest_base.hpp>
 
 namespace test_code {
 
@@ -14,7 +13,8 @@ class TestBitControlUint32 : public mhl::UnitTestBase {
    * コンストラクタ
    */
   TestBitControlUint32(
-      std::shared_ptr<mhl::output::console::IConsoleOutputables> output_console);
+      std::shared_ptr<mhl::output::console::IConsoleOutputables>
+          output_console);
 
   /**
    * デストラクタ

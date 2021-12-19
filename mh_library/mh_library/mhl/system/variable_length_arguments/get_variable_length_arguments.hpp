@@ -2,6 +2,7 @@
 #define MHL_SYSTEM_VARIABLE_LENGTH_ARGUMENTS_GET_VARIABLE_LENGTH_ARGUMENTS_HPP_
 
 #include <vector>
+#include <string>
 
 namespace mhl {
 namespace system {

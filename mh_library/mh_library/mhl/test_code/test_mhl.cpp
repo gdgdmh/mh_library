@@ -1,20 +1,18 @@
 ﻿#include "test_mhl.hpp"
 
-#include "../test/unittest_execute_list.hpp"
-#include "../output/console/iconsole_outputables.hpp"
-#include "test_execute_method.hpp"
-#include "test_scene_stack.hpp"
-#include "test_subject.hpp"
-#include "bit/test_bit_control_uint32.hpp"
-#include "data/test_data_collection.hpp"
-
+#include <mhl/output/console/iconsole_outputables.hpp>
+#include <mhl/test/unittest_execute_list.hpp>
+#include <mhl/test_code/bit/test_bit_control_uint32.hpp>
+#include <mhl/test_code/data/test_data_collection.hpp>
+#include <mhl/test_code/test_execute_method.hpp>
+#include <mhl/test_code/test_scene_stack.hpp>
+#include <mhl/test_code/test_subject.hpp>
 
 /**
  * コンストラクタ
  */
 test_code::TestMhl::TestMhl(
-    std::shared_ptr<mhl::output::console::IConsoleOutputables>
-        output_console)
+    std::shared_ptr<mhl::output::console::IConsoleOutputables> output_console)
     : UnitTestBase(output_console) {}
 
 /**

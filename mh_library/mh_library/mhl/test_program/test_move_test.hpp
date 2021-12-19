@@ -2,9 +2,8 @@
 #define MHL_TEST_PROGRAM_TEST_MOVE_TEST_HPP_
 
 #include <memory>
-
-#include "../test/unittest_base.hpp"
-#include "../string/format/formatter.hpp"
+#include <mhl/string/format/formatter.hpp>
+#include <mhl/test/unittest_base.hpp>
 
 namespace test_program {
 
@@ -15,7 +14,8 @@ class TestMoveDummy {
    *
    * @param output_console
    */
-  TestMoveDummy(std::shared_ptr<mhl::output::console::IConsoleOutputables>& output_console);
+  TestMoveDummy(std::shared_ptr<mhl::output::console::IConsoleOutputables>&
+                    output_console);
 
  private:
   std::shared_ptr<mhl::output::console::IConsoleOutputables> output_console_;
@@ -32,7 +32,8 @@ class TestMoveTest : public mhl::UnitTestBase {
    *
    * @param output_console
    */
-  TestMoveTest(std::shared_ptr<mhl::output::console::IConsoleOutputables> output_console);
+  TestMoveTest(std::shared_ptr<mhl::output::console::IConsoleOutputables>
+                   output_console);
 
   /**
    * @brief Destroy the Test Move Test object

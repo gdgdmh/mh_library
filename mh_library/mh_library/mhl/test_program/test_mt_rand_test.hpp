@@ -4,9 +4,8 @@
 #include <stdint.h>
 
 #include <memory>
-
-#include "../test/unittest_base.hpp"
-#include "../system/rand/irand_getable.hpp"
+#include <mhl/system/rand/irand_getable.hpp>
+#include <mhl/test/unittest_base.hpp>
 
 namespace test_program {
 
@@ -29,7 +28,7 @@ class TestMtRandTest : public mhl::UnitTestBase {
 
   void ExecuteUnitTest();
 
-private:
+ private:
   std::shared_ptr<mhl::IRandGetable> mt_;
 };
 

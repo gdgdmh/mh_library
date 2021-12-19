@@ -1,8 +1,8 @@
 ﻿#include "test_output_consoles_test.hpp"
 
-#include "../output/console/output_consoles.hpp"
-#include "../output/console/output_console.hpp"
-#include "../output/console/output_console_vs_sjis.hpp"
+#include <mhl/output/console/output_console.hpp>
+#include <mhl/output/console/output_console_vs_sjis.hpp>
+#include <mhl/output/console/output_consoles.hpp>
 
 /**
  * コンストラクタ

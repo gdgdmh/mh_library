@@ -1,6 +1,6 @@
 ﻿#include "mhl_assertion.hpp"
 
-#include "../../exception/argument_exception.hpp"
+#include <mhl/exception/argument_exception.hpp>
 
 /**
  * @brief コンストラクタ

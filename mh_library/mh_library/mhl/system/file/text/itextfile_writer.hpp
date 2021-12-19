@@ -1,9 +1,8 @@
 ﻿#ifndef MHL_SYSTEM_FILE_TEXT_ITEXTFILE_WRITER_HPP_
 #define MHL_SYSTEM_FILE_TEXT_ITEXTFILE_WRITER_HPP_
 
+#include <mhl/system/file/text/textfile_write_mode.hpp>
 #include <string>
-
-#include "textfile_write_mode.hpp"
 
 namespace mhl {
 namespace system {

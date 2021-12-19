@@ -2,8 +2,7 @@
 #define MHL_DEBUG_ASSERT_MHL_ASSERT_PROCESS_HPP_
 
 #include <cassert>
-
-#include "iassert_processor.hpp"
+#include <mhl/debug/assert/iassert_processor.hpp>
 
 namespace mhl {
 
@@ -17,7 +16,6 @@ namespace assert {
  */
 class AssertProcess : public IAssertProcessor {
  public:
-
   AssertProcess() {}
 
   /**

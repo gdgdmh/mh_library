@@ -2,6 +2,7 @@
 #define MHL_OUTPUT_LOG_ILOG_OUTPUTABLE_HPP_
 
 #include <string>
+#include <mhl/system/file/text/textfile_write_mode.hpp>
 
 namespace mhl {
 namespace output {

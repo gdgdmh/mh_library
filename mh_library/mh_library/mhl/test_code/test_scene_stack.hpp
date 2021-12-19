@@ -2,9 +2,8 @@
 #define MHL_TEST_CODE_TESTSCENESTACK_HPP_
 
 #include <memory>
-
-#include "../scene/isceneable.hpp"
-#include "../test/unittest_base.hpp"
+#include <mhl/scene/ISceneable.hpp>
+#include <mhl/test/unittest_base.hpp>
 
 namespace test_code {
 
@@ -174,8 +173,8 @@ class TestSceneStack : public mhl::UnitTestBase {
    *
    * @param output_console 出力クラス
    */
-  TestSceneStack(
-      std::shared_ptr<mhl::output::console::IConsoleOutputables> output_console);
+  TestSceneStack(std::shared_ptr<mhl::output::console::IConsoleOutputables>
+                     output_console);
 
   /**
    * @brief Destroy the Test Scene Stack object
@@ -238,6 +237,6 @@ class TestSceneStack : public mhl::UnitTestBase {
   void TestEventSwapCall();
 };
 
-}  // namespace test
+}  // namespace test_code
 
 #endif  // MHL_TEST_CODE_TESTSCENESTACK_HPP_

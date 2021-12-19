@@ -1,8 +1,8 @@
 ﻿#include "unittest_execute_list.hpp"
 
-#include "../exception/unittest_exception.hpp"
-#include "../output/console/iconsole_outputable.hpp"
-#include "../output/console/output_console.hpp"
+#include <mhl/exception/unittest_exception.hpp>
+#include <mhl/output/console/iconsole_outputable.hpp>
+#include <mhl/output/console/output_console.hpp>
 
 mhl::UnitTestExecuteList::UnitTestExecuteList() {}
 

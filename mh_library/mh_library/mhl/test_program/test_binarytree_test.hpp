@@ -2,18 +2,17 @@
 #define MHL_TEST_CODE_TEST_BINARYTREE_TEST_HPP_
 
 #include <memory>
-
-#include "../test/unittest_base.hpp"
+#include <mhl/test/unittest_base.hpp>
 
 namespace test_program {
 
 class TestBinaryClass {
-public:
+ public:
   /**
    * @brief コンストラクタ
-   * 
+   *
    */
- TestBinaryClass(int id, const std::string& value) : id_(id), value_(value) {}
+  TestBinaryClass(int id, const std::string& value) : id_(id), value_(value) {}
 
   /**
    * @brief デストラクタ
@@ -23,10 +22,10 @@ public:
 
   void SetId(int id) { id_ = id; }
   int GetId() const { return id_; }
-  void SetValue(const std::string& value) { value_ = value;}
+  void SetValue(const std::string& value) { value_ = value; }
   const std::string& GetValue() const { return value_; }
 
-private:
+ private:
   int id_;
   std::string value_;
 };
@@ -37,8 +36,8 @@ class TestBinaryTest : public mhl::UnitTestBase {
   /**
    * コンストラクタ
    */
-  TestBinaryTest(
-      std::shared_ptr<mhl::output::console::IConsoleOutputables> output_console);
+  TestBinaryTest(std::shared_ptr<mhl::output::console::IConsoleOutputables>
+                     output_console);
 
   /**
    * デストラクタ
@@ -52,6 +51,6 @@ class TestBinaryTest : public mhl::UnitTestBase {
   void TestBinaryClassTest();
 };
 
-}  // namespace test
+}  // namespace test_program
 
 #endif  // MHL_TEST_CODE_TEST_BINARYTREE_TEST_HPP_
