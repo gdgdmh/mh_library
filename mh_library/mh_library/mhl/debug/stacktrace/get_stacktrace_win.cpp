@@ -2,9 +2,10 @@
 #ifdef _MSC_VER
 
 #include "get_stacktrace_win.hpp"
-#include "../../string/format/formatter.hpp"
 
 #include <imagehlp.h>
+
+#include <mhl/string/format/formatter.hpp>
 
 #pragma comment(lib, "imagehlp.lib")
 
@@ -98,9 +99,8 @@ void mhl::debug::stacktrace::GetStacktraceWin::GetStacktrace(
   symbol = nullptr;
 
   mhl::debug::stacktrace::StacktraceInfo stacktraceInfo(
-      trace_size, std::move(addresses),
-                                     std::move(symbols), std::move(file_names),
-                                     std::move(line_numbers));
+      trace_size, std::move(addresses), std::move(symbols),
+      std::move(file_names), std::move(line_numbers));
   info = stacktraceInfo;
 }
 
@@ -121,8 +121,8 @@ void mhl::debug::stacktrace::GetStacktraceWin::ToStringStacktrace(
   size_t size = symbols.size();
   for (size_t i = 0; i < size; ++i) {
     stacktraceInfo += mhl::string::format::Formatter::Format(
-        "%s line:%u(%s)", symbols.at(i).c_str(),
-        line_number.at(i), file_name.at(i).c_str());
+        "%s line:%u(%s)", symbols.at(i).c_str(), line_number.at(i),
+        file_name.at(i).c_str());
     /*
     stacktraceInfo += symbols.at(i).c_str();
     stacktraceInfo += " file_name:";

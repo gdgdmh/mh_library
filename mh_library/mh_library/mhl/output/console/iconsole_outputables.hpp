@@ -2,9 +2,8 @@
 #define MHL_OUTPUT_CONSOLE_ICONSOLEOUTPUTABLES_HPP_
 
 #include <memory>
+#include <mhl/output/console/iconsole_outputable.hpp>
 #include <string>
-
-#include "iconsole_outputable.hpp"
 
 namespace mhl {
 

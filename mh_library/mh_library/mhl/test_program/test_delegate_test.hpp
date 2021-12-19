@@ -2,9 +2,8 @@
 #define MHL_TEST_PROGRAM_TEST_DELEGATE_TEST_HPP_
 
 #include <memory>
-
-#include "../test/unittest_base.hpp"
-#include "../string/format/formatter.hpp"
+#include <mhl/string/format/formatter.hpp>
+#include <mhl/test/unittest_base.hpp>
 
 namespace test_program {
 
@@ -15,7 +14,8 @@ class TestDog {
    *
    * @param output_console
    */
-  TestDog(std::shared_ptr<mhl::output::console::IConsoleOutputables> output_console)
+  TestDog(
+      std::shared_ptr<mhl::output::console::IConsoleOutputables> output_console)
       : console(output_console) {}
 
   /**
@@ -40,7 +40,8 @@ class TestCat {
    *
    * @param output_console コンソール出力
    */
-  TestCat(std::shared_ptr<mhl::output::console::IConsoleOutputables> output_console)
+  TestCat(
+      std::shared_ptr<mhl::output::console::IConsoleOutputables> output_console)
       : console(output_console) {}
   /**
    * @brief 鳴くクラス
@@ -158,8 +159,8 @@ class TestDelegateTest : public mhl::UnitTestBase {
   /**
    * コンストラクタ
    */
-  TestDelegateTest(
-      std::shared_ptr<mhl::output::console::IConsoleOutputables> output_console);
+  TestDelegateTest(std::shared_ptr<mhl::output::console::IConsoleOutputables>
+                       output_console);
 
   /**
    * デストラクタ

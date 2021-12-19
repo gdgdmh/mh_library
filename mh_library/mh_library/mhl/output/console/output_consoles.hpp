@@ -1,11 +1,10 @@
 ﻿#ifndef MHL_OUTPUT_CONSOLE_OUTPUTCONSOLES_HPP_
 #define MHL_OUTPUT_CONSOLE_OUTPUTCONSOLES_HPP_
 
+#include <mhl/output/console/iconsole_outputable.hpp>
+#include <mhl/output/console/iconsole_outputables.hpp>
 #include <string>
 #include <vector>
-
-#include "iconsole_outputable.hpp"
-#include "iconsole_outputables.hpp"
 
 namespace mhl {
 

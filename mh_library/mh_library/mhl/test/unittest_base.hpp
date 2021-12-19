@@ -2,11 +2,10 @@
 #define MHL_TEST_UNITTESTBASE_HPP_
 
 #include <memory>
+#include <mhl/exception/unittest_exception.hpp>
+#include <mhl/output/console/iconsole_outputables.hpp>
+#include <mhl/string/format/formatter.hpp>
 #include <string>
-
-#include "../exception/unittest_exception.hpp"
-#include "../output/console/iconsole_outputables.hpp"
-#include "../string/format/formatter.hpp"
 
 namespace mhl {
 
@@ -24,8 +23,7 @@ class UnitTestBase {
  */
 #define AssertEquals(expected, msg)                                           \
   if (!(expected)) {                                                          \
-    std::string msg1 =                                                        \
-        mhl::string::format::Formatter::Format(                               \
+    std::string msg1 = mhl::string::format::Formatter::Format(                \
         "UnitTestBase Assert %s ", (#msg));                                   \
     std::string msg2 =                                                        \
         mhl::string::format::Formatter::Format("file %s ", __FILE__);         \
@@ -40,15 +38,15 @@ class UnitTestBase {
 #ifdef NDEBUG
 #define AssertRange(index, length, msg)
 #else
- /**
-  * 配列の範囲をチェックする
-  * @param  index    条件チェックする値(配列のindex)
-  * @param  length   配列の大きさ
-  * @param  msg      失敗した際のメッセージ
-  */
-#define AssertRange(index, length, msg) \
+  /**
+   * 配列の範囲をチェックする
+   * @param  index    条件チェックする値(配列のindex)
+   * @param  length   配列の大きさ
+   * @param  msg      失敗した際のメッセージ
+   */
+#define AssertRange(index, length, msg)         \
   if (((index) < 0) || ((index) >= (length))) { \
-    AssertEquals(0, msg); \
+    AssertEquals(0, msg);                       \
   }
 #endif
 
@@ -57,7 +55,8 @@ class UnitTestBase {
    * コンストラクタ
    * @param outputConsole コンソール出力クラス
    */
-  UnitTestBase(std::shared_ptr<mhl::output::console::IConsoleOutputables> output_console)
+  UnitTestBase(
+      std::shared_ptr<mhl::output::console::IConsoleOutputables> output_console)
       : output_console_(output_console) {}
 
   /**

@@ -2,8 +2,7 @@
 #define MHL_TEST_CODE_TEST_ASSERT_TEST_HPP_
 
 #include <memory>
-
-#include "../test/unittest_base.hpp"
+#include <mhl/test/unittest_base.hpp>
 
 namespace test_program {
 

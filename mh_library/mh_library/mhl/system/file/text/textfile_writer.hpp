@@ -3,8 +3,7 @@
 
 #include <fstream>
 #include <iostream>
-
-#include "itextfile_writer.hpp"
+#include <mhl/system/file/text/itextfile_writer.hpp>
 
 namespace mhl {
 namespace system {

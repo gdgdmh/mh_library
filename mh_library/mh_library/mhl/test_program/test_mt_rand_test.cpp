@@ -1,7 +1,7 @@
 ﻿#include "test_mt_rand_test.hpp"
 
-#include "../string/format/formatter.hpp"
-#include "../system/rand/mt_rand.hpp"
+#include <mhl/string/format/formatter.hpp>
+#include <mhl/system/rand/mt_rand.hpp>
 
 /**
  * コンストラクタ
@@ -16,7 +16,6 @@ test_program::TestMtRandTest::TestMtRandTest(
 test_program::TestMtRandTest::~TestMtRandTest() {}
 
 void test_program::TestMtRandTest::ExecuteUnitTest() {
-
   mt_.reset(new mhl::MtRand());
 
   {

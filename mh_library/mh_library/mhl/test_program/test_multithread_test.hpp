@@ -2,15 +2,15 @@
 #define MHL_TEST_CODE_TEST_MULTITHREAD_TEST_HPP_
 
 #include <memory>
+#include <mhl/test/unittest_base.hpp>
 #include <mutex>
-
-#include "../test/unittest_base.hpp"
 
 namespace test_program {
 
 class MultiThreadTestTask {
  public:
-  MultiThreadTestTask(std::shared_ptr<mhl::output::console::IConsoleOutputables> output_console);
+  MultiThreadTestTask(std::shared_ptr<mhl::output::console::IConsoleOutputables>
+                          output_console);
   virtual ~MultiThreadTestTask();
 
   void SetId(int id) { id_ = id; }
@@ -37,7 +37,8 @@ class TestMultithreadTest : public mhl::UnitTestBase {
   /**
    * コンストラクタ
    */
-  TestMultithreadTest(std::shared_ptr<mhl::output::console::IConsoleOutputables> output_console);
+  TestMultithreadTest(std::shared_ptr<mhl::output::console::IConsoleOutputables>
+                          output_console);
 
   /**
    * デストラクタ
@@ -47,6 +48,6 @@ class TestMultithreadTest : public mhl::UnitTestBase {
   void ExecuteUnitTest();
 };
 
-}  // namespace test
+}  // namespace test_program
 
 #endif  // MHL_TEST_CODE_TEST_MULTITHREAD_TEST_HPP_

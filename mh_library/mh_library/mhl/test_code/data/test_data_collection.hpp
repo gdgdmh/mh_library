@@ -2,8 +2,7 @@
 #define MHL_TEST_CODE_TEST_DATA_DATA_COLLECTION_HPP_
 
 #include <memory>
-
-#include "../../test/unittest_base.hpp"
+#include <mhl/test/unittest_base.hpp>
 
 namespace test_code {
 
@@ -13,8 +12,8 @@ class TestDataCollection : public mhl::UnitTestBase {
   /**
    * コンストラクタ
    */
-  TestDataCollection(
-      std::shared_ptr<mhl::output::console::IConsoleOutputables> output_console);
+  TestDataCollection(std::shared_ptr<mhl::output::console::IConsoleOutputables>
+                         output_console);
 
   /**
    * デストラクタ

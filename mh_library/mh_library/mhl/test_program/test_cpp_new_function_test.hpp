@@ -2,8 +2,7 @@
 #define MHL_TEST_CODE_TESTCPPNEWFUNCTIONTEST_HPP_
 
 #include <memory>
-
-#include "../test/unittest_base.hpp"
+#include <mhl/test/unittest_base.hpp>
 
 namespace test_program {
 
@@ -27,7 +26,9 @@ class TestCppNewFunctionTest : public mhl::UnitTestBase {
   /**
    * コンストラクタ
    */
-  TestCppNewFunctionTest(std::shared_ptr<mhl::output::console::IConsoleOutputables> output_console);
+  TestCppNewFunctionTest(
+      std::shared_ptr<mhl::output::console::IConsoleOutputables>
+          output_console);
 
   /**
    * デストラクタ
@@ -77,6 +78,6 @@ class TestCppNewFunctionTest : public mhl::UnitTestBase {
   void TestTypeAlias();
 };
 
-}  // namespace test
+}  // namespace test_program
 
 #endif  // TEST_TESTCPPNEWFUNCTIONTEST_HPP_

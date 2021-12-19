@@ -1,7 +1,7 @@
 ﻿#include "test_singleton_test.hpp"
 
-#include "../system/singleton/mh_singleton.hpp"
-#include "../system/singleton/singleton_cleanup.hpp"
+#include <mhl/system/singleton/mh_singleton.hpp>
+#include <mhl/system/singleton/singleton_cleanup.hpp>
 
 /**
  * コンストラクタ

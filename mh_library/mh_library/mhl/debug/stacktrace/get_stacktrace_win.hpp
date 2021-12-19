@@ -8,7 +8,7 @@
 // 安全のためにヘッダでincludeする
 #include <windows.h>
 
-#include "istacktraceable.hpp"
+#include <mhl/debug/stacktrace/istacktraceable.hpp>
 
 namespace mhl {
 
@@ -48,7 +48,8 @@ class GetStacktraceWin : public IStacktraceable {
    * @param stacktraceInfo 文字列を受け取る変数
    * @param info スタックトレース情報
    */
-  virtual void ToStringStacktrace(std::string& stacktraceInfo,
+  virtual void ToStringStacktrace(
+      std::string& stacktraceInfo,
       const mhl::debug::stacktrace::StacktraceInfo& info) override;
 };
 }  // namespace stacktrace

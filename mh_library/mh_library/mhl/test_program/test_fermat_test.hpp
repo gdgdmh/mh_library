@@ -4,8 +4,7 @@
 #include <stdint.h>
 
 #include <memory>
-
-#include "../test/unittest_base.hpp"
+#include <mhl/test/unittest_base.hpp>
 
 namespace test_program {
 
@@ -15,8 +14,8 @@ class TestFermatTest : public mhl::UnitTestBase {
   /**
    * コンストラクタ
    */
-  TestFermatTest(
-      std::shared_ptr<mhl::output::console::IConsoleOutputables> output_console);
+  TestFermatTest(std::shared_ptr<mhl::output::console::IConsoleOutputables>
+                     output_console);
 
   /**
    * デストラクタ
