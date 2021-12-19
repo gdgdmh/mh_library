@@ -1,7 +1,7 @@
 ﻿#ifndef MHL_DEBUG_ASSERT_MHL_ASSERT_HPP_
 #define MHL_DEBUG_ASSERT_MHL_ASSERT_HPP_
 
-#include "mhl_assertion.hpp"
+#include <mhl/debug/assert/mhl_assertion.hpp>
 
 namespace mhl {
 

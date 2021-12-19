@@ -2,8 +2,7 @@
 #define MHL_SYSTEM_SINGLETON_MH_SINGLETON_HPP_
 
 #include <memory>
-
-#include "singleton_cleanup.hpp"
+#include <mhl/system/singleton/singleton_cleanup.hpp>
 
 namespace mhl {
 

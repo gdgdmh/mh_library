@@ -4,9 +4,8 @@
 #include <stdint.h>
 
 #include <memory>
+#include <mhl/system/rand/irand_getable.hpp>
 #include <random>
-
-#include "irand_getable.hpp"
 
 namespace mhl {
 

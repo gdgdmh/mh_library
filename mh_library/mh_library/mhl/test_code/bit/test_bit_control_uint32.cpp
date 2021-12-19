@@ -1,6 +1,6 @@
 ﻿#include "test_bit_control_uint32.hpp"
 
-#include "../../bit/bit_control_uint32.hpp"
+#include <mhl/bit/bit_control_uint32.hpp>
 
 /**
  * コンストラクタ

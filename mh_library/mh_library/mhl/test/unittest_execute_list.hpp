@@ -3,8 +3,7 @@
 
 #include <list>
 #include <memory>
-
-#include "unittest_base.hpp"
+#include <mhl/test/unittest_base.hpp>
 
 namespace mhl {
 

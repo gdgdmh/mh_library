@@ -3,12 +3,11 @@
 
 #include <cassert>
 #include <memory>
-
-#include "../../output/console/iconsole_outputables.hpp"
-#include "../stacktrace/get_stacktrace_win.hpp"
-#include "../stacktrace/istacktraceable.hpp"
-#include "iassert_checker.hpp"
-#include "iassert_processor.hpp"
+#include <mhl/debug/assert/iassert_checker.hpp>
+#include <mhl/debug/assert/iassert_processor.hpp>
+#include <mhl/debug/stacktrace/get_stacktrace_win.hpp>
+#include <mhl/debug/stacktrace/istacktraceable.hpp>
+#include <mhl/output/console/iconsole_outputables.hpp>
 
 namespace mhl {
 

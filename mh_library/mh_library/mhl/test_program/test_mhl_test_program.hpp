@@ -2,8 +2,7 @@
 #define MHL_TEST_PROGRAM_TESTMHLTESTPROGRAM_HPP_
 
 #include <memory>
-
-#include "../test/unittest_base.hpp"
+#include <mhl/test/unittest_base.hpp>
 
 namespace test_program {
 
@@ -13,7 +12,8 @@ class TestMhlTestProgram : public mhl::UnitTestBase {
   /**
    * コンストラクタ
    */
-  TestMhlTestProgram(std::shared_ptr<mhl::output::console::IConsoleOutputables> output_console);
+  TestMhlTestProgram(std::shared_ptr<mhl::output::console::IConsoleOutputables>
+                         output_console);
 
   /**
    * デストラクタ

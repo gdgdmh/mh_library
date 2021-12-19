@@ -1,7 +1,7 @@
 ﻿#ifndef MHL_TEST_PROGRAM_TEST_FREE_TEST_HPP_
 #define MHL_TEST_PROGRAM_TEST_FREE_TEST_HPP_
 
-#include "../test/unittest_base.hpp"
+#include <mhl/test/unittest_base.hpp>
 
 namespace test_program {
 

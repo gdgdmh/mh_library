@@ -1,9 +1,8 @@
 ﻿#ifndef MHL_STRING_FORMAT_FORMATTER_HPP_
 #define MHL_STRING_FORMAT_FORMATTER_HPP_
 
+#include <mhl/system/variable_length_arguments/get_variable_length_arguments.hpp>
 #include <string>
-
-#include "../../system/variable_length_arguments/get_variable_length_arguments.hpp"
 
 namespace mhl {
 namespace string {

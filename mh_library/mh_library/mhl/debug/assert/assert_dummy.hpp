@@ -2,8 +2,7 @@
 #define MHL_DEBUG_ASSERT_MHL_ASSERT_DUMMY_HPP_
 
 #include <cassert>
-
-#include "iassert_processor.hpp"
+#include <mhl/debug/assert/iassert_processor.hpp>
 
 namespace mhl {
 

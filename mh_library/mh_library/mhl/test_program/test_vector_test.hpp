@@ -2,21 +2,20 @@
 #define MHL_TEST_PROGRAM_TEST_VECTOR_TEST_HPP_
 
 #include <stdint.h>
-#include <memory>
 
-#include "../test/unittest_base.hpp"
+#include <memory>
+#include <mhl/test/unittest_base.hpp>
 
 namespace test_program {
 
 class TestVectorData {
-public:
+ public:
   TestVectorData(int32_t a, int32_t b, int32_t c);
 
-public:
+ public:
   int32_t a_;
   int32_t b_;
   int32_t c_;
-
 };
 
 // vector
@@ -25,7 +24,8 @@ class TestVectorTest : public mhl::UnitTestBase {
   /**
    * コンストラクタ
    */
-  TestVectorTest(std::shared_ptr<mhl::output::console::IConsoleOutputables> output_console);
+  TestVectorTest(std::shared_ptr<mhl::output::console::IConsoleOutputables>
+                     output_console);
 
   /**
    * デストラクタ
@@ -56,8 +56,7 @@ class TestVectorTest : public mhl::UnitTestBase {
   void CopyVector2(std::vector<TestVectorData*>& v);
 
  private:
-  std::vector< std::vector<TestVectorData*> > v_;
-
+  std::vector<std::vector<TestVectorData*> > v_;
 };
 
 }  // namespace test_program

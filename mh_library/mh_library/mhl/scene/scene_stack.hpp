@@ -3,8 +3,7 @@
 
 #include <list>
 #include <memory>
-
-#include "isceneable.hpp"
+#include <mhl/scene/ISceneable.hpp>
 
 namespace mhl {
 

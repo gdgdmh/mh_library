@@ -1,16 +1,16 @@
 ﻿#include "test_free_test.hpp"
 
-#include <stdint.h>
 #include <shlobj.h>
+#include <stdint.h>
 
-#include "../system/variable_length_arguments/get_variable_length_arguments.hpp"
-#include "../system/file/text/textfile_writer.hpp"
-#include "../system/file/file_deleter.hpp"
-#include "../system/file/file_exists_checker_win.hpp"
-#include "../output/log/ilog_outputable.hpp"
-#include "../output/log/ilog_outputables.hpp"
-#include "../output/log/output_log.hpp"
-#include "../output/log/output_logs.hpp"
+#include <mhl/output/log/ilog_outputable.hpp>
+#include <mhl/output/log/ilog_outputables.hpp>
+#include <mhl/output/log/output_log.hpp>
+#include <mhl/output/log/output_logs.hpp>
+#include <mhl/system/file/file_deleter.hpp>
+#include <mhl/system/file/file_exists_checker_win.hpp>
+#include <mhl/system/file/text/textfile_writer.hpp>
+#include <mhl/system/variable_length_arguments/get_variable_length_arguments.hpp>
 
 /**
  * コンストラクタ
@@ -66,26 +66,26 @@ void test_program::TestFreeTest::TestFileExistsChecker() {
   TCHAR path[MAX_PATH];
   SHGetSpecialFolderPath(NULL, path, CSIDL_PERSONAL, 0);
 
-  //std::string s = path;
+  // std::string s = path;
 #ifdef UNICODE
   std::vector<char> buffer;
   int32_t size = WideCharToMultiByte(CP_UTF8, 0, path, -1, NULL, 0, NULL, NULL);
   if (size > 0) {
     buffer.resize(size);
-    WideCharToMultiByte(CP_UTF8, 0, path, -1, static_cast<LPSTR>(&buffer[0]), static_cast<int32_t>(buffer.size()), NULL, NULL);
+    WideCharToMultiByte(CP_UTF8, 0, path, -1, static_cast<LPSTR>(&buffer[0]),
+                        static_cast<int32_t>(buffer.size()), NULL, NULL);
   } else {
     // Error
   }
   std::string s(&buffer[0]);
 #else
   std::string s(path);
-#endif // UNICODE
+#endif  // UNICODE
 
-
-  //if (fc.IsExists("test.txt")) {
+  // if (fc.IsExists("test.txt")) {
   if (fc.IsExists(s)) {
-    int aa=10;
-    aa=20;
+    int aa = 10;
+    aa = 20;
   } else {
     int bb = 10;
     bb = 20;
@@ -103,8 +103,6 @@ void test_program::TestFreeTest::TestOutputLog() {
   // テスト前に消しておく
   mhl::system::file::FileDeleter fd;
   fd.Delete(file_name);
-
-
 
   std::shared_ptr<mhl::system::file::text::TextfileWriter> writer =
       std::make_shared<mhl::system::file::text::TextfileWriter>();
@@ -138,8 +136,9 @@ void test_program::TestFreeTest::TestOutputLogs() {
         std::make_shared<mhl::system::file::text::TextfileWriter>();
     std::shared_ptr<mhl::output::log::ILogOutputable> output_log =
         std::make_shared<mhl::output::log::OutputLog>(writer);
-    
-    output_log->Initialize(file_name1, mhl::system::file::text::Mode::kNewWrite);
+
+    output_log->Initialize(file_name1,
+                           mhl::system::file::text::Mode::kNewWrite);
     output_logs.Add(output_log);
   }
   {

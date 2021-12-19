@@ -3,8 +3,7 @@
 
 #include <functional>
 #include <memory>
-
-#include "../test/unittest_base.hpp"
+#include <mhl/test/unittest_base.hpp>
 
 namespace test_program {
 
@@ -35,8 +34,8 @@ class TestCallbackTest : public mhl::UnitTestBase {
   /**
    * コンストラクタ
    */
-  TestCallbackTest(
-      std::shared_ptr<mhl::output::console::IConsoleOutputables> output_console);
+  TestCallbackTest(std::shared_ptr<mhl::output::console::IConsoleOutputables>
+                       output_console);
 
   /**
    * デストラクタ
@@ -48,6 +47,6 @@ class TestCallbackTest : public mhl::UnitTestBase {
   bool OuterCallback();
 };
 
-}  // namespace test
+}  // namespace test_program
 
 #endif  // MHL_TEST_CODE_TESTCALLBACKTEST_HPP_

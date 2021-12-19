@@ -4,9 +4,8 @@
 #include <stdint.h>
 
 #include <memory>
-
-#include "field_position.hpp"
-#include "field_type.hpp"
+#include <mhl/test_program/route_search/field_position.hpp>
+#include <mhl/test_program/route_search/field_type.hpp>
 
 namespace test_program {
 

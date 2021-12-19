@@ -1,9 +1,8 @@
 ﻿#ifndef MHL_OUTPUT_CONSOLE_DUMMYOUTPUTCONSOLE_HPP_
 #define MHL_OUTPUT_CONSOLE_DUMMYOUTPUTCONSOLE_HPP_
 
+#include <mhl/output/console/iconsole_outputable.hpp>
 #include <string>
-
-#include "iconsole_outputable.hpp"
 
 namespace mhl {
 

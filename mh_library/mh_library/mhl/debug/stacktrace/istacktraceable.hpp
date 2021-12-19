@@ -1,7 +1,7 @@
 ﻿#ifndef MHL_DEBUG_STACKTRACE_ISTACKTRACEABLE_HPP_
 #define MHL_DEBUG_STACKTRACE_ISTACKTRACEABLE_HPP_
 
-#include "stacktrace_info.hpp"
+#include <mhl/debug/stacktrace/stacktrace_info.hpp>
 
 namespace mhl {
 
@@ -29,7 +29,8 @@ class IStacktraceable {
    * @param stacktraceInfo 文字列を受け取る変数
    * @param info スタックトレース情報
    */
-  virtual void ToStringStacktrace(std::string& stacktraceInfo,
+  virtual void ToStringStacktrace(
+      std::string& stacktraceInfo,
       const mhl::debug::stacktrace::StacktraceInfo& info) = 0;
 };
 }  // namespace stacktrace

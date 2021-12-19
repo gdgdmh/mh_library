@@ -2,11 +2,10 @@
 #define MHL_OUTPUT_LOG_OUTPUT_LOG_HPP_
 
 #include <memory>
+#include <mhl/output/log/ilog_outputable.hpp>
+#include <mhl/system/file/text/itextfile_writer.hpp>
 #include <string>
 #include <vector>
-
-#include "../../system/file/text/itextfile_writer.hpp"
-#include "ilog_outputable.hpp"
 
 namespace mhl {
 

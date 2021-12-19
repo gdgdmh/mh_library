@@ -1,7 +1,7 @@
 ﻿#ifndef MHL_DEBUG_ASSERT_MHL_ASSERT_CHECKER_HPP_
 #define MHL_DEBUG_ASSERT_MHL_ASSERT_CHECKER_HPP_
 
-#include "iassert_checker.hpp"
+#include <mhl/debug/assert/iassert_checker.hpp>
 
 namespace mhl {
 
@@ -15,7 +15,6 @@ namespace assert {
  */
 class AssertChecker : public mhl::debug::assert::IAssertChecker {
  public:
-
   AssertChecker() {}
 
   /**
