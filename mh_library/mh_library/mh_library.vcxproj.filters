@@ -252,9 +252,6 @@
     <ClInclude Include="mhl\debug\assert\assert_process.hpp">
       <Filter>ソース ファイル\mhl\debug\assert</Filter>
     </ClInclude>
-    <ClInclude Include="mhl\scene\isceneable.hpp">
-      <Filter>ソース ファイル\mhl\scene</Filter>
-    </ClInclude>
     <ClInclude Include="mhl\debug\assert\iassert_checker.hpp">
       <Filter>ソース ファイル\mhl\debug\assert</Filter>
     </ClInclude>
@@ -329,6 +326,9 @@
     </ClInclude>
     <ClInclude Include="mhl\output\log\output_log.hpp">
       <Filter>ソース ファイル\mhl\output\log</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\scene\isceneable.hpp">
+      <Filter>ソース ファイル\mhl\scene</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
