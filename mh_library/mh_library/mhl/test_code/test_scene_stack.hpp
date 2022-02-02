@@ -2,7 +2,7 @@
 #define MHL_TEST_CODE_TESTSCENESTACK_HPP_
 
 #include <memory>
-#include <mhl/scene/ISceneable.hpp>
+#include <mhl/scene/isceneable.hpp>
 #include <mhl/test/unittest_base.hpp>
 
 namespace test_code {
