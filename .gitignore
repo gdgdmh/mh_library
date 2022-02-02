@@ -14,3 +14,6 @@ mh_library/.vs/mh_library/v16/TestStore/
 mh_library/mh_library_gtest/x64/
 mh_library/.vs/mh_library/v16/
 mh_library/mh_library_exec/x64/
+mh_library/.vs/mh_library/v17
+mh_library/packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.5/build
+mh_library/packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.5/lib
