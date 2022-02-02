@@ -1,46 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="a_pch.cpp">
-      <Filter>mh_library_gtest</Filter>
-    </ClCompile>
     <ClCompile Include="test.cpp">
       <Filter>mh_library_gtest</Filter>
     </ClCompile>
-    <ClCompile Include="gt_mhl_debug_stacktrace_stacktrace_info.cpp">
-      <Filter>mh_library_gtest</Filter>
-    </ClCompile>
-    <ClCompile Include="gt_mhl_debug_stacktrace_get_stacktrace_win.cpp">
-      <Filter>mh_library_gtest</Filter>
-    </ClCompile>
-    <ClCompile Include="gt_mhl_bit_bit_control_uint32.cpp">
-      <Filter>mh_library_gtest</Filter>
-    </ClCompile>
-    <ClCompile Include="gt_mhl_output_console_output_consoles.cpp">
-      <Filter>mh_library_gtest</Filter>
-    </ClCompile>
-    <ClCompile Include="gt_mhl_rand_mt_rand.cpp">
-      <Filter>mh_library_gtest</Filter>
-    </ClCompile>
-    <ClCompile Include="gt_mhl_debug_assert_assert_dummy.cpp">
-      <Filter>mh_library_gtest</Filter>
-    </ClCompile>
-    <ClCompile Include="gt_mhl_system_singleton_singleton_cleanup.cpp">
-      <Filter>mh_library_gtest</Filter>
-    </ClCompile>
-    <ClCompile Include="gt_mhl_system_singleton_mh_singleton.cpp">
-      <Filter>mh_library_gtest</Filter>
-    </ClCompile>
-    <ClCompile Include="gt_mhl_system_variable_length_arguments_get_variable_length_arguments.cpp">
+    <ClCompile Include="a_pch.cpp">
       <Filter>mh_library_gtest</Filter>
     </ClCompile>
     <ClCompile Include="gt_mhl_system_file_file_deleter.cpp">
       <Filter>mh_library_gtest</Filter>
     </ClCompile>
+    <ClCompile Include="gt_mhl_system_file_file_exist_checker_win.cpp">
+      <Filter>mh_library_gtest</Filter>
+    </ClCompile>
     <ClCompile Include="gt_mhl_system_file_text_textfile_writer.cpp">
       <Filter>mh_library_gtest</Filter>
     </ClCompile>
-    <ClCompile Include="gt_mhl_system_file_file_exist_checker_win.cpp">
+    <ClCompile Include="gt_mhl_system_singleton_mh_singleton.cpp">
+      <Filter>mh_library_gtest</Filter>
+    </ClCompile>
+    <ClCompile Include="gt_mhl_system_singleton_singleton_cleanup.cpp">
+      <Filter>mh_library_gtest</Filter>
+    </ClCompile>
+    <ClCompile Include="gt_mhl_system_variable_length_arguments_get_variable_length_arguments.cpp">
+      <Filter>mh_library_gtest</Filter>
+    </ClCompile>
+    <ClCompile Include="gt_mhl_bit_bit_control_uint32.cpp">
+      <Filter>mh_library_gtest</Filter>
+    </ClCompile>
+    <ClCompile Include="gt_mhl_debug_assert_assert_dummy.cpp">
+      <Filter>mh_library_gtest</Filter>
+    </ClCompile>
+    <ClCompile Include="gt_mhl_debug_stacktrace_get_stacktrace_win.cpp">
+      <Filter>mh_library_gtest</Filter>
+    </ClCompile>
+    <ClCompile Include="gt_mhl_debug_stacktrace_stacktrace_info.cpp">
+      <Filter>mh_library_gtest</Filter>
+    </ClCompile>
+    <ClCompile Include="gt_mhl_output_console_output_consoles.cpp">
       <Filter>mh_library_gtest</Filter>
     </ClCompile>
     <ClCompile Include="gt_mhl_output_log_output_log.cpp">
@@ -49,16 +46,14 @@
     <ClCompile Include="gt_mhl_output_log_output_logs.cpp">
       <Filter>mh_library_gtest</Filter>
     </ClCompile>
+    <ClCompile Include="gt_mhl_rand_mt_rand.cpp">
+      <Filter>mh_library_gtest</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="mh_library_gtest">
-      <UniqueIdentifier>{c0dc81b3-7837-44be-8be3-8fb763feaed5}</UniqueIdentifier>
+      <UniqueIdentifier>{c05d2ad1-505e-4ca0-b14d-1801e5d086df}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config">
-      <Filter>mh_library_gtest</Filter>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="a_pch.h">
