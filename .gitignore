@@ -18,3 +18,4 @@ mh_library/.vs/mh_library/v17
 mh_library/packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.5/build
 mh_library/packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.5/lib
 *.vsidx
+mh_library/packages/Microsoft.googletest.v140.windesktop.msvcstl.static.rt-dyn.1.8.1.7/lib
