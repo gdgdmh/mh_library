@@ -97,6 +97,9 @@
     <Filter Include="ソース ファイル\mhl\system\file\text">
       <UniqueIdentifier>{6be70a5f-5c4f-421c-8df7-6a98c2b85b17}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\mhl\state">
+      <UniqueIdentifier>{2afb0e36-a2e2-4474-bdff-1d2dbec99301}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mhl\exception\argument_exception.hpp">
@@ -329,6 +332,9 @@
     </ClInclude>
     <ClInclude Include="mhl\scene\isceneable.hpp">
       <Filter>ソース ファイル\mhl\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="mhl\state\state.hpp">
+      <Filter>ソース ファイル\mhl\state</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
