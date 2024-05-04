@@ -100,6 +100,12 @@
     <Filter Include="ソース ファイル\mhl\state">
       <UniqueIdentifier>{2afb0e36-a2e2-4474-bdff-1d2dbec99301}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\mhl\system\math">
+      <UniqueIdentifier>{0bc6b0fb-8c54-49f7-9792-37bbfadfaffd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\mhl\system\math\probability">
+      <UniqueIdentifier>{c4393c53-2ea1-48e3-bd3c-ec1a7fbfa16e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mhl\exception\argument_exception.hpp">
@@ -336,6 +342,9 @@
     <ClInclude Include="mhl\state\state.hpp">
       <Filter>ソース ファイル\mhl\state</Filter>
     </ClInclude>
+    <ClInclude Include="mhl\system\math\probability\basis_point.hpp">
+      <Filter>ソース ファイル\mhl\system\math\probability</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mh_library.cpp">
@@ -493,6 +502,9 @@
     </ClCompile>
     <ClCompile Include="mhl\output\log\output_log.cpp">
       <Filter>ソース ファイル\mhl\output\log</Filter>
+    </ClCompile>
+    <ClCompile Include="mhl\system\math\probability\basis_point.cpp">
+      <Filter>ソース ファイル\mhl\system\math\probability</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
