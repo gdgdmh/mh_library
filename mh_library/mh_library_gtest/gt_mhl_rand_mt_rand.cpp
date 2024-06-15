@@ -1,17 +1,21 @@
-﻿
-#include "a_pch.h"
-#include "mhl/system/rand/mt_rand.hpp"
+﻿#include "a_pch.h"
+#include "mhl/system/rand/MtRand.hpp"
 
-namespace mhl {
-namespace rand {
-namespace mt_rand {
+namespace mhl
+{
+    namespace rand
+    {
+        namespace mt_rand
+        {
 
-/**
- * @brief コンストラクタデフォルト値チェック
- *
- */
-TEST(MtRand, ConstructorDefault) {}
+            /**
+             * @brief コンストラクタデフォルト値チェック
+             *
+             */
+            TEST(MtRand, ConstructorDefault)
+            {
+            }
 
-}  // namespace mt_rand
-}  // namespace rand
-}  // namespace mhl
+        } // namespace mt_rand
+    } // namespace rand
+} // namespace mhl

@@ -1,289 +1,289 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <ItemGroup Label="ProjectConfigurations">
-    <ProjectConfiguration Include="Debug|Win32">
-      <Configuration>Debug</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|Win32">
-      <Configuration>Release</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Debug|x64">
-      <Configuration>Debug</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|x64">
-      <Configuration>Release</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="mhl\bit\bit_control_uint32.hpp" />
-    <ClInclude Include="mhl\data\data_collection.hpp" />
-    <ClInclude Include="mhl\debug\assert\assert_checker.hpp" />
-    <ClInclude Include="mhl\debug\assert\assert_dummy.hpp" />
-    <ClInclude Include="mhl\debug\assert\assert_process.hpp" />
-    <ClInclude Include="mhl\debug\assert\iassert_checker.hpp" />
-    <ClInclude Include="mhl\debug\assert\iassert_processor.hpp" />
-    <ClInclude Include="mhl\debug\assert\mhl_assert.hpp" />
-    <ClInclude Include="mhl\debug\assert\mhl_assertion.hpp" />
-    <ClInclude Include="mhl\debug\debug.hpp" />
-    <ClInclude Include="mhl\debug\service_locator\log\debug_log.hpp" />
-    <ClInclude Include="mhl\debug\stacktrace\get_stacktrace_win.hpp" />
-    <ClInclude Include="mhl\debug\stacktrace\istacktraceable.hpp" />
-    <ClInclude Include="mhl\debug\stacktrace\stacktrace_info.hpp" />
-    <ClInclude Include="mhl\exception\argument_exception.hpp" />
-    <ClInclude Include="mhl\exception\unittest_exception.hpp" />
-    <ClInclude Include="mhl\output\console\dummy_output_console.hpp" />
-    <ClInclude Include="mhl\output\console\iconsole_outputable.hpp" />
-    <ClInclude Include="mhl\output\console\iconsole_outputables.hpp" />
-    <ClInclude Include="mhl\output\console\output_console.hpp" />
-    <ClInclude Include="mhl\output\console\output_consoles.hpp" />
-    <ClInclude Include="mhl\output\console\output_console_vs_sjis.hpp" />
-    <ClInclude Include="mhl\output\log\ilog_outputable.hpp" />
-    <ClInclude Include="mhl\output\log\ilog_outputables.hpp" />
-    <ClInclude Include="mhl\output\log\output_log.hpp" />
-    <ClInclude Include="mhl\output\log\output_logs.hpp" />
-    <ClInclude Include="mhl\scene\isceneable.hpp" />
-    <ClInclude Include="mhl\scene\scene_stack.hpp" />
-    <ClInclude Include="mhl\state\state.hpp" />
-    <ClInclude Include="mhl\string\format\formatter.hpp" />
-    <ClInclude Include="mhl\system\file\file_deleter.hpp" />
-    <ClInclude Include="mhl\system\file\file_exists_checker_win.hpp" />
-    <ClInclude Include="mhl\system\file\ifile_deleter.hpp" />
-    <ClInclude Include="mhl\system\file\ifile_exists_checker.hpp" />
-    <ClInclude Include="mhl\system\file\text\itextfile_writer.hpp" />
-    <ClInclude Include="mhl\system\file\text\textfile_writer.hpp" />
-    <ClInclude Include="mhl\system\file\text\textfile_write_mode.hpp" />
-    <ClInclude Include="mhl\system\math\probability\basis_point.hpp" />
-    <ClInclude Include="mhl\system\rand\irand_getable.hpp" />
-    <ClInclude Include="mhl\system\rand\mt_rand.hpp" />
-    <ClInclude Include="mhl\system\service_locator\service_locator.hpp" />
-    <ClInclude Include="mhl\system\singleton\mh_singleton.hpp" />
-    <ClInclude Include="mhl\system\singleton\singleton_cleanup.hpp" />
-    <ClInclude Include="mhl\system\template\iexecute_method.hpp" />
-    <ClInclude Include="mhl\system\template\iobservable.hpp" />
-    <ClInclude Include="mhl\system\template\subject.hpp" />
-    <ClInclude Include="mhl\system\variable_length_arguments\get_variable_length_arguments.hpp" />
-    <ClInclude Include="mhl\test\unittest_base.hpp" />
-    <ClInclude Include="mhl\test\unittest_execute_list.hpp" />
-    <ClInclude Include="mhl\test_code\bit\test_bit_control_uint32.hpp" />
-    <ClInclude Include="mhl\test_code\data\test_data_collection.hpp" />
-    <ClInclude Include="mhl\test_code\test_execute_method.hpp" />
-    <ClInclude Include="mhl\test_code\test_mhl.hpp" />
-    <ClInclude Include="mhl\test_code\test_scene_stack.hpp" />
-    <ClInclude Include="mhl\test_code\test_subject.hpp" />
-    <ClInclude Include="mhl\test_program\route_search\field.hpp" />
-    <ClInclude Include="mhl\test_program\route_search\field_info.hpp" />
-    <ClInclude Include="mhl\test_program\route_search\field_position.hpp" />
-    <ClInclude Include="mhl\test_program\route_search\field_type.hpp" />
-    <ClInclude Include="mhl\test_program\route_search\ifield_block_settable.hpp" />
-    <ClInclude Include="mhl\test_program\route_search\set_field_block_always.hpp" />
-    <ClInclude Include="mhl\test_program\route_search\test_route_search_test.hpp" />
-    <ClInclude Include="mhl\test_program\test_binarytree_test.hpp" />
-    <ClInclude Include="mhl\test_program\test_callback_test.hpp" />
-    <ClInclude Include="mhl\test_program\test_component_test.hpp" />
-    <ClInclude Include="mhl\test_program\test_cpp_new_function_test.hpp" />
-    <ClInclude Include="mhl\test_program\test_debug_assert_test.hpp" />
-    <ClInclude Include="mhl\test_program\test_delegate_test.hpp" />
-    <ClInclude Include="mhl\test_program\test_fermat_test.hpp" />
-    <ClInclude Include="mhl\test_program\test_free_test.hpp" />
-    <ClInclude Include="mhl\test_program\test_instance_of_test.hpp" />
-    <ClInclude Include="mhl\test_program\test_mhl_test_program.hpp" />
-    <ClInclude Include="mhl\test_program\test_move_test.hpp" />
-    <ClInclude Include="mhl\test_program\test_mt_rand_test.hpp" />
-    <ClInclude Include="mhl\test_program\test_multithread_test.hpp" />
-    <ClInclude Include="mhl\test_program\test_output_consoles_test.hpp" />
-    <ClInclude Include="mhl\test_program\test_singleton_test.hpp" />
-    <ClInclude Include="mhl\test_program\test_stacktrace_test.hpp" />
-    <ClInclude Include="mhl\test_program\test_vector_test.hpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="mhl\bit\bit_control_uint32.cpp" />
-    <ClCompile Include="mhl\debug\assert\mhl_assert.cpp" />
-    <ClCompile Include="mhl\debug\assert\mhl_assertion.cpp" />
-    <ClCompile Include="mhl\debug\debug.cpp" />
-    <ClCompile Include="mhl\debug\service_locator\log\debug_log.cpp" />
-    <ClCompile Include="mhl\debug\stacktrace\get_stacktrace_win.cpp" />
-    <ClCompile Include="mhl\debug\stacktrace\stacktrace_info.cpp" />
-    <ClCompile Include="mhl\exception\argument_exception.cpp" />
-    <ClCompile Include="mhl\exception\unittest_exception.cpp" />
-    <ClCompile Include="mhl\output\console\dummy_output_console.cpp" />
-    <ClCompile Include="mhl\output\console\output_console.cpp" />
-    <ClCompile Include="mhl\output\console\output_consoles.cpp" />
-    <ClCompile Include="mhl\output\console\output_console_vs_sjis.cpp" />
-    <ClCompile Include="mhl\output\log\output_log.cpp" />
-    <ClCompile Include="mhl\output\log\output_logs.cpp" />
-    <ClCompile Include="mhl\scene\scene_stack.cpp" />
-    <ClCompile Include="mhl\system\file\file_deleter.cpp" />
-    <ClCompile Include="mhl\system\file\file_exists_checker_win.cpp" />
-    <ClCompile Include="mhl\system\file\text\textfile_writer.cpp" />
-    <ClCompile Include="mhl\system\math\probability\basis_point.cpp" />
-    <ClCompile Include="mhl\system\rand\mt_rand.cpp" />
-    <ClCompile Include="mhl\system\singleton\singleton_cleanup.cpp" />
-    <ClCompile Include="mhl\test\unittest_execute_list.cpp" />
-    <ClCompile Include="mhl\test_code\bit\test_bit_control_uint32.cpp" />
-    <ClCompile Include="mhl\test_code\data\test_data_collection.cpp" />
-    <ClCompile Include="mhl\test_code\test_execute_method.cpp" />
-    <ClCompile Include="mhl\test_code\test_mhl.cpp" />
-    <ClCompile Include="mhl\test_code\test_scene_stack.cpp" />
-    <ClCompile Include="mhl\test_code\test_subject.cpp" />
-    <ClCompile Include="mhl\test_program\route_search\field.cpp" />
-    <ClCompile Include="mhl\test_program\route_search\field_info.cpp" />
-    <ClCompile Include="mhl\test_program\route_search\field_position.cpp" />
-    <ClCompile Include="mhl\test_program\route_search\field_type.cpp" />
-    <ClCompile Include="mhl\test_program\route_search\set_field_block_always.cpp" />
-    <ClCompile Include="mhl\test_program\route_search\test_route_search_test.cpp" />
-    <ClCompile Include="mhl\test_program\test_binarytree_test.cpp" />
-    <ClCompile Include="mhl\test_program\test_callback_test.cpp" />
-    <ClCompile Include="mhl\test_program\test_component_test.cpp" />
-    <ClCompile Include="mhl\test_program\test_cpp_new_function_test.cpp" />
-    <ClCompile Include="mhl\test_program\test_debug_assert_test.cpp" />
-    <ClCompile Include="mhl\test_program\test_delegate_test.cpp" />
-    <ClCompile Include="mhl\test_program\test_fermat_test.cpp" />
-    <ClCompile Include="mhl\test_program\test_free_test.cpp" />
-    <ClCompile Include="mhl\test_program\test_instance_of_test.cpp" />
-    <ClCompile Include="mhl\test_program\test_mhl_test_program.cpp" />
-    <ClCompile Include="mhl\test_program\test_move_test.cpp" />
-    <ClCompile Include="mhl\test_program\test_mt_rand_test.cpp" />
-    <ClCompile Include="mhl\test_program\test_multithread_test.cpp" />
-    <ClCompile Include="mhl\test_program\test_output_consoles_test.cpp" />
-    <ClCompile Include="mhl\test_program\test_singleton_test.cpp" />
-    <ClCompile Include="mhl\test_program\test_stacktrace_test.cpp" />
-    <ClCompile Include="mhl\test_program\test_vector_test.cpp" />
-    <ClCompile Include="mh_library.cpp" />
-  </ItemGroup>
-  <PropertyGroup Label="Globals">
-    <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{FAE09A71-E76D-4ECA-997F-B9AE97C3B9E3}</ProjectGuid>
-    <Keyword>Win32Proj</Keyword>
-    <RootNamespace>mhlibrary</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
-  </PropertyGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-  <ImportGroup Label="ExtensionSettings">
-  </ImportGroup>
-  <ImportGroup Label="Shared">
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LinkIncremental>true</LinkIncremental>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LinkIncremental>true</LinkIncremental>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <LinkIncremental>false</LinkIncremental>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LinkIncremental>false</LinkIncremental>
-  </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <ClCompile>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ClCompile>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\mh_library;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <ClCompile>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <ClCompile>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <ImportGroup Label="ExtensionTargets">
-  </ImportGroup>
+    <ItemGroup Label="ProjectConfigurations">
+        <ProjectConfiguration Include="Debug|Win32">
+            <Configuration>Debug</Configuration>
+            <Platform>Win32</Platform>
+        </ProjectConfiguration>
+        <ProjectConfiguration Include="Release|Win32">
+            <Configuration>Release</Configuration>
+            <Platform>Win32</Platform>
+        </ProjectConfiguration>
+        <ProjectConfiguration Include="Debug|x64">
+            <Configuration>Debug</Configuration>
+            <Platform>x64</Platform>
+        </ProjectConfiguration>
+        <ProjectConfiguration Include="Release|x64">
+            <Configuration>Release</Configuration>
+            <Platform>x64</Platform>
+        </ProjectConfiguration>
+    </ItemGroup>
+    <ItemGroup>
+        <ClInclude Include="mhl\bit\BitControlUint32.hpp" />
+        <ClInclude Include="mhl\data\DataCollection.hpp" />
+        <ClInclude Include="mhl\debug\assert\AssertChecker.hpp" />
+        <ClInclude Include="mhl\debug\assert\AssertDummy.hpp" />
+        <ClInclude Include="mhl\debug\assert\AssertProcess.hpp" />
+        <ClInclude Include="mhl\debug\assert\IAssertChecker.hpp" />
+        <ClInclude Include="mhl\debug\assert\IAssertProcessor.hpp" />
+        <ClInclude Include="mhl\debug\assert\MhlAssert.hpp" />
+        <ClInclude Include="mhl\debug\assert\MhlAssertion.hpp" />
+        <ClInclude Include="mhl\debug\Debug.hpp" />
+        <ClInclude Include="mhl\debug\service_locator\log\DebugLog.hpp" />
+        <ClInclude Include="mhl\debug\stacktrace\GetStacktraceWin.hpp" />
+        <ClInclude Include="mhl\debug\stacktrace\IStacktraceable.hpp" />
+        <ClInclude Include="mhl\debug\stacktrace\StacktraceInfo.hpp" />
+        <ClInclude Include="mhl\exception\ArgumentException.hpp" />
+        <ClInclude Include="mhl\exception\UnittestException.hpp" />
+        <ClInclude Include="mhl\output\console\DummyOutputConsole.hpp" />
+        <ClInclude Include="mhl\output\console\IConsoleOutputable.hpp" />
+        <ClInclude Include="mhl\output\console\IConsoleOutputables.hpp" />
+        <ClInclude Include="mhl\output\console\OutputConsole.hpp" />
+        <ClInclude Include="mhl\output\console\OutputConsoles.hpp" />
+        <ClInclude Include="mhl\output\console\OutputConsoleVsSjis.hpp" />
+        <ClInclude Include="mhl\output\log\ILogOutputable.hpp" />
+        <ClInclude Include="mhl\output\log\ILogOutputables.hpp" />
+        <ClInclude Include="mhl\output\log\OutputLog.hpp" />
+        <ClInclude Include="mhl\output\log\OutputLogs.hpp" />
+        <ClInclude Include="mhl\scene\ISceneable.hpp" />
+        <ClInclude Include="mhl\scene\SceneStack.hpp" />
+        <ClInclude Include="mhl\state\State.hpp" />
+        <ClInclude Include="mhl\string\format\Formatter.hpp" />
+        <ClInclude Include="mhl\system\file\FileDeleter.hpp" />
+        <ClInclude Include="mhl\system\file\FileExistsCheckerWin.hpp" />
+        <ClInclude Include="mhl\system\file\IFileDeleter.hpp" />
+        <ClInclude Include="mhl\system\file\IFileExistsChecker.hpp" />
+        <ClInclude Include="mhl\system\file\text\ITextfileWriter.hpp" />
+        <ClInclude Include="mhl\system\file\text\TextfileWriter.hpp" />
+        <ClInclude Include="mhl\system\file\text\TextfileWriteMode.hpp" />
+        <ClInclude Include="mhl\system\math\probability\BasisPoint.hpp" />
+        <ClInclude Include="mhl\system\rand\IRandGetable.hpp" />
+        <ClInclude Include="mhl\system\rand\MtRand.hpp" />
+        <ClInclude Include="mhl\system\service_locator\ServiceLocator.hpp" />
+        <ClInclude Include="mhl\system\singleton\MhSingleton.hpp" />
+        <ClInclude Include="mhl\system\singleton\SingletonCleanup.hpp" />
+        <ClInclude Include="mhl\system\template\IExecuteMethod.hpp" />
+        <ClInclude Include="mhl\system\template\IObservable.hpp" />
+        <ClInclude Include="mhl\system\template\Subject.hpp" />
+        <ClInclude Include="mhl\system\variable_length_arguments\GetVariableLengthArguments.hpp" />
+        <ClInclude Include="mhl\test\UnittestBase.hpp" />
+        <ClInclude Include="mhl\test\UnittestExecuteList.hpp" />
+        <ClInclude Include="mhl\test_code\bit\TestBitControlUint32.hpp" />
+        <ClInclude Include="mhl\test_code\data\TestDataCollection.hpp" />
+        <ClInclude Include="mhl\test_code\TestExecuteMethod.hpp" />
+        <ClInclude Include="mhl\test_code\TestMhl.hpp" />
+        <ClInclude Include="mhl\test_code\TestSceneStack.hpp" />
+        <ClInclude Include="mhl\test_code\TestSubject.hpp" />
+        <ClInclude Include="mhl\test_program\route_search\Field.hpp" />
+        <ClInclude Include="mhl\test_program\route_search\FieldInfo.hpp" />
+        <ClInclude Include="mhl\test_program\route_search\FieldPosition.hpp" />
+        <ClInclude Include="mhl\test_program\route_search\FieldType.hpp" />
+        <ClInclude Include="mhl\test_program\route_search\IFieldBlockSettable.hpp" />
+        <ClInclude Include="mhl\test_program\route_search\SetFieldBlockAlways.hpp" />
+        <ClInclude Include="mhl\test_program\route_search\TestRouteSearchTest.hpp" />
+        <ClInclude Include="mhl\test_program\TestBinarytreeTest.hpp" />
+        <ClInclude Include="mhl\test_program\TestCallbackTest.hpp" />
+        <ClInclude Include="mhl\test_program\TestComponentTest.hpp" />
+        <ClInclude Include="mhl\test_program\TestCppNewFunctionTest.hpp" />
+        <ClInclude Include="mhl\test_program\TestDebugAssertTest.hpp" />
+        <ClInclude Include="mhl\test_program\TestDelegateTest.hpp" />
+        <ClInclude Include="mhl\test_program\TestFermatTest.hpp" />
+        <ClInclude Include="mhl\test_program\TestFreeTest.hpp" />
+        <ClInclude Include="mhl\test_program\TestInstanceOfTest.hpp" />
+        <ClInclude Include="mhl\test_program\TestMhlTestProgram.hpp" />
+        <ClInclude Include="mhl\test_program\TestMoveTest.hpp" />
+        <ClInclude Include="mhl\test_program\TestMtRandTest.hpp" />
+        <ClInclude Include="mhl\test_program\TestMultithreadTest.hpp" />
+        <ClInclude Include="mhl\test_program\TestOutputConsolesTest.hpp" />
+        <ClInclude Include="mhl\test_program\TestSingletonTest.hpp" />
+        <ClInclude Include="mhl\test_program\TestStacktraceTest.hpp" />
+        <ClInclude Include="mhl\test_program\TestVectorTest.hpp" />
+    </ItemGroup>
+    <ItemGroup>
+        <ClCompile Include="mhl\bit\BitControlUint32.cpp" />
+        <ClCompile Include="mhl\debug\assert\MhlAssert.cpp" />
+        <ClCompile Include="mhl\debug\assert\MhlAssertion.cpp" />
+        <ClCompile Include="mhl\debug\Debug.cpp" />
+        <ClCompile Include="mhl\debug\service_locator\log\DebugLog.cpp" />
+        <ClCompile Include="mhl\debug\stacktrace\GetStacktraceWin.cpp" />
+        <ClCompile Include="mhl\debug\stacktrace\StacktraceInfo.cpp" />
+        <ClCompile Include="mhl\exception\ArgumentException.cpp" />
+        <ClCompile Include="mhl\exception\UnittestException.cpp" />
+        <ClCompile Include="mhl\output\console\DummyOutputConsole.cpp" />
+        <ClCompile Include="mhl\output\console\OutputConsole.cpp" />
+        <ClCompile Include="mhl\output\console\OutputConsoles.cpp" />
+        <ClCompile Include="mhl\output\console\OutputConsoleVsSjis.cpp" />
+        <ClCompile Include="mhl\output\log\OutputLog.cpp" />
+        <ClCompile Include="mhl\output\log\OutputLogs.cpp" />
+        <ClCompile Include="mhl\scene\SceneStack.cpp" />
+        <ClCompile Include="mhl\system\file\FileDeleter.cpp" />
+        <ClCompile Include="mhl\system\file\FileExistsCheckerWin.cpp" />
+        <ClCompile Include="mhl\system\file\text\TextfileWriter.cpp" />
+        <ClCompile Include="mhl\system\math\probability\BasisPoint.cpp" />
+        <ClCompile Include="mhl\system\rand\MtRand.cpp" />
+        <ClCompile Include="mhl\system\singleton\SingletonCleanup.cpp" />
+        <ClCompile Include="mhl\test\UnittestExecuteList.cpp" />
+        <ClCompile Include="mhl\test_code\bit\TestBitControlUint32.cpp" />
+        <ClCompile Include="mhl\test_code\data\TestDataCollection.cpp" />
+        <ClCompile Include="mhl\test_code\TestExecuteMethod.cpp" />
+        <ClCompile Include="mhl\test_code\TestMhl.cpp" />
+        <ClCompile Include="mhl\test_code\TestSceneStack.cpp" />
+        <ClCompile Include="mhl\test_code\TestSubject.cpp" />
+        <ClCompile Include="mhl\test_program\route_search\Field.cpp" />
+        <ClCompile Include="mhl\test_program\route_search\FieldInfo.cpp" />
+        <ClCompile Include="mhl\test_program\route_search\FieldPosition.cpp" />
+        <ClCompile Include="mhl\test_program\route_search\FieldType.cpp" />
+        <ClCompile Include="mhl\test_program\route_search\SetFieldBlockAlways.cpp" />
+        <ClCompile Include="mhl\test_program\route_search\TestRouteSearchTest.cpp" />
+        <ClCompile Include="mhl\test_program\TestBinarytreeTest.cpp" />
+        <ClCompile Include="mhl\test_program\TestCallbackTest.cpp" />
+        <ClCompile Include="mhl\test_program\TestComponentTest.cpp" />
+        <ClCompile Include="mhl\test_program\TestCppNewFunctionTest.cpp" />
+        <ClCompile Include="mhl\test_program\TestDebugAssertTest.cpp" />
+        <ClCompile Include="mhl\test_program\TestDelegateTest.cpp" />
+        <ClCompile Include="mhl\test_program\TestFermatTest.cpp" />
+        <ClCompile Include="mhl\test_program\TestFreeTest.cpp" />
+        <ClCompile Include="mhl\test_program\TestInstanceOfTest.cpp" />
+        <ClCompile Include="mhl\test_program\TestMhlTestProgram.cpp" />
+        <ClCompile Include="mhl\test_program\TestMoveTest.cpp" />
+        <ClCompile Include="mhl\test_program\TestMtRandTest.cpp" />
+        <ClCompile Include="mhl\test_program\TestMultithreadTest.cpp" />
+        <ClCompile Include="mhl\test_program\TestOutputConsolesTest.cpp" />
+        <ClCompile Include="mhl\test_program\TestSingletonTest.cpp" />
+        <ClCompile Include="mhl\test_program\TestStacktraceTest.cpp" />
+        <ClCompile Include="mhl\test_program\TestVectorTest.cpp" />
+        <ClCompile Include="MhLibrary.cpp" />
+    </ItemGroup>
+    <PropertyGroup Label="Globals">
+        <VCProjectVersion>16.0</VCProjectVersion>
+        <ProjectGuid>{FAE09A71-E76D-4ECA-997F-B9AE97C3B9E3}</ProjectGuid>
+        <Keyword>Win32Proj</Keyword>
+        <RootNamespace>mhlibrary</RootNamespace>
+        <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+        <ConfigurationType>Application</ConfigurationType>
+        <UseDebugLibraries>true</UseDebugLibraries>
+        <PlatformToolset>v143</PlatformToolset>
+        <CharacterSet>Unicode</CharacterSet>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+        <ConfigurationType>Application</ConfigurationType>
+        <UseDebugLibraries>false</UseDebugLibraries>
+        <PlatformToolset>v143</PlatformToolset>
+        <WholeProgramOptimization>true</WholeProgramOptimization>
+        <CharacterSet>Unicode</CharacterSet>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+        <ConfigurationType>StaticLibrary</ConfigurationType>
+        <UseDebugLibraries>true</UseDebugLibraries>
+        <PlatformToolset>v143</PlatformToolset>
+        <CharacterSet>Unicode</CharacterSet>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+        <ConfigurationType>Application</ConfigurationType>
+        <UseDebugLibraries>false</UseDebugLibraries>
+        <PlatformToolset>v143</PlatformToolset>
+        <WholeProgramOptimization>true</WholeProgramOptimization>
+        <CharacterSet>Unicode</CharacterSet>
+    </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
+    <ImportGroup Label="ExtensionSettings">
+    </ImportGroup>
+    <ImportGroup Label="Shared">
+    </ImportGroup>
+    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+        <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform"/>
+    </ImportGroup>
+    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+        <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform"/>
+    </ImportGroup>
+    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+        <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform"/>
+    </ImportGroup>
+    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+        <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform"/>
+    </ImportGroup>
+    <PropertyGroup Label="UserMacros"/>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+        <LinkIncremental>true</LinkIncremental>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+        <LinkIncremental>true</LinkIncremental>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+        <LinkIncremental>false</LinkIncremental>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+        <LinkIncremental>false</LinkIncremental>
+    </PropertyGroup>
+    <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+        <ClCompile>
+            <PrecompiledHeader>
+            </PrecompiledHeader>
+            <WarningLevel>Level3</WarningLevel>
+            <SDLCheck>true</SDLCheck>
+            <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+            <ConformanceMode>true</ConformanceMode>
+        </ClCompile>
+        <Link>
+            <SubSystem>Console</SubSystem>
+            <GenerateDebugInformation>true</GenerateDebugInformation>
+        </Link>
+    </ItemDefinitionGroup>
+    <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+        <ClCompile>
+            <PrecompiledHeader>
+            </PrecompiledHeader>
+            <WarningLevel>Level3</WarningLevel>
+            <SDLCheck>true</SDLCheck>
+            <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+            <ConformanceMode>true</ConformanceMode>
+            <AdditionalIncludeDirectories>..\mh_library;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+        </ClCompile>
+        <Link>
+            <SubSystem>Console</SubSystem>
+            <GenerateDebugInformation>true</GenerateDebugInformation>
+        </Link>
+    </ItemDefinitionGroup>
+    <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+        <ClCompile>
+            <PrecompiledHeader>
+            </PrecompiledHeader>
+            <WarningLevel>Level3</WarningLevel>
+            <FunctionLevelLinking>true</FunctionLevelLinking>
+            <IntrinsicFunctions>true</IntrinsicFunctions>
+            <SDLCheck>true</SDLCheck>
+            <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+            <ConformanceMode>true</ConformanceMode>
+        </ClCompile>
+        <Link>
+            <SubSystem>Console</SubSystem>
+            <EnableCOMDATFolding>true</EnableCOMDATFolding>
+            <OptimizeReferences>true</OptimizeReferences>
+            <GenerateDebugInformation>true</GenerateDebugInformation>
+        </Link>
+    </ItemDefinitionGroup>
+    <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+        <ClCompile>
+            <PrecompiledHeader>
+            </PrecompiledHeader>
+            <WarningLevel>Level3</WarningLevel>
+            <FunctionLevelLinking>true</FunctionLevelLinking>
+            <IntrinsicFunctions>true</IntrinsicFunctions>
+            <SDLCheck>true</SDLCheck>
+            <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+            <ConformanceMode>true</ConformanceMode>
+        </ClCompile>
+        <Link>
+            <SubSystem>Console</SubSystem>
+            <EnableCOMDATFolding>true</EnableCOMDATFolding>
+            <OptimizeReferences>true</OptimizeReferences>
+            <GenerateDebugInformation>true</GenerateDebugInformation>
+        </Link>
+    </ItemDefinitionGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
+    <ImportGroup Label="ExtensionTargets">
+    </ImportGroup>
 </Project>
