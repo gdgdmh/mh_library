@@ -30,36 +30,26 @@ namespace mhl
         /**
          * @brief データの追加
          *
-         * @param add_data 追加するデータ
+         * @param addData 追加するデータ
          */
-        void Add(const T &add_data)
+        void Add(const T &addData)
         {
-            data_.emplace_back(add_data);
+            data_.emplace_back(addData);
         }
 
         /**
          * @brief データの削除
          *
-         * @param remove_data 削除対象のデータ
+         * @param removeData 削除対象のデータ
          */
-        void Remove(const T &remove_data)
+        void Remove(const T &removeData)
         {
-            auto it = std::find(data_.begin(), data_.end(), remove_data);
+            auto it = std::find(data_.begin(), data_.end(), removeData);
             if (it == data_.end())
             {
                 return;
             }
             data_.erase(it);
-            /*
-            auto it = remove_data.begin();
-            auto it_end = remove_data.end();
-            for (; it != it_end; ++it) {
-              if ((*it) == remove_data) {
-                data_.erase(it);
-                return;
-              }
-            }
-            */
         }
 
         void Get(size_t index) const

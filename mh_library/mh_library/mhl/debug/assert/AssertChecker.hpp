@@ -19,17 +19,13 @@ namespace mhl
             class AssertChecker : public IAssertChecker
             {
             public:
-                AssertChecker()
-                {
-                }
+                AssertChecker() = default;
 
                 /**
                  * @brief デストラクタ
                  *
                  */
-                ~AssertChecker() override
-                {
-                }
+                virtual ~AssertChecker() override = default;
 
                 /**
                  * @brief チェック

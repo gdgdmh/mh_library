@@ -19,9 +19,11 @@ namespace mhl
             class IAssertProcessor
             {
             public:
-                virtual ~IAssertProcessor()
-                {
-                }
+                /**
+                 * @brief デストラクタ
+                 *
+                 */
+                virtual ~IAssertProcessor() = default;
 
                 /**
                  * @brief アサーション処理

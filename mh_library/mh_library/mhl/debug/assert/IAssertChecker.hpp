@@ -20,12 +20,16 @@ namespace mhl
             {
             public:
                 /**
+                 * @brief コンストラクタ
+                 *
+                 */
+                IAssertChecker() = default;
+                
+                /**
                  * @brief デストラクタ
                  *
                  */
-                virtual ~IAssertChecker()
-                {
-                }
+                virtual ~IAssertChecker() = default;
 
                 /**
                  * @brief チェック

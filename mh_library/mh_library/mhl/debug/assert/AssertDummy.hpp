@@ -22,7 +22,7 @@ namespace mhl
             {
             public:
                 AssertDummy() :
-                    is_called_(false)
+                    isCalled(false)
                 {
                 }
 
@@ -30,9 +30,7 @@ namespace mhl
                  * @brief デストラクタ
                  *
                  */
-                ~AssertDummy() override
-                {
-                }
+                ~AssertDummy() override = default;
 
                 /**
                  * @brief アサーション処理
@@ -40,7 +38,7 @@ namespace mhl
                  */
                 void Assert() override
                 {
-                    is_called_ = true;
+                    isCalled = true;
                 }
 
                 /**
@@ -51,16 +49,19 @@ namespace mhl
                  */
                 virtual bool IsCalled() const
                 {
-                    return is_called_;
+                    return isCalled;
                 }
 
+                /**
+                 * @brief フラグリセット処理
+                 */
                 virtual void Reset()
                 {
-                    is_called_ = false;
+                    isCalled = false;
                 }
 
             private:
-                bool is_called_; // アサーションが呼ばれたか判定するフラグ
+                bool isCalled; // アサーションが呼ばれたか判定するフラグ
             };
 
         } // namespace assert

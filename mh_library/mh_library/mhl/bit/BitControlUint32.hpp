@@ -27,7 +27,7 @@ namespace mhl
          * @brief デストラクタ
          *
          */
-        virtual ~BitControlUint32();
+        virtual ~BitControlUint32() = default;
 
         /**
          * @brief 値の設定

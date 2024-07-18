@@ -20,14 +20,6 @@ mhl::BitControlUint32::BitControlUint32(uint32_t value) :
 }
 
 /**
- * @brief デストラクタ
- *
- */
-mhl::BitControlUint32::~BitControlUint32()
-{
-}
-
-/**
  * @brief 値の設定
  *
  * @param value 設定する値

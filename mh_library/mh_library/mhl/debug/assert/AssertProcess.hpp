@@ -12,25 +12,25 @@ namespace mhl
 
         namespace assert
         {
-
             /**
              * @brief アサーション処理クラス
              *
+             * アサーションのハンドリング処理を行う
              */
             class AssertProcess : public IAssertProcessor
             {
             public:
-                AssertProcess()
-                {
-                }
+                /**
+                 * @brief コンストラクタ
+                 *
+                 */
+                AssertProcess() = default;
 
                 /**
                  * @brief デストラクタ
                  *
                  */
-                ~AssertProcess() override
-                {
-                }
+                ~AssertProcess() override = default;
 
                 /**
                  * @brief アサーション処理
